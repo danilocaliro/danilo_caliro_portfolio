@@ -10,9 +10,9 @@ import {
   X,
 } from "lucide-react";
 
-const heroImage = "/manus-storage/blender-tools-hero_507f0f66.jpg";
-const emissionImage = "/manus-storage/emission-pro-render_eca0efa1.jpg";
-const upcomingImage = "/manus-storage/upcoming-tool-teaser_be0de7a6.jpg";
+const heroImage = "/assets/hero.jpg";
+const emissionImage = "/assets/emission-pro.jpg";
+const upcomingImage = "/assets/upcoming-tool.jpg";
 
 // Replace these placeholders with your real URLs when ready.
 const superhiveCreatorUrl = "https://superhivemarket.com/creators/danilocaliro";
