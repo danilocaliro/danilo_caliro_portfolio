@@ -27,6 +27,44 @@ const navItems = [
   { label: "The Missing Workflow", href: "#tools" },
 ];
 
+const workCases = [
+  {
+    id: "light",
+    number: "01",
+    category: "Look Development",
+    title: "Light is a design decision.",
+    image: heroImage,
+    role: "Look Development / Lighting",
+    summary: "A visual language built from material, colour, atmosphere and controlled contrast — designed to make the image feel intentional before it feels finished.",
+    outcome: "A flexible lookdev system for cinematic CGI frames and art-directed lighting studies.",
+    tags: ["Lookdev", "Lighting", "Rendering"],
+  },
+  {
+    id: "pipeline",
+    number: "02",
+    category: "Technical Direction",
+    title: "Systems that support the idea.",
+    image: upcomingImage,
+    role: "Pipeline TD / Technical Direction",
+    summary: "Production thinking that makes ambitious visual work easier to build, revise and deliver — without putting the creative idea second.",
+    outcome: "Clearer handoffs, repeatable workflows and more room for creative decisions inside production.",
+    tags: ["Pipeline", "Tools", "Production"],
+  },
+  {
+    id: "tools",
+    number: "03",
+    category: "Tool Development",
+    title: "Less friction, more control.",
+    image: emissionImage,
+    role: "Blender Add-on / Product Design",
+    summary: "Focused tools shaped by the friction of real image-making: fewer repetitive steps, clearer controls and workflows artists can trust.",
+    outcome: "Production-grade Blender utilities that turn technical constraints into creative leverage.",
+    tags: ["Blender", "Workflow", "Technical Art"],
+  },
+];
+
+const workFilters = ["All", "Look Development", "Technical Direction", "Tool Development"];
+
 function SectionLabel({ children }: { children: string }) {
   return (
     <div className="section-label">
@@ -49,6 +87,8 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [formSent, setFormSent] = useState(false);
+  const [activeWorkId, setActiveWorkId] = useState("light");
+  const [activeWorkFilter, setActiveWorkFilter] = useState("All");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 18);
@@ -149,9 +189,14 @@ export default function Home() {
         <section className="work-section section-pad" id="work">
           <div className="container">
             <div className="section-heading split-heading"><div><SectionLabel>03 / SELECTED WORK</SectionLabel><h2>Building the image<br />from <em>the inside out.</em></h2></div><p>Visual development, lighting and technical direction for images that need both a point of view and a reliable way to get there.</p></div>
-            <div className="work-grid">
-              <article className="work-feature"><div className="work-image work-image-large" style={{ backgroundImage: `url(${heroImage})` }} /><div className="work-info"><span>LOOK DEVELOPMENT / LIGHTING</span><h3>Light is a design decision.</h3><p>Materials, colour, atmosphere and finalisation as one connected visual language.</p></div></article>
-              <article className="work-feature"><div className="work-image" style={{ backgroundImage: `url(${upcomingImage})` }} /><div className="work-info"><span>PIPELINE / TECHNICAL DIRECTION</span><h3>Systems that support the idea.</h3><p>Production thinking that makes ambitious visual work easier to build, revise and deliver.</p></div></article>
+            <div className="work-filter-bar" role="tablist" aria-label="Filter selected work">
+              {workFilters.map((filter) => <button key={filter} type="button" className={activeWorkFilter === filter ? "is-active" : ""} onClick={() => setActiveWorkFilter(filter)} role="tab" aria-selected={activeWorkFilter === filter}>{filter}</button>)}
+            </div>
+            <div className="work-gallery">
+              <div className="work-gallery-list">
+                {workCases.filter((work) => activeWorkFilter === "All" || work.category === activeWorkFilter).map((work) => <button key={work.id} type="button" className={`work-gallery-card ${activeWorkId === work.id ? "is-selected" : ""}`} onClick={() => setActiveWorkId(work.id)}><span className="work-gallery-image" style={{ backgroundImage: `url(${work.image})` }} /><span className="work-gallery-card-overlay" /><span className="work-gallery-card-top"><span>{work.number}</span><ArrowUpRight size={17} /></span><span className="work-gallery-card-bottom"><small>{work.category}</small><strong>{work.title}</strong></span></button>)}
+              </div>
+              {(() => { const activeWork = workCases.find((work) => work.id === activeWorkId) ?? workCases[0]; return <article className="case-study-panel"><div className="case-study-image" style={{ backgroundImage: `url(${activeWork.image})` }}><span>{activeWork.number} / CASE STUDY</span></div><div className="case-study-content"><div className="case-study-heading"><span>{activeWork.role}</span><span>SELECTED WORK</span></div><h3>{activeWork.title}</h3><p>{activeWork.summary}</p><div className="case-study-outcome"><span>OUTCOME</span><strong>{activeWork.outcome}</strong></div><div className="case-study-tags">{activeWork.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>; })()}
             </div>
           </div>
         </section>
