@@ -100,7 +100,7 @@ export default function Home() {
               <p className="artist-hero-intro reveal-up delay-2">I build visual worlds, lighting systems and technical tools for artists who care about how an image comes together.</p>
               <div className="hero-actions reveal-up delay-3">
                 <a className="button button-primary" href="#reel">Watch the reel <Play size={15} fill="currentColor" /></a>
-                <a className="text-link" href="#about">Read about the practice <ArrowDownRight size={16} /></a>
+                <a className="text-link" href="#about">Read about me <ArrowDownRight size={16} /></a>
               </div>
             </div>
             <div className="artist-hero-side reveal-up delay-3">
