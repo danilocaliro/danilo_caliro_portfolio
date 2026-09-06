@@ -15,10 +15,11 @@ const emissionImage = "/manus-storage/emission-pro-render_eca0efa1.jpg";
 const upcomingImage = "/manus-storage/upcoming-tool-teaser_be0de7a6.jpg";
 
 // Replace these placeholders with your real URLs when ready.
-const gumroadUrl = "https://gumroad.com/";
-const superhiveUrl = "https://superhivemarket.com/";
-const linkedinUrl = "https://www.linkedin.com/";
-const vimeoId = "";
+const superhiveCreatorUrl = "https://superhivemarket.com/creators/danilocaliro";
+const emissionProUrl = "https://superhivemarket.com/products/emission-pro";
+const colorSpaceConverterUrl = "https://superhivemarket.com/products/color-space-converter";
+const linkedinUrl = "https://www.linkedin.com/in/danilo-caliro/";
+const vimeoId = "1216793443";
 
 const navItems = [
   { label: "Work", href: "#work" },
@@ -47,6 +48,7 @@ function MarketplaceLink({ href, children }: { href: string; children: string })
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [formSent, setFormSent] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 18);
@@ -60,7 +62,7 @@ export default function Home() {
         <div className="header-inner">
           <a href="#top" className="brand-mark" aria-label="Home">
             <span className="brand-mark-symbol">/</span>
-            <span className="brand-mark-name">YOUR NAME / CGI</span>
+            <span className="brand-mark-name">DANILO CALIRO / CGI</span>
           </a>
 
           <nav className="desktop-nav" aria-label="Primary navigation">
@@ -158,19 +160,19 @@ export default function Home() {
           <div className="container">
             <div className="section-heading split-heading"><div><SectionLabel>04 / TOOLS FOR ARTISTS</SectionLabel><h2>Tools are part of<br /><em>the practice.</em></h2></div><p>Alongside production and supervision, I design focused Blender tools that solve the friction I know from working inside the image.</p></div>
             <div className="tools-grid">
-              <article className="tool-card tool-card-featured"><div className="tool-visual"><img src={emissionImage} alt="Abstract emissive CGI render for Emission Pro" loading="lazy" /><div className="tool-visual-badge"><Check size={14} /> Available now</div><span className="tool-number">01</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER / SHADING</span><span>EMISSION PRO</span></div><h3>Emission Pro</h3><p className="tool-lead">An advanced shading system for Blender, built to make emissive looks faster to build, easier to control and more consistent to art-direct.</p><div className="benefit-list"><span><Check size={15} /> Centralised emission control</span><span><Check size={15} /> Designed for look development</span><span><Check size={15} /> Production-minded workflow</span></div><div className="tool-actions"><MarketplaceLink href={gumroadUrl}>Gumroad</MarketplaceLink><MarketplaceLink href={superhiveUrl}>Superhive</MarketplaceLink></div></div></article>
-              <article className="tool-card tool-card-secondary"><div className="tool-visual tool-visual-secondary"><div className="visual-lines" /><span className="tool-number">02</span><span className="visual-caption">BLENDER / WORKFLOW</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>AVAILABLE NOW</span><span>ADD-ON 02</span></div><h3>Another exceptional tool.</h3><p className="tool-lead">A second production-grade add-on for artists who want cleaner, repeatable workflows without giving up creative control.</p><div className="benefit-list"><span><Check size={15} /> Built from real production needs</span><span><Check size={15} /> Faster repetitive operations</span><span><Check size={15} /> Clearer technical decisions</span></div><div className="tool-actions"><MarketplaceLink href={gumroadUrl}>Gumroad</MarketplaceLink><MarketplaceLink href={superhiveUrl}>Superhive</MarketplaceLink></div></div></article>
+              <article className="tool-card tool-card-featured"><div className="tool-visual"><img src={emissionImage} alt="Abstract emissive CGI render for Emission Pro" loading="lazy" /><div className="tool-visual-badge"><Check size={14} /> Available now</div><span className="tool-number">01</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER / SHADING</span><span>EMISSION PRO</span></div><h3>Emission Pro</h3><p className="tool-lead">An advanced shading system for Blender, built to make emissive looks faster to build, easier to control and more consistent to art-direct.</p><div className="benefit-list"><span><Check size={15} /> Centralised emission control</span><span><Check size={15} /> Designed for look development</span><span><Check size={15} /> Production-minded workflow</span></div><div className="tool-actions"><MarketplaceLink href={emissionProUrl}>View on Superhive</MarketplaceLink></div></div></article>
+              <article className="tool-card tool-card-secondary"><div className="tool-visual tool-visual-secondary"><div className="visual-lines" /><span className="tool-number">02</span><span className="visual-caption">BLENDER / COLOR MANAGEMENT</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>AVAILABLE NOW</span><span>COLOR SPACE CONVERTER</span></div><h3>Color Space Converter</h3><p className="tool-lead">A focused Blender utility for moving between colour spaces with more clarity and control inside the production workflow.</p><div className="benefit-list"><span><Check size={15} /> Clearer colour management</span><span><Check size={15} /> Built for production workflows</span><span><Check size={15} /> Less technical friction</span></div><div className="tool-actions"><MarketplaceLink href={colorSpaceConverterUrl}>View on Superhive</MarketplaceLink></div></div></article>
             </div>
-            <div className="tools-note"><span>PRODUCT PAGES &amp; THUMBNAILS</span><p>Each tool will have its own dedicated page, with the marketplace thumbnail, documentation and release details.</p><ArrowUpRight size={17} /></div>
+            <div className="tools-note"><span>THE MISSING WORKFLOW</span><p>Explore the complete tool collection, official thumbnails and future releases on the Superhive creator page.</p><a className="tools-note-link" href={superhiveCreatorUrl} target="_blank" rel="noreferrer">Visit the collection <ArrowUpRight size={17} /></a></div>
           </div>
         </section>
 
         <section className="upcoming-section section-pad" id="upcoming"><div className="container"><div className="upcoming-card"><div className="upcoming-copy"><SectionLabel>05 / IN DEVELOPMENT</SectionLabel><span className="upcoming-kicker">NEXT RELEASE / 03</span><h2>A more powerful<br /><em>way to work.</em></h2><p>Another tool is taking shape behind the scenes — designed to push Blender workflows further, with the same focus on clarity, control and real production value.</p><a className="button button-outline" href={linkedinUrl} target="_blank" rel="noreferrer">Follow the release <ArrowUpRight size={17} /></a></div><div className="upcoming-visual"><img src={upcomingImage} alt="Abstract geometric teaser for the upcoming Blender add-on" loading="lazy" /><div className="upcoming-scanline" /><span className="upcoming-visual-label">WORK IN PROGRESS / 2026</span></div></div></div></section>
 
-        <section className="contact-section section-pad" id="contact"><div className="container contact-inner"><SectionLabel>06 / CONTACT</SectionLabel><h2>Let&apos;s make the image<br /><em>work harder.</em></h2><p>For production, technical direction, workflow development or tools.</p><a className="contact-link" href="mailto:hello@example.com">hello@example.com <ArrowUpRight size={19} /></a></div></section>
+        <section className="contact-section section-pad" id="contact"><div className="container contact-inner"><SectionLabel>06 / CONTACT</SectionLabel><h2>Let&apos;s make the image<br /><em>work harder.</em></h2><p>For production, technical direction, workflow development or tools.</p>{formSent ? <div className="form-success"><Check size={18} /> Thanks — your message is ready to be connected.</div> : <form className="contact-form" onSubmit={(event) => { event.preventDefault(); setFormSent(true); }}><div className="form-row"><label><span>Your name</span><input type="text" name="name" placeholder="Name" required /></label><label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required /></label></div><label><span>Message</span><textarea name="message" placeholder="Tell me about the project..." rows={4} required /></label><button className="button button-dark" type="submit">Send message <ArrowUpRight size={17} /></button><small>This form is ready for a form endpoint such as Formspree or Netlify Forms.</small></form>}</div></section>
       </main>
 
-      <footer className="site-footer"><div className="container footer-inner"><span className="footer-brand">YOUR NAME / CGI</span><span>© 2026 — SELECTED WORK &amp; TOOLS</span><div className="footer-links"><a href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn</a><a href={gumroadUrl} target="_blank" rel="noreferrer">Gumroad</a><a href={superhiveUrl} target="_blank" rel="noreferrer">Superhive</a></div></div></footer>
+      <footer className="site-footer"><div className="container footer-inner"><span className="footer-brand">DANILO CALIRO / CGI</span><span>© 2026 — SELECTED WORK &amp; TOOLS</span><div className="footer-links"><a href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn</a><a href={superhiveCreatorUrl} target="_blank" rel="noreferrer">Superhive</a></div></div></footer>
     </div>
   );
 }
