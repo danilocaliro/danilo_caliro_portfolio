@@ -24,7 +24,7 @@ const vimeoId = "1216793443";
 const navItems = [
   { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
-  { label: "Tools", href: "#tools" },
+  { label: "The Missing Workflow", href: "#tools" },
 ];
 
 function SectionLabel({ children }: { children: string }) {
@@ -62,7 +62,7 @@ export default function Home() {
         <div className="header-inner">
           <a href="#top" className="brand-mark" aria-label="Home">
             <span className="brand-mark-symbol">/</span>
-            <span className="brand-mark-name">DANILO CALIRO / CGI</span>
+            <span className="brand-mark-name">DANILO CALIRO</span>
           </a>
 
           <nav className="desktop-nav" aria-label="Primary navigation">
@@ -95,9 +95,9 @@ export default function Home() {
           <div className="artist-hero-grid" />
           <div className="container artist-hero-content">
             <div className="artist-hero-copy">
-              <div className="eyebrow reveal-up"><span className="eyebrow-line" /> LOOK DEVELOPMENT / CGI / TECHNICAL DIRECTION</div>
+              <div className="eyebrow reveal-up"><span className="eyebrow-line" /> LOOK DEVELOPMENT / LIGHTING / TECHNICAL DIRECTION / PIPELINE</div>
               <h1 className="artist-hero-title reveal-up delay-1">Images with<br /><em>intent.</em></h1>
-              <p className="artist-hero-intro reveal-up delay-2">I build visual worlds, lighting systems and technical tools for artists who care about how an image comes together.</p>
+              <p className="artist-hero-intro reveal-up delay-2">I shape how images look and how they're made — lighting, lookdev, and the tools that hold a pipeline together.</p>
               <div className="hero-actions reveal-up delay-3">
                 <a className="button button-primary" href="#reel">Watch the reel <Play size={15} fill="currentColor" /></a>
                 <a className="text-link" href="#about">Read about me <ArrowDownRight size={16} /></a>
@@ -121,7 +121,7 @@ export default function Home() {
         <section className="reel-section artist-reel-section section-pad" id="reel">
           <div className="container">
             <div className="section-heading split-heading reel-heading">
-              <div><SectionLabel>01 / DEMOREEL</SectionLabel><h2>The work comes<br /><em>first.</em></h2></div>
+              <div><SectionLabel>01 / DEMOREEL</SectionLabel><h2>Frame by<br /><em>frame.</em></h2></div>
               <p>A selection of CGI, lighting, look development and visual problem-solving across productions, experiences and experiments.</p>
             </div>
             <div className="reel-frame">
@@ -142,7 +142,7 @@ export default function Home() {
         <section className="about-section artist-about-section section-pad" id="about">
           <div className="container about-layout">
             <div className="about-portrait"><div className="about-portrait-grid" /><div className="about-initials">TD<span> / </span>CGI</div><div className="about-portrait-label">LOOKDEV / PIPELINE / LIGHTING</div></div>
-            <div className="about-copy"><SectionLabel>02 / ABOUT THE PRACTICE</SectionLabel><h2>Creative judgement.<br /><em>Technical precision.</em></h2><p className="about-lead">I&apos;m a Look Development TD, Pipeline TD and Technical Artist with a background in 3D, lighting, rendering, photography and CGI production.</p><p>Over the years, my role has evolved from hands-on production into a broader technical and supervisory position, combining artistic vision, technical problem-solving, pipeline development and workflow optimisation.</p><p>I work across animation, television, advertising, institutional content, immersive experiences and interactive projects — from visual development and asset creation to lighting, rendering, post-production and final delivery.</p><div className="about-details"><div><span>SELECTED PROJECTS</span><strong>Lola On Board · RAI · Leonardo · Thales Alenia Space · Telespazio</strong></div><div><span>CORE PRACTICE</span><strong>Look Development · Lighting · Pipeline TD · Tool Development</strong></div></div><a className="inline-arrow-link" href={linkedinUrl} target="_blank" rel="noreferrer">More on LinkedIn <ArrowUpRight size={17} /></a></div>
+            <div className="about-copy"><SectionLabel>02 / ABOUT THE PRACTICE</SectionLabel><h2>Creative judgement.<br /><em>Technical precision.</em></h2><p className="about-lead">I&apos;m a Look Development TD, Pipeline TD and Technical Artist with a background in 3D, lighting, rendering, photography and CGI production.</p><p>Over the years, my role has evolved from hands-on production into a broader technical and supervisory position, combining artistic vision, technical problem-solving, pipeline development and workflow optimisation.</p><p>I work across animation, television, advertising, institutional content, immersive experiences and interactive projects — from visual development and asset creation to lighting, rendering, post-production and final delivery.</p><div className="about-details"><div><span>SELECTED PRODUCTIONS</span><strong>Uanema · Digitalcomoedia · RAI · Leonardo · Thales Alenia Space · Telespazio · Arkaevision</strong></div><div><span>CORE PRACTICE</span><strong>Look Development · Lighting · Pipeline TD · Tool Development</strong></div></div><a className="inline-arrow-link" href={linkedinUrl} target="_blank" rel="noreferrer">More on LinkedIn <ArrowUpRight size={17} /></a></div>
           </div>
         </section>
 
@@ -158,7 +158,7 @@ export default function Home() {
 
         <section className="tools-section artist-tools-section section-pad" id="tools">
           <div className="container">
-            <div className="section-heading split-heading"><div><SectionLabel>04 / TOOLS FOR ARTISTS</SectionLabel><h2>Tools are part of<br /><em>the practice.</em></h2></div><p>Alongside production and supervision, I design focused Blender tools that solve the friction I know from working inside the image.</p></div>
+            <div className="section-heading split-heading"><div><SectionLabel>04 / THE MISSING WORKFLOW</SectionLabel><h2>Tools are part of<br /><em>the practice.</em></h2></div><p>Alongside production and supervision, I design focused Blender tools that solve the friction I know from working inside the image.</p></div>
             <div className="tools-grid">
               <article className="tool-card tool-card-featured"><div className="tool-visual"><img src={emissionImage} alt="Abstract emissive CGI render for Emission Pro" loading="lazy" /><div className="tool-visual-badge"><Check size={14} /> Available now</div><span className="tool-number">01</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER / SHADING</span><span>EMISSION PRO</span></div><h3>Emission Pro</h3><p className="tool-lead">An advanced shading system for Blender, built to make emissive looks faster to build, easier to control and more consistent to art-direct.</p><div className="benefit-list"><span><Check size={15} /> Centralised emission control</span><span><Check size={15} /> Designed for look development</span><span><Check size={15} /> Production-minded workflow</span></div><div className="tool-actions"><MarketplaceLink href={emissionProUrl}>View on Superhive</MarketplaceLink></div></div></article>
               <article className="tool-card tool-card-secondary"><div className="tool-visual tool-visual-secondary"><div className="visual-lines" /><span className="tool-number">02</span><span className="visual-caption">BLENDER / COLOR MANAGEMENT</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>AVAILABLE NOW</span><span>COLOR SPACE CONVERTER</span></div><h3>Color Space Converter</h3><p className="tool-lead">A focused Blender utility for moving between colour spaces with more clarity and control inside the production workflow.</p><div className="benefit-list"><span><Check size={15} /> Clearer colour management</span><span><Check size={15} /> Built for production workflows</span><span><Check size={15} /> Less technical friction</span></div><div className="tool-actions"><MarketplaceLink href={colorSpaceConverterUrl}>View on Superhive</MarketplaceLink></div></div></article>
@@ -172,7 +172,7 @@ export default function Home() {
         <section className="contact-section section-pad" id="contact"><div className="container contact-inner"><SectionLabel>06 / CONTACT</SectionLabel><h2>Let&apos;s make the image<br /><em>work harder.</em></h2><p>For production, technical direction, workflow development or tools.</p>{formSent ? <div className="form-success"><Check size={18} /> Thanks — your message is ready to be connected.</div> : <form className="contact-form" onSubmit={(event) => { event.preventDefault(); setFormSent(true); }}><div className="form-row"><label><span>Your name</span><input type="text" name="name" placeholder="Name" required /></label><label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required /></label></div><label><span>Message</span><textarea name="message" placeholder="Tell me about the project..." rows={4} required /></label><button className="button button-dark" type="submit">Send message <ArrowUpRight size={17} /></button><small>This form is ready for a form endpoint such as Formspree or Netlify Forms.</small></form>}</div></section>
       </main>
 
-      <footer className="site-footer"><div className="container footer-inner"><span className="footer-brand">DANILO CALIRO / CGI</span><span>© 2026 — SELECTED WORK &amp; TOOLS</span><div className="footer-links"><a href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn</a><a href={superhiveCreatorUrl} target="_blank" rel="noreferrer">Superhive</a></div></div></footer>
+      <footer className="site-footer" style={{textAlign: 'center'}}><div className="container footer-inner" style={{textAlign: 'center'}}><span className="footer-brand" style={{textAlign: 'center'}}>DANILO CALIRO</span><span style={{textAlign: 'center'}}>© 2026</span><div className="footer-links" style={{textAlign: 'center'}}><a href={linkedinUrl} target="_blank" rel="noreferrer" style={{textAlign: 'center'}}>LinkedIn</a><a href={superhiveCreatorUrl} target="_blank" rel="noreferrer" style={{textAlign: 'center'}}>Superhive</a></div></div></footer>
     </div>
   );
 }
