@@ -206,7 +206,9 @@ function vitePluginStorageProxy(): Plugin {
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
 
 export default defineConfig({
-  base: process.env.GITHUB_ACTIONS ? "/danilo_caliro_portfolio/" : "/",
+  base: process.env.GITHUB_ACTIONS
+    ? (process.env.GITHUB_REPOSITORY?.endsWith(".github.io") ? "/" : "/danilo_caliro_portfolio/")
+    : "/",
   plugins,
   resolve: {
     alias: {
