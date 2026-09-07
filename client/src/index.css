@@ -546,3 +546,7 @@ img { display: block; max-width: 100%; }
 @media (max-width: 700px) { .artist-ticker .ticker-set { padding: 0 20px; } }
 
 .artist-hero-side p { max-width: 220px; margin: 0; color: rgba(236,234,227,.58); font-family: 'DM Sans', sans-serif; font-size: 13px; line-height: 1.6; letter-spacing: 0; text-transform: none; }
+
+/* Exact ticker seam: no extra edge spacing before the repeated first label */
+.artist-ticker .ticker-set { justify-content: space-between; padding-left: 0; padding-right: 0; }
+@media (max-width: 700px) { .artist-ticker .ticker-set { padding-left: 0; padding-right: 0; } }
