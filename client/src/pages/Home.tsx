@@ -117,6 +117,11 @@ export default function Home() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = expandedWorkImage ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [expandedWorkImage]);
+
   return (
     <div className="site-shell">
       <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
@@ -215,7 +220,7 @@ export default function Home() {
               <div className="work-gallery-list">
                 {workCases.map((work) => <button key={work.id} type="button" className={`work-gallery-card ${activeWorkId === work.id ? "is-selected" : ""}`} onClick={() => { setActiveWorkId(work.id); setExpandedWorkImage(false); }}><span className="work-gallery-image" style={{ backgroundImage: `url(${work.image})` }} /><span className="work-gallery-card-overlay" /><span className="work-gallery-card-top"><span className="work-gallery-card-number">{work.number}</span><strong>{work.category}</strong><ArrowUpRight size={17} /></span><span className="work-gallery-card-bottom"><span>{work.title}</span></span></button>)}
               </div>
-              {(() => { const activeWork = workCases.find((work) => work.id === activeWorkId) ?? workCases[0]; return <article className="case-study-panel"><button type="button" className={`case-study-image ${expandedWorkImage ? "is-expanded" : ""}`} onClick={() => setExpandedWorkImage((expanded) => !expanded)} aria-label={expandedWorkImage ? "Reduce preview image" : "Enlarge preview image"} style={{ backgroundImage: `url(${activeWork.previewImage})` }} /><div className="case-study-content"><div className="case-study-heading"><span>{activeWork.role}</span><span>{activeWork.category}</span></div><h3>{activeWork.title}</h3><p>{activeWork.summary}</p><div className="case-study-outcome"><span>OUTCOME</span><strong>{activeWork.outcome}</strong></div><div className="case-study-tags">{activeWork.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>; })()}
+              {(() => { const activeWork = workCases.find((work) => work.id === activeWorkId) ?? workCases[0]; return <article className="case-study-panel"><button type="button" className="case-study-image" onClick={() => setExpandedWorkImage(true)} aria-label="Open preview image" style={{ backgroundImage: `url(${activeWork.previewImage})` }} /><div className="case-study-content"><div className="case-study-heading"><span>{activeWork.role}</span><span>{activeWork.category}</span></div><h3>{activeWork.title}</h3><p>{activeWork.summary}</p><div className="case-study-outcome"><span>OUTCOME</span><strong>{activeWork.outcome}</strong></div><div className="case-study-tags">{activeWork.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>; })()}
             </div>
           </div>
         </section>
@@ -232,6 +237,8 @@ export default function Home() {
             <div className="tools-note"><span>THE MISSING WORKFLOW</span><p>Explore the complete tool collection, official thumbnails and future releases on Superhive — and find free resources for artists on Gumroad.</p><div className="tools-note-links"><a className="tools-note-link" href={superhiveCreatorUrl} target="_blank" rel="noreferrer">Visit Superhive <ArrowUpRight size={17} /></a><a className="tools-note-link" href={gumroadUrl} target="_blank" rel="noreferrer">Visit Gumroad <ArrowUpRight size={17} /></a></div></div>
           </div>
         </section>
+
+        {expandedWorkImage && (() => { const activeWork = workCases.find((work) => work.id === activeWorkId) ?? workCases[0]; return <div className="work-image-lightbox" role="dialog" aria-modal="true" aria-label={`${activeWork.category} preview`} onClick={() => setExpandedWorkImage(false)}><button type="button" className="work-image-lightbox-image" onClick={() => setExpandedWorkImage(false)} aria-label="Close enlarged preview" style={{ backgroundImage: `url(${activeWork.previewImage})` }} /></div>; })()}
 
 
         <section className="contact-section section-pad" id="contact"><div className="container contact-inner"><SectionLabel>05 / GET IN TOUCH</SectionLabel><h2>Let&apos;s make the image<br /><em>work harder.</em></h2><p>For production, technical direction, workflow development or tools.</p>{formSent ? <div className="form-success"><Check size={18} /> Thanks — your message is ready to be connected.</div> : <form className="contact-form" onSubmit={(event) => { event.preventDefault(); setFormSent(true); }}><div className="form-row"><label><span>Your name</span><input type="text" name="name" placeholder="Name" required /></label><label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required /></label></div><label><span>Message</span><textarea name="message" placeholder="Tell me about the project..." rows={4} required /></label><button className="button button-dark" type="submit">Send message <ArrowUpRight size={17} /></button><small>This form is ready for a form endpoint such as Formspree or Netlify Forms.</small></form>}</div></section>

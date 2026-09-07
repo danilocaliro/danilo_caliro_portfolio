@@ -505,3 +505,10 @@ img { display: block; max-width: 100%; }
 .case-study-image.is-expanded { min-height: 420px; background-size: contain; background-repeat: no-repeat; background-color: #090b0f; cursor: zoom-out; }
 .case-study-image:focus-visible { outline: 2px solid #f18b32; outline-offset: -4px; }
 @media (max-width: 700px) { .artist-ticker .ticker-set { gap: 21px; padding-right: 21px; } .case-study-image.is-expanded { min-height: 300px; } }
+
+/* Floating Selected Works lightbox: the case-study panel remains fixed underneath */
+.work-image-lightbox { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: clamp(24px, 6vw, 84px); background: rgba(4, 6, 10, .7); backdrop-filter: blur(8px); animation: lightbox-in .22s ease-out both; cursor: zoom-out; }
+.work-image-lightbox-image { width: min(1120px, 88vw); height: min(720px, 78vh); border: 1px solid rgba(240,237,229,.3); border-radius: 2px; background-position: center; background-size: contain; background-repeat: no-repeat; background-color: #090b0f; box-shadow: 0 28px 90px rgba(0,0,0,.55); cursor: zoom-out; animation: lightbox-image-in .28s cubic-bezier(.23,1,.32,1) both; }
+@keyframes lightbox-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lightbox-image-in { from { opacity: 0; transform: scale(.86); } to { opacity: 1; transform: scale(1); } }
+@media (max-width: 700px) { .work-image-lightbox { padding: 20px; } .work-image-lightbox-image { width: 92vw; height: 64vh; } }
