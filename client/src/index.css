@@ -550,3 +550,8 @@ img { display: block; max-width: 100%; }
 /* Exact ticker seam: no extra edge spacing before the repeated first label */
 .artist-ticker .ticker-set { justify-content: space-between; padding-left: 0; padding-right: 0; }
 @media (max-width: 700px) { .artist-ticker .ticker-set { padding-left: 0; padding-right: 0; } }
+
+/* Ticker spacing normalization: identical gaps inside and at the repeated seam */
+.artist-ticker .ticker-track { width: max-content; gap: 0; }
+.artist-ticker .ticker-set { width: max-content; min-width: max-content; flex-shrink: 0; justify-content: flex-start; gap: 30px; padding: 0 30px 0 0; }
+@media (max-width: 700px) { .artist-ticker .ticker-set { gap: 21px; padding-right: 21px; } }
