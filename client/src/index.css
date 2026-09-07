@@ -525,3 +525,10 @@ img { display: block; max-width: 100%; }
 .work-image-lightbox-prev:hover, .work-image-lightbox-next:hover { transform: translateY(-50%) scale(1.05); }
 .work-image-lightbox-counter { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); padding: 7px 10px; color: rgba(240,237,229,.8); background: rgba(9,11,15,.72); font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .1em; }
 @media (max-width: 700px) { .work-image-lightbox-stage { width: 92vw; height: 64vh; } .work-image-lightbox-prev { left: 10px; } .work-image-lightbox-next { right: 10px; } .work-image-lightbox-close { top: 10px; right: 10px; } }
+
+/* Lightbox control placement refinement */
+.work-image-lightbox-arrow { width: 44px; height: 62px; }
+.work-image-lightbox-prev { left: -18px; }
+.work-image-lightbox-next { right: -18px; }
+.work-image-lightbox-counter { bottom: -38px; padding: 8px 13px; color: rgba(240,237,229,.88); background: rgba(9,11,15,.9); border: 1px solid rgba(240,237,229,.22); }
+@media (max-width: 700px) { .work-image-lightbox-prev { left: 7px; } .work-image-lightbox-next { right: 7px; } .work-image-lightbox-counter { bottom: -36px; } }
