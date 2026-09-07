@@ -22,8 +22,9 @@ const linkedinUrl = "https://www.linkedin.com/in/danilo-caliro/";
 const vimeoId = "1216793443";
 
 const navItems = [
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
+  { label: "Demoreel", href: "#reel" },
+  { label: "About me", href: "#about" },
+  { label: "Works", href: "#work" },
   { label: "The Missing Workflow", href: "#tools" },
 ];
 
