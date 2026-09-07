@@ -544,3 +544,5 @@ img { display: block; max-width: 100%; }
 .artist-ticker .ticker-set { width: 100vw; min-width: 100vw; box-sizing: border-box; justify-content: space-around; gap: 0; padding: 0 30px; }
 @keyframes ticker-loop-seamless { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
 @media (max-width: 700px) { .artist-ticker .ticker-set { padding: 0 20px; } }
+
+.artist-hero-side p { max-width: 220px; margin: 0; color: rgba(236,234,227,.58); font-family: 'DM Sans', sans-serif; font-size: 13px; line-height: 1.6; letter-spacing: 0; text-transform: none; }
