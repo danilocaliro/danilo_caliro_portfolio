@@ -13,6 +13,10 @@ import {
 const heroImage = "/assets/hero.jpg";
 const emissionImage = "/assets/emission-pro.jpg";
 const upcomingImage = "/assets/upcoming-tool.jpg";
+const emissionOfficialImage = "https://assets.superhivemarket.com/store/product/262099/image/xlarge_og-f81c24108fbdac02a484262bcca72c12.png";
+const colorSpaceOfficialImage = "https://assets.superhivemarket.com/store/product/263206/image/xlarge_og-80afdd45ad80acd114c971a73e9253fd.png";
+const gumroadUrl = "https://danilocaliro.gumroad.com";
+const uvEditProUrl = "#";
 
 // Replace these placeholders with your real URLs when ready.
 const superhiveCreatorUrl = "https://superhivemarket.com/creators/danilocaliro";
@@ -22,6 +26,7 @@ const linkedinUrl = "https://www.linkedin.com/in/danilo-caliro/";
 const vimeoId = "1216793443";
 
 const navItems = [
+  // Primary navigation follows the artist-first information hierarchy.
   { label: "Demoreel", href: "#reel" },
   { label: "About me", href: "#about" },
   { label: "Works", href: "#work" },
@@ -30,41 +35,50 @@ const navItems = [
 
 const workCases = [
   {
-    id: "light",
+    id: "entertainment",
     number: "01",
-    category: "Look Development",
-    title: "Light is a design decision.",
+    category: "Entertainment",
+    title: "Worlds built to hold attention.",
     image: heroImage,
-    role: "Look Development / Lighting",
-    summary: "A visual language built from material, colour, atmosphere and controlled contrast — designed to make the image feel intentional before it feels finished.",
-    outcome: "A flexible lookdev system for cinematic CGI frames and art-directed lighting studies.",
-    tags: ["Lookdev", "Lighting", "Rendering"],
+    role: "Look Development / Lighting / CGI",
+    summary: "Visual development, lighting and technical direction for entertainment work with a strong point of view and a clear visual world.",
+    outcome: "From first look to final frame, the image stays expressive, legible and built for the story.",
+    tags: ["Lookdev", "Lighting", "CGI"],
   },
   {
-    id: "pipeline",
+    id: "institutional",
     number: "02",
-    category: "Technical Direction",
-    title: "Systems that support the idea.",
+    category: "Institutional",
+    title: "Clarity for complex ideas.",
     image: upcomingImage,
-    role: "Pipeline TD / Technical Direction",
-    summary: "Production thinking that makes ambitious visual work easier to build, revise and deliver — without putting the creative idea second.",
-    outcome: "Clearer handoffs, repeatable workflows and more room for creative decisions inside production.",
-    tags: ["Pipeline", "Tools", "Production"],
+    role: "Technical Direction / Visual Communication",
+    summary: "Images and systems that translate complex subjects into visual experiences with structure, precision and atmosphere.",
+    outcome: "A production language that makes technical content easier to understand without flattening its character.",
+    tags: ["Direction", "Visualisation", "Pipeline"],
   },
   {
-    id: "tools",
+    id: "commercial",
     number: "03",
-    category: "Tool Development",
-    title: "Less friction, more control.",
+    category: "Commercial",
+    title: "Make the image do more.",
     image: emissionImage,
-    role: "Blender Add-on / Product Design",
-    summary: "Focused tools shaped by the friction of real image-making: fewer repetitive steps, clearer controls and workflows artists can trust.",
-    outcome: "Production-grade Blender utilities that turn technical constraints into creative leverage.",
-    tags: ["Blender", "Workflow", "Technical Art"],
+    role: "Look Development / Lighting / Rendering",
+    summary: "Art-directed CGI and image-making for brands, products and campaigns that need a memorable visual signature.",
+    outcome: "A focused visual system that gives every material, light and detail a role in the final image.",
+    tags: ["Commercial", "Shading", "Rendering"],
+  },
+  {
+    id: "cultural",
+    number: "04",
+    category: "Cultural",
+    title: "Images with a sense of place.",
+    image: heroImage,
+    role: "Visual Development / Technical Art",
+    summary: "Collaborative visual work for cultural projects, experiences and stories that ask for both sensitivity and craft.",
+    outcome: "A considered visual language that supports the subject while leaving room for discovery.",
+    tags: ["Culture", "Experience", "Visual Development"],
   },
 ];
-
-const workFilters = ["All", "Look Development", "Technical Direction", "Tool Development"];
 
 function SectionLabel({ children }: { children: string }) {
   return (
@@ -89,7 +103,6 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [formSent, setFormSent] = useState(false);
   const [activeWorkId, setActiveWorkId] = useState("light");
-  const [activeWorkFilter, setActiveWorkFilter] = useState("All");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 18);
@@ -151,7 +164,7 @@ export default function Home() {
               <span>Pipeline &amp; Tools</span>
               <span>Technical Direction</span>
             </div>
-            <div className="hero-foot reveal-up delay-3"><span>SELECTED WORK / TOOLS / 2026</span><span className="hero-foot-rule" /><span>SCROLL TO EXPLORE</span></div>
+            <div className="hero-foot reveal-up delay-3"><span className="hero-foot-rule" /><span>SCROLL TO EXPLORE</span></div>
           </div>
         </section>
 
@@ -183,21 +196,18 @@ export default function Home() {
         <section className="about-section artist-about-section section-pad" id="about">
           <div className="container about-layout">
             <div className="about-portrait"><div className="about-portrait-grid" /><div className="about-initials">TD<span> / </span>CGI</div><div className="about-portrait-label">LOOKDEV / PIPELINE / LIGHTING</div></div>
-            <div className="about-copy"><SectionLabel>02 / ABOUT THE PRACTICE</SectionLabel><h2>Creative judgement.<br /><em>Technical precision.</em></h2><p className="about-lead">I&apos;m a Look Development TD, Pipeline TD and Technical Artist with a background in 3D, lighting, rendering, photography and CGI production.</p><p>Over the years, my role has evolved from hands-on production into a broader technical and supervisory position, combining artistic vision, technical problem-solving, pipeline development and workflow optimisation.</p><p>I work across animation, television, advertising, institutional content, immersive experiences and interactive projects — from visual development and asset creation to lighting, rendering, post-production and final delivery.</p><div className="about-details"><div><span>SELECTED PRODUCTIONS</span><strong>Uanema · Digitalcomoedia · RAI · Leonardo · Thales Alenia Space · Telespazio · Arkaevision</strong></div><div><span>CORE PRACTICE</span><strong>Look Development · Lighting · Pipeline TD · Tool Development</strong></div></div><a className="inline-arrow-link" href={linkedinUrl} target="_blank" rel="noreferrer">More on LinkedIn <ArrowUpRight size={17} /></a></div>
+            <div className="about-copy"><SectionLabel>02 / ABOUT ME</SectionLabel><h2>Creative judgement.<br /><em>Technical precision.</em></h2><p className="about-lead">I&apos;m a Look Development TD, Pipeline TD and Technical Artist with a background in 3D, lighting, rendering, photography and CGI production.</p><p>Over the years, my role has evolved from hands-on production into a broader technical and supervisory position, combining artistic vision, technical problem-solving, pipeline development and workflow optimisation.</p><p>I work across animation, television, advertising, institutional content, immersive experiences and interactive projects — from visual development and asset creation to lighting, rendering, post-production and final delivery.</p><div className="about-details"><div><span>SELECTED PRODUCTIONS</span><strong>Uanema · Digitalcomoedia · RAI · Leonardo · Thales Alenia Space · Telespazio · Arkaevision · IAC · Voice of Heritages · Brancaccio · 5Senses</strong></div><div><span>CORE PRACTICE</span><strong>Look Development · Lighting · Compositing · Set Dress · Pipeline TD · Tool Development</strong></div></div><a className="inline-arrow-link" href={linkedinUrl} target="_blank" rel="noreferrer">More on LinkedIn <ArrowUpRight size={17} /></a></div>
           </div>
         </section>
 
         <section className="work-section section-pad" id="work">
           <div className="container">
-            <div className="section-heading split-heading"><div><SectionLabel>03 / SELECTED WORK</SectionLabel><h2>Building the image<br />from <em>the inside out.</em></h2></div><p>Visual development, lighting and technical direction for images that need both a point of view and a reliable way to get there.</p></div>
-            <div className="work-filter-bar" role="tablist" aria-label="Filter selected work">
-              {workFilters.map((filter) => <button key={filter} type="button" className={activeWorkFilter === filter ? "is-active" : ""} onClick={() => setActiveWorkFilter(filter)} role="tab" aria-selected={activeWorkFilter === filter}>{filter}</button>)}
-            </div>
-            <div className="work-gallery">
+            <div className="section-heading split-heading"><div><SectionLabel>03 / SELECTED WORKS</SectionLabel><h2>Four areas.<br /><em>One practice.</em></h2></div><p>Selected work across entertainment, institutional, commercial and cultural projects.</p></div>
+            <div className="work-gallery-simple">
               <div className="work-gallery-list">
-                {workCases.filter((work) => activeWorkFilter === "All" || work.category === activeWorkFilter).map((work) => <button key={work.id} type="button" className={`work-gallery-card ${activeWorkId === work.id ? "is-selected" : ""}`} onClick={() => setActiveWorkId(work.id)}><span className="work-gallery-image" style={{ backgroundImage: `url(${work.image})` }} /><span className="work-gallery-card-overlay" /><span className="work-gallery-card-top"><span>{work.number}</span><ArrowUpRight size={17} /></span><span className="work-gallery-card-bottom"><small>{work.category}</small><strong>{work.title}</strong></span></button>)}
+                {workCases.map((work) => <button key={work.id} type="button" className={`work-gallery-card ${activeWorkId === work.id ? "is-selected" : ""}`} onClick={() => setActiveWorkId(work.id)}><span className="work-gallery-image" style={{ backgroundImage: `url(${work.image})` }} /><span className="work-gallery-card-overlay" /><span className="work-gallery-card-top"><span>{work.number}</span><ArrowUpRight size={17} /></span><span className="work-gallery-card-bottom"><small>{work.category}</small><strong>{work.title}</strong></span></button>)}
               </div>
-              {(() => { const activeWork = workCases.find((work) => work.id === activeWorkId) ?? workCases[0]; return <article className="case-study-panel"><div className="case-study-image" style={{ backgroundImage: `url(${activeWork.image})` }}><span>{activeWork.number} / CASE STUDY</span></div><div className="case-study-content"><div className="case-study-heading"><span>{activeWork.role}</span><span>SELECTED WORK</span></div><h3>{activeWork.title}</h3><p>{activeWork.summary}</p><div className="case-study-outcome"><span>OUTCOME</span><strong>{activeWork.outcome}</strong></div><div className="case-study-tags">{activeWork.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>; })()}
+              {(() => { const activeWork = workCases.find((work) => work.id === activeWorkId) ?? workCases[0]; return <article className="case-study-panel"><div className="case-study-image" style={{ backgroundImage: `url(${activeWork.image})` }}><span>{activeWork.number} / CASE STUDY</span></div><div className="case-study-content"><div className="case-study-heading"><span>{activeWork.role}</span><span>{activeWork.category}</span></div><h3>{activeWork.title}</h3><p>{activeWork.summary}</p><div className="case-study-outcome"><span>OUTCOME</span><strong>{activeWork.outcome}</strong></div><div className="case-study-tags">{activeWork.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>; })()}
             </div>
           </div>
         </section>
@@ -205,20 +215,21 @@ export default function Home() {
         <section className="tools-section artist-tools-section section-pad" id="tools">
           <div className="container">
             <div className="section-heading split-heading"><div><SectionLabel>04 / THE MISSING WORKFLOW</SectionLabel><h2>Tools are part of<br /><em>the practice.</em></h2></div><p>Alongside production and supervision, I design focused Blender tools that solve the friction I know from working inside the image.</p></div>
-            <div className="tools-grid">
-              <article className="tool-card tool-card-featured"><div className="tool-visual"><img src={emissionImage} alt="Abstract emissive CGI render for Emission Pro" loading="lazy" /><div className="tool-visual-badge"><Check size={14} /> Available now</div><span className="tool-number">01</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER / SHADING</span><span>EMISSION PRO</span></div><h3>Emission Pro</h3><p className="tool-lead">An advanced shading system for Blender, built to make emissive looks faster to build, easier to control and more consistent to art-direct.</p><div className="benefit-list"><span><Check size={15} /> Centralised emission control</span><span><Check size={15} /> Designed for look development</span><span><Check size={15} /> Production-minded workflow</span></div><div className="tool-actions"><MarketplaceLink href={emissionProUrl}>View on Superhive</MarketplaceLink></div></div></article>
-              <article className="tool-card tool-card-secondary"><div className="tool-visual tool-visual-secondary"><div className="visual-lines" /><span className="tool-number">02</span><span className="visual-caption">BLENDER / COLOR MANAGEMENT</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>AVAILABLE NOW</span><span>COLOR SPACE CONVERTER</span></div><h3>Color Space Converter</h3><p className="tool-lead">A focused Blender utility for moving between colour spaces with more clarity and control inside the production workflow.</p><div className="benefit-list"><span><Check size={15} /> Clearer colour management</span><span><Check size={15} /> Built for production workflows</span><span><Check size={15} /> Less technical friction</span></div><div className="tool-actions"><MarketplaceLink href={colorSpaceConverterUrl}>View on Superhive</MarketplaceLink></div></div></article>
+            <div className="tools-grid tools-grid-four">
+              <article className="tool-card tool-card-featured"><div className="tool-visual"><img src={emissionOfficialImage} alt="Official Emission Pro thumbnail from Superhive" loading="lazy" /><div className="tool-visual-badge"><Check size={14} /> Available now</div><span className="tool-number">01</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER / SHADING</span><span>EMISSION PRO</span></div><h3>Emission Pro</h3><p className="tool-lead">An advanced shader system for Blender, built to make emissive looks faster to build, easier to control and more consistent to art-direct.</p><div className="tool-actions"><MarketplaceLink href={emissionProUrl}>View on Superhive</MarketplaceLink></div></div></article>
+              <article className="tool-card"><div className="tool-visual"><img src={colorSpaceOfficialImage} alt="Official Color Space Converter thumbnail from Superhive" loading="lazy" /><div className="tool-visual-badge"><Check size={14} /> Available now</div><span className="tool-number">02</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER / COLOR MANAGEMENT</span><span>COLOR SPACE CONVERTER</span></div><h3>Color Space Converter</h3><p className="tool-lead">A focused Blender utility for moving between colour spaces with clarity and control inside the production workflow.</p><div className="tool-actions"><MarketplaceLink href={colorSpaceConverterUrl}>View on Superhive</MarketplaceLink></div></div></article>
+              <article className="tool-card"><div className="tool-visual"><img src={upcomingImage} alt="UV Edit Pro preview" loading="lazy" /><div className="tool-visual-badge"><Check size={14} /> Ready to publish</div><span className="tool-number">03</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER / UV MAPPING</span><span>UV EDIT PRO</span></div><h3>UV Edit Pro</h3><p className="tool-lead">An industry-minded UV mapping workflow for Blender, bringing focused editing functions into a faster, more direct interface.</p><div className="tool-actions"><MarketplaceLink href={uvEditProUrl}>Coming to Superhive</MarketplaceLink></div></div></article>
+              <article className="tool-card tool-card-wip"><div className="tool-visual tool-visual-secondary"><div className="visual-lines" /><span className="tool-number">04</span><span className="visual-caption">BLENDER / WORK IN PROGRESS</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>IN DEVELOPMENT</span><span>WORK IN PROGRESS</span></div><h3>Work in progress</h3><p className="tool-lead">A new tool is taking shape behind the scenes. More soon.</p></div></article>
             </div>
-            <div className="tools-note"><span>THE MISSING WORKFLOW</span><p>Explore the complete tool collection, official thumbnails and future releases on the Superhive creator page.</p><a className="tools-note-link" href={superhiveCreatorUrl} target="_blank" rel="noreferrer">Visit the collection <ArrowUpRight size={17} /></a></div>
+            <div className="tools-note"><span>THE MISSING WORKFLOW</span><p>Explore the complete tool collection, official thumbnails and future releases on Superhive — and find free resources for artists on Gumroad.</p><div className="tools-note-links"><a className="tools-note-link" href={superhiveCreatorUrl} target="_blank" rel="noreferrer">Visit Superhive <ArrowUpRight size={17} /></a><a className="tools-note-link" href={gumroadUrl} target="_blank" rel="noreferrer">Visit Gumroad <ArrowUpRight size={17} /></a></div></div>
           </div>
         </section>
 
-        <section className="upcoming-section section-pad" id="upcoming"><div className="container"><div className="upcoming-card"><div className="upcoming-copy"><SectionLabel>05 / IN DEVELOPMENT</SectionLabel><span className="upcoming-kicker">NEXT RELEASE / 03</span><h2>A more powerful<br /><em>way to work.</em></h2><p>Another tool is taking shape behind the scenes — designed to push Blender workflows further, with the same focus on clarity, control and real production value.</p><a className="button button-outline" href={linkedinUrl} target="_blank" rel="noreferrer">Follow the release <ArrowUpRight size={17} /></a></div><div className="upcoming-visual"><img src={upcomingImage} alt="Abstract geometric teaser for the upcoming Blender add-on" loading="lazy" /><div className="upcoming-scanline" /><span className="upcoming-visual-label">WORK IN PROGRESS / 2026</span></div></div></div></section>
 
-        <section className="contact-section section-pad" id="contact"><div className="container contact-inner"><SectionLabel>06 / CONTACT</SectionLabel><h2>Let&apos;s make the image<br /><em>work harder.</em></h2><p>For production, technical direction, workflow development or tools.</p>{formSent ? <div className="form-success"><Check size={18} /> Thanks — your message is ready to be connected.</div> : <form className="contact-form" onSubmit={(event) => { event.preventDefault(); setFormSent(true); }}><div className="form-row"><label><span>Your name</span><input type="text" name="name" placeholder="Name" required /></label><label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required /></label></div><label><span>Message</span><textarea name="message" placeholder="Tell me about the project..." rows={4} required /></label><button className="button button-dark" type="submit">Send message <ArrowUpRight size={17} /></button><small>This form is ready for a form endpoint such as Formspree or Netlify Forms.</small></form>}</div></section>
+        <section className="contact-section section-pad" id="contact"><div className="container contact-inner"><SectionLabel>05 / GET IN TOUCH</SectionLabel><h2>Let&apos;s make the image<br /><em>work harder.</em></h2><p>For production, technical direction, workflow development or tools.</p>{formSent ? <div className="form-success"><Check size={18} /> Thanks — your message is ready to be connected.</div> : <form className="contact-form" onSubmit={(event) => { event.preventDefault(); setFormSent(true); }}><div className="form-row"><label><span>Your name</span><input type="text" name="name" placeholder="Name" required /></label><label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required /></label></div><label><span>Message</span><textarea name="message" placeholder="Tell me about the project..." rows={4} required /></label><button className="button button-dark" type="submit">Send message <ArrowUpRight size={17} /></button><small>This form is ready for a form endpoint such as Formspree or Netlify Forms.</small></form>}</div></section>
       </main>
 
-      <footer className="site-footer" style={{textAlign: 'center'}}><div className="container footer-inner" style={{textAlign: 'center'}}><span className="footer-brand" style={{textAlign: 'center'}}>DANILO CALIRO</span><span style={{textAlign: 'center'}}>© 2026</span><div className="footer-links" style={{textAlign: 'center'}}><a href={linkedinUrl} target="_blank" rel="noreferrer" style={{textAlign: 'center'}}>LinkedIn</a><a href={superhiveCreatorUrl} target="_blank" rel="noreferrer" style={{textAlign: 'center'}}>Superhive</a></div></div></footer>
+      <footer className="site-footer" style={{textAlign: 'center'}}><div className="container footer-inner" style={{textAlign: 'center'}}><span className="footer-brand" style={{textAlign: 'center'}}>DANILO CALIRO</span><span style={{textAlign: 'center'}}>© 2026</span><div className="footer-links" style={{textAlign: 'center'}}><a href={linkedinUrl} target="_blank" rel="noreferrer" style={{textAlign: 'center'}}>LinkedIn</a><a href={superhiveCreatorUrl} target="_blank" rel="noreferrer" style={{textAlign: 'center'}}>Superhive</a><a href={gumroadUrl} target="_blank" rel="noreferrer" style={{textAlign: 'center'}}>Gumroad</a></div></div></footer>
     </div>
   );
 }

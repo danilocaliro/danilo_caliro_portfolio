@@ -470,3 +470,16 @@ img { display: block; max-width: 100%; }
 .case-study-tags span { padding: 6px 9px; border: 1px solid rgba(240,237,229,.17); color: rgba(240,237,229,.6); font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; }
 @media (max-width: 980px) { .work-gallery { grid-template-columns: 1fr; } .work-gallery-list { grid-template-columns: repeat(3, 1fr); } .work-gallery-card { min-height: 160px; } .case-study-panel { min-height: 490px; } }
 @media (max-width: 700px) { .work-filter-bar { margin-top: -12px; } .work-filter-bar button { font-size: 8px; padding: 8px 10px; } .work-gallery-list { grid-template-columns: 1fr; } .work-gallery-card { min-height: 145px; } .work-gallery-card:hover, .work-gallery-card.is-selected { transform: none; } .case-study-panel { min-height: 560px; } .case-study-image { min-height: 250px; } .case-study-content { padding: 22px 19px; } }
+
+/* Portfolio information architecture refinements */
+.tools-grid-four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tools-grid-four .tool-visual { height: 260px; }
+.tools-grid-four .tool-card-body { padding: 23px 24px 25px; }
+.tools-grid-four .tool-card h3 { font-size: 30px; margin-top: 15px; }
+.tools-grid-four .tool-card-wip { background: #11141a; }
+.tools-note-links { display: flex; flex-wrap: wrap; gap: 24px; }
+.work-gallery-simple { display: grid; grid-template-columns: .84fr 1.16fr; gap: 18px; align-items: stretch; }
+.work-gallery-simple .work-gallery-list { grid-template-columns: 1fr; }
+.work-gallery-simple .work-gallery-card { min-height: 118px; }
+@media (max-width: 980px) { .tools-grid-four { grid-template-columns: repeat(2, 1fr); } .work-gallery-simple { grid-template-columns: 1fr; } .work-gallery-simple .work-gallery-list { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) { .tools-grid-four { grid-template-columns: 1fr; } .tools-grid-four .tool-visual { height: 230px; } }
