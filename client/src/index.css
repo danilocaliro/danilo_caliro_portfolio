@@ -537,3 +537,10 @@ img { display: block; max-width: 100%; }
 .tools-grid-four .tool-visual { height: auto; min-height: 0; aspect-ratio: 2 / 1; }
 .tools-grid-four .tool-visual img { object-fit: cover; }
 @media (max-width: 700px) { .tools-grid-four .tool-visual { height: auto; aspect-ratio: 2 / 1; } }
+
+/* Seamless ticker: two identical viewport-width sets, no gaps at the loop seam */
+.artist-ticker { background: #f0ede5; }
+.artist-ticker .ticker-track { width: max-content; gap: 0; animation: ticker-loop-seamless 34s linear infinite; will-change: transform; }
+.artist-ticker .ticker-set { width: 100vw; min-width: 100vw; box-sizing: border-box; justify-content: space-around; gap: 0; padding: 0 30px; }
+@keyframes ticker-loop-seamless { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
+@media (max-width: 700px) { .artist-ticker .ticker-set { padding: 0 20px; } }

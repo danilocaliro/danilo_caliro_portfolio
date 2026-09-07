@@ -68,7 +68,7 @@ const workCases = [
     id: "commercial",
     number: "03",
     category: "Commercial",
-    title: "Make the image do more.",
+    title: "Let the image do more.",
     image: "/assets/work-commercial-thumb.jpg",
     previewImage: "/assets/work-commercial-preview.jpg",
     galleryImages: ["/assets/work-commercial-preview.jpg", "/assets/work-commercial-thumb.jpg"],
