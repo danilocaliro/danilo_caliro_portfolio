@@ -12,7 +12,7 @@ import {
   X,
 } from "lucide-react";
 
-const heroImage = "/assets/hero-chiaroscuro.jpg";
+const heroImage = "/assets/hero-chiaroscuro.webp";
 const emissionImage = "/assets/emission-pro.jpg";
 const upcomingImage = "/assets/upcoming-tool.jpg";
 const emissionOfficialImage = "https://assets.superhivemarket.com/store/product/262099/image/xlarge_og-f81c24108fbdac02a484262bcca72c12.png";
