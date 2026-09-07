@@ -40,8 +40,9 @@ const workCases = [
     id: "entertainment",
     number: "01",
     category: "Entertainment",
-    title: "Worlds built to hold attention.",
-    image: heroImage,
+    title: "Stories in light.",
+    image: "/assets/work-entertainment-thumb.jpg",
+    previewImage: "/assets/work-entertainment-preview.jpg",
     role: "Look Development / Lighting / CGI",
     summary: "Series TV, CGI and VFX work shaped through look development, lighting and compositing — building visual worlds that can hold a story from first frame to final delivery.",
     outcome: "A coherent visual language for narrative work, balancing character, atmosphere and technical control.",
@@ -51,8 +52,9 @@ const workCases = [
     id: "institutional",
     number: "02",
     category: "Institutional",
-    title: "Clarity for complex ideas.",
-    image: upcomingImage,
+    title: "Making the complex clear.",
+    image: "/assets/work-institutional-thumb.jpg",
+    previewImage: "/assets/work-institutional-preview.jpg",
     role: "Technical Direction / Visual Communication",
     summary: "Films and visual products for organisations such as Leonardo and Thales Alenia Space, where technical subjects need clarity, credibility and visual impact.",
     outcome: "Complex information translated into precise, engaging images that communicate with authority.",
@@ -63,7 +65,8 @@ const workCases = [
     number: "03",
     category: "Commercial",
     title: "Make the image do more.",
-    image: emissionImage,
+    image: "/assets/work-commercial-thumb.jpg",
+    previewImage: "/assets/work-commercial-preview.jpg",
     role: "Look Development / Lighting / Rendering",
     summary: "Commercial CGI for campaigns including the Caffè Borbone spot, created entirely in a cartoon-driven visual language with controlled design and animation.",
     outcome: "A distinctive world where stylisation, timing and production craft work together to make the brand memorable.",
@@ -73,8 +76,9 @@ const workCases = [
     id: "cultural",
     number: "04",
     category: "Cultural",
-    title: "Images with a sense of place.",
-    image: heroImage,
+    title: "Spaces to step into.",
+    image: "/assets/work-cultural-thumb.jpg",
+    previewImage: "/assets/work-cultural-preview.jpg",
     role: "Visual Development / Technical Art",
     summary: "Projects dedicated to culture and immersive experiences across VR, XR and MR, connecting visual storytelling with presence, space and interaction.",
     outcome: "Worlds designed to be explored — not only watched — with a visual language that serves the subject and the experience.",
@@ -105,6 +109,7 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [formSent, setFormSent] = useState(false);
   const [activeWorkId, setActiveWorkId] = useState("entertainment");
+  const [expandedWorkImage, setExpandedWorkImage] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 18);
@@ -172,7 +177,7 @@ export default function Home() {
         </section>
 
         <section className="artist-ticker" aria-label="Disciplines">
-          <div className="ticker-track"><span>LOOK DEVELOPMENT</span><i>✳</i><span>LIGHTING</span><i>✳</i><span>RENDERING</span><i>✳</i><span>PIPELINE TD</span><i>✳</i><span>TECHNICAL ART</span><i>✳</i><span>LOOK DEVELOPMENT</span><i>✳</i></div>
+          <div className="ticker-track"><div className="ticker-set"><span>LOOK DEVELOPMENT</span><i>✳</i><span>LIGHTING</span><i>✳</i><span>COMPOSITING</span><i>✳</i><span>RENDERING</span><i>✳</i><span>PIPELINE TD</span><i>✳</i><span>TECHNICAL ART</span><i>✳</i></div><div className="ticker-set" aria-hidden="true"><span>LOOK DEVELOPMENT</span><i>✳</i><span>LIGHTING</span><i>✳</i><span>COMPOSITING</span><i>✳</i><span>RENDERING</span><i>✳</i><span>PIPELINE TD</span><i>✳</i><span>TECHNICAL ART</span><i>✳</i></div></div>
         </section>
 
         <section className="reel-section artist-reel-section section-pad" id="reel">
@@ -208,9 +213,9 @@ export default function Home() {
             <div className="section-heading split-heading"><div><SectionLabel>03 / SELECTED WORKS</SectionLabel><h2>Four areas.<br /><em>One practice.</em></h2></div><p>Selected work across entertainment, institutional, commercial and cultural projects.</p></div>
             <div className="work-gallery-simple">
               <div className="work-gallery-list">
-                {workCases.map((work) => <button key={work.id} type="button" className={`work-gallery-card ${activeWorkId === work.id ? "is-selected" : ""}`} onClick={() => setActiveWorkId(work.id)}><span className="work-gallery-image" style={{ backgroundImage: `url(${work.image})` }} /><span className="work-gallery-card-overlay" /><span className="work-gallery-card-top"><span className="work-gallery-card-number">{work.number}</span><strong>{work.category}</strong><ArrowUpRight size={17} /></span><span className="work-gallery-card-bottom"><span>{work.title}</span></span></button>)}
+                {workCases.map((work) => <button key={work.id} type="button" className={`work-gallery-card ${activeWorkId === work.id ? "is-selected" : ""}`} onClick={() => { setActiveWorkId(work.id); setExpandedWorkImage(false); }}><span className="work-gallery-image" style={{ backgroundImage: `url(${work.image})` }} /><span className="work-gallery-card-overlay" /><span className="work-gallery-card-top"><span className="work-gallery-card-number">{work.number}</span><strong>{work.category}</strong><ArrowUpRight size={17} /></span><span className="work-gallery-card-bottom"><span>{work.title}</span></span></button>)}
               </div>
-              {(() => { const activeWork = workCases.find((work) => work.id === activeWorkId) ?? workCases[0]; return <article className="case-study-panel"><div className="case-study-image" style={{ backgroundImage: `url(${activeWork.image})` }}><span>{activeWork.number} / CASE STUDY</span></div><div className="case-study-content"><div className="case-study-heading"><span>{activeWork.role}</span><span>{activeWork.category}</span></div><h3>{activeWork.title}</h3><p>{activeWork.summary}</p><div className="case-study-outcome"><span>OUTCOME</span><strong>{activeWork.outcome}</strong></div><div className="case-study-tags">{activeWork.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>; })()}
+              {(() => { const activeWork = workCases.find((work) => work.id === activeWorkId) ?? workCases[0]; return <article className="case-study-panel"><button type="button" className={`case-study-image ${expandedWorkImage ? "is-expanded" : ""}`} onClick={() => setExpandedWorkImage((expanded) => !expanded)} aria-label={expandedWorkImage ? "Reduce preview image" : "Enlarge preview image"} style={{ backgroundImage: `url(${activeWork.previewImage})` }} /><div className="case-study-content"><div className="case-study-heading"><span>{activeWork.role}</span><span>{activeWork.category}</span></div><h3>{activeWork.title}</h3><p>{activeWork.summary}</p><div className="case-study-outcome"><span>OUTCOME</span><strong>{activeWork.outcome}</strong></div><div className="case-study-tags">{activeWork.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>; })()}
             </div>
           </div>
         </section>

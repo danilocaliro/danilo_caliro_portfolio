@@ -495,3 +495,13 @@ img { display: block; max-width: 100%; }
 .work-gallery-simple .work-gallery-card-bottom span { display: block; max-width: 420px; color: rgba(240,237,229,.82); font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -.05em; line-height: 1.05; }
 .work-gallery-card-number { color: #f18b32; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .08em; }
 @media (max-width: 700px) { .artist-hero-art { background-position: 64% center; } .work-gallery-simple .work-gallery-card { height: 124px; min-height: 124px; } }
+
+/* Infinite skills ticker and clickable Selected Works preview */
+.artist-ticker { overflow: hidden; }
+.artist-ticker .ticker-track { display: flex; width: max-content; animation: ticker-loop 34s linear infinite; }
+.artist-ticker .ticker-set { display: flex; align-items: center; gap: 30px; padding-right: 30px; flex-shrink: 0; }
+@keyframes ticker-loop { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.case-study-image { display: block; width: 100%; border: 0; padding: 0; cursor: zoom-in; transition: min-height .35s cubic-bezier(.23,1,.32,1), background-size .35s ease; }
+.case-study-image.is-expanded { min-height: 420px; background-size: contain; background-repeat: no-repeat; background-color: #090b0f; cursor: zoom-out; }
+.case-study-image:focus-visible { outline: 2px solid #f18b32; outline-offset: -4px; }
+@media (max-width: 700px) { .artist-ticker .ticker-set { gap: 21px; padding-right: 21px; } .case-study-image.is-expanded { min-height: 300px; } }
