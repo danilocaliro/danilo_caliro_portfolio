@@ -532,3 +532,8 @@ img { display: block; max-width: 100%; }
 .work-image-lightbox-next { right: -18px; }
 .work-image-lightbox-counter { bottom: -38px; padding: 8px 13px; color: rgba(240,237,229,.88); background: rgba(9,11,15,.9); border: 1px solid rgba(240,237,229,.22); }
 @media (max-width: 700px) { .work-image-lightbox-prev { left: 7px; } .work-image-lightbox-next { right: 7px; } .work-image-lightbox-counter { bottom: -36px; } }
+
+/* Superhive thumbnail proportion */
+.tools-grid-four .tool-visual { height: auto; min-height: 0; aspect-ratio: 2 / 1; }
+.tools-grid-four .tool-visual img { object-fit: cover; }
+@media (max-width: 700px) { .tools-grid-four .tool-visual { height: auto; aspect-ratio: 2 / 1; } }
