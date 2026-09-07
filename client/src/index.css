@@ -558,3 +558,6 @@ img { display: block; max-width: 100%; }
 
 .work-image-lightbox-stage { touch-action: pan-y; }
 .work-image-lightbox-image { touch-action: pan-y; }
+
+.about-links { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }
+@media (max-width: 700px) { .about-links { align-items: flex-start; flex-direction: column; gap: 14px; } }
