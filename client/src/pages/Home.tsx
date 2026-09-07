@@ -10,12 +10,14 @@ import {
   X,
 } from "lucide-react";
 
-const heroImage = "/assets/hero.jpg";
+const heroImage = "/assets/hero-chiaroscuro.jpg";
 const emissionImage = "/assets/emission-pro.jpg";
 const upcomingImage = "/assets/upcoming-tool.jpg";
 const emissionOfficialImage = "https://assets.superhivemarket.com/store/product/262099/image/xlarge_og-f81c24108fbdac02a484262bcca72c12.png";
 const colorSpaceOfficialImage = "https://assets.superhivemarket.com/store/product/263206/image/xlarge_og-80afdd45ad80acd114c971a73e9253fd.png";
 const gumroadUrl = "https://danilocaliro.gumroad.com";
+const gumroadEmissionUrl = "https://danilocaliro.gumroad.com/l/emission_pro?layout=profile";
+const gumroadColorSpaceUrl = "https://danilocaliro.gumroad.com/l/color_space_converter?layout=profile";
 const uvEditProUrl = "#";
 
 // Replace these placeholders with your real URLs when ready.
@@ -41,8 +43,8 @@ const workCases = [
     title: "Worlds built to hold attention.",
     image: heroImage,
     role: "Look Development / Lighting / CGI",
-    summary: "Visual development, lighting and technical direction for entertainment work with a strong point of view and a clear visual world.",
-    outcome: "From first look to final frame, the image stays expressive, legible and built for the story.",
+    summary: "Series TV, CGI and VFX work shaped through look development, lighting and compositing — building visual worlds that can hold a story from first frame to final delivery.",
+    outcome: "A coherent visual language for narrative work, balancing character, atmosphere and technical control.",
     tags: ["Lookdev", "Lighting", "CGI"],
   },
   {
@@ -52,8 +54,8 @@ const workCases = [
     title: "Clarity for complex ideas.",
     image: upcomingImage,
     role: "Technical Direction / Visual Communication",
-    summary: "Images and systems that translate complex subjects into visual experiences with structure, precision and atmosphere.",
-    outcome: "A production language that makes technical content easier to understand without flattening its character.",
+    summary: "Films and visual products for organisations such as Leonardo and Thales Alenia Space, where technical subjects need clarity, credibility and visual impact.",
+    outcome: "Complex information translated into precise, engaging images that communicate with authority.",
     tags: ["Direction", "Visualisation", "Pipeline"],
   },
   {
@@ -63,8 +65,8 @@ const workCases = [
     title: "Make the image do more.",
     image: emissionImage,
     role: "Look Development / Lighting / Rendering",
-    summary: "Art-directed CGI and image-making for brands, products and campaigns that need a memorable visual signature.",
-    outcome: "A focused visual system that gives every material, light and detail a role in the final image.",
+    summary: "Commercial CGI for campaigns including the Caffè Borbone spot, created entirely in a cartoon-driven visual language with controlled design and animation.",
+    outcome: "A distinctive world where stylisation, timing and production craft work together to make the brand memorable.",
     tags: ["Commercial", "Shading", "Rendering"],
   },
   {
@@ -74,8 +76,8 @@ const workCases = [
     title: "Images with a sense of place.",
     image: heroImage,
     role: "Visual Development / Technical Art",
-    summary: "Collaborative visual work for cultural projects, experiences and stories that ask for both sensitivity and craft.",
-    outcome: "A considered visual language that supports the subject while leaving room for discovery.",
+    summary: "Projects dedicated to culture and immersive experiences across VR, XR and MR, connecting visual storytelling with presence, space and interaction.",
+    outcome: "Worlds designed to be explored — not only watched — with a visual language that serves the subject and the experience.",
     tags: ["Culture", "Experience", "Visual Development"],
   },
 ];
@@ -102,7 +104,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [formSent, setFormSent] = useState(false);
-  const [activeWorkId, setActiveWorkId] = useState("light");
+  const [activeWorkId, setActiveWorkId] = useState("entertainment");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 18);
@@ -149,7 +151,7 @@ export default function Home() {
           <div className="artist-hero-grid" />
           <div className="container artist-hero-content">
             <div className="artist-hero-copy">
-              <div className="eyebrow reveal-up"><span className="eyebrow-line" /> LOOK DEVELOPMENT / LIGHTING / TECHNICAL DIRECTION / PIPELINE</div>
+              <div className="eyebrow reveal-up"><span className="eyebrow-line" /> LOOK DEVELOPMENT / LIGHTING / COMPOSITING / TECHNICAL DIRECTION / PIPELINE</div>
               <h1 className="artist-hero-title reveal-up delay-1">Images with<br /><em>intent.</em></h1>
               <p className="artist-hero-intro reveal-up delay-2">I shape how images look and how they're made — lighting, lookdev, and the tools that hold a pipeline together.</p>
               <div className="hero-actions reveal-up delay-3">
@@ -161,6 +163,7 @@ export default function Home() {
               <span className="artist-hero-side-kicker">A multidisciplinary practice</span>
               <span>Look Development</span>
               <span>Lighting &amp; Rendering</span>
+              <span>Compositing</span>
               <span>Pipeline &amp; Tools</span>
               <span>Technical Direction</span>
             </div>
@@ -205,7 +208,7 @@ export default function Home() {
             <div className="section-heading split-heading"><div><SectionLabel>03 / SELECTED WORKS</SectionLabel><h2>Four areas.<br /><em>One practice.</em></h2></div><p>Selected work across entertainment, institutional, commercial and cultural projects.</p></div>
             <div className="work-gallery-simple">
               <div className="work-gallery-list">
-                {workCases.map((work) => <button key={work.id} type="button" className={`work-gallery-card ${activeWorkId === work.id ? "is-selected" : ""}`} onClick={() => setActiveWorkId(work.id)}><span className="work-gallery-image" style={{ backgroundImage: `url(${work.image})` }} /><span className="work-gallery-card-overlay" /><span className="work-gallery-card-top"><span>{work.number}</span><ArrowUpRight size={17} /></span><span className="work-gallery-card-bottom"><small>{work.category}</small><strong>{work.title}</strong></span></button>)}
+                {workCases.map((work) => <button key={work.id} type="button" className={`work-gallery-card ${activeWorkId === work.id ? "is-selected" : ""}`} onClick={() => setActiveWorkId(work.id)}><span className="work-gallery-image" style={{ backgroundImage: `url(${work.image})` }} /><span className="work-gallery-card-overlay" /><span className="work-gallery-card-top"><span className="work-gallery-card-number">{work.number}</span><strong>{work.category}</strong><ArrowUpRight size={17} /></span><span className="work-gallery-card-bottom"><span>{work.title}</span></span></button>)}
               </div>
               {(() => { const activeWork = workCases.find((work) => work.id === activeWorkId) ?? workCases[0]; return <article className="case-study-panel"><div className="case-study-image" style={{ backgroundImage: `url(${activeWork.image})` }}><span>{activeWork.number} / CASE STUDY</span></div><div className="case-study-content"><div className="case-study-heading"><span>{activeWork.role}</span><span>{activeWork.category}</span></div><h3>{activeWork.title}</h3><p>{activeWork.summary}</p><div className="case-study-outcome"><span>OUTCOME</span><strong>{activeWork.outcome}</strong></div><div className="case-study-tags">{activeWork.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>; })()}
             </div>
@@ -216,9 +219,9 @@ export default function Home() {
           <div className="container">
             <div className="section-heading split-heading"><div><SectionLabel>04 / THE MISSING WORKFLOW</SectionLabel><h2>Tools are part of<br /><em>the practice.</em></h2></div><p>Alongside production and supervision, I design focused Blender tools that solve the friction I know from working inside the image.</p></div>
             <div className="tools-grid tools-grid-four">
-              <article className="tool-card tool-card-featured"><div className="tool-visual"><img src={emissionOfficialImage} alt="Official Emission Pro thumbnail from Superhive" loading="lazy" /><div className="tool-visual-badge"><Check size={14} /> Available now</div><span className="tool-number">01</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER / SHADING</span><span>EMISSION PRO</span></div><h3>Emission Pro</h3><p className="tool-lead">An advanced shader system for Blender, built to make emissive looks faster to build, easier to control and more consistent to art-direct.</p><div className="tool-actions"><MarketplaceLink href={emissionProUrl}>View on Superhive</MarketplaceLink></div></div></article>
-              <article className="tool-card"><div className="tool-visual"><img src={colorSpaceOfficialImage} alt="Official Color Space Converter thumbnail from Superhive" loading="lazy" /><div className="tool-visual-badge"><Check size={14} /> Available now</div><span className="tool-number">02</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER / COLOR MANAGEMENT</span><span>COLOR SPACE CONVERTER</span></div><h3>Color Space Converter</h3><p className="tool-lead">A focused Blender utility for moving between colour spaces with clarity and control inside the production workflow.</p><div className="tool-actions"><MarketplaceLink href={colorSpaceConverterUrl}>View on Superhive</MarketplaceLink></div></div></article>
-              <article className="tool-card"><div className="tool-visual"><img src={upcomingImage} alt="UV Edit Pro preview" loading="lazy" /><div className="tool-visual-badge"><Check size={14} /> Ready to publish</div><span className="tool-number">03</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER / UV MAPPING</span><span>UV EDIT PRO</span></div><h3>UV Edit Pro</h3><p className="tool-lead">An industry-minded UV mapping workflow for Blender, bringing focused editing functions into a faster, more direct interface.</p><div className="tool-actions"><MarketplaceLink href={uvEditProUrl}>Coming to Superhive</MarketplaceLink></div></div></article>
+              <article className="tool-card tool-card-featured"><div className="tool-visual"><img src={emissionOfficialImage} alt="Official Emission Pro thumbnail from Superhive" loading="lazy" /><span className="tool-number">01</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER / SHADING</span><span>EMISSION PRO</span></div><h3>Emission Pro</h3><p className="tool-lead">An advanced shader system for Blender, built to make emissive looks faster to build, easier to control and more consistent to art-direct.</p><div className="tool-actions"><MarketplaceLink href={emissionProUrl}>View on Superhive</MarketplaceLink><MarketplaceLink href={gumroadEmissionUrl}>View on Gumroad</MarketplaceLink></div></div></article>
+              <article className="tool-card"><div className="tool-visual"><img src={colorSpaceOfficialImage} alt="Official Color Space Converter thumbnail from Superhive" loading="lazy" /><span className="tool-number">02</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER / COLOR MANAGEMENT</span><span>COLOR SPACE CONVERTER</span></div><h3>Color Space Converter</h3><p className="tool-lead">A focused Blender utility for moving between colour spaces with clarity and control inside the production workflow.</p><div className="tool-actions"><MarketplaceLink href={colorSpaceConverterUrl}>View on Superhive</MarketplaceLink><MarketplaceLink href={gumroadColorSpaceUrl}>View on Gumroad</MarketplaceLink></div></div></article>
+              <article className="tool-card"><div className="tool-visual"><img src={upcomingImage} alt="UV Edit Pro preview" loading="lazy" /><span className="tool-number">03</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER / UV MAPPING</span><span>UV EDIT PRO</span></div><h3>UV Edit Pro</h3><p className="tool-lead">An industry-minded UV mapping workflow for Blender, bringing focused editing functions into a faster, more direct interface.</p><div className="tool-actions"><MarketplaceLink href={uvEditProUrl}>Coming to Superhive</MarketplaceLink><MarketplaceLink href={gumroadUrl}>Visit Gumroad</MarketplaceLink></div></div></article>
               <article className="tool-card tool-card-wip"><div className="tool-visual tool-visual-secondary"><div className="visual-lines" /><span className="tool-number">04</span><span className="visual-caption">BLENDER / WORK IN PROGRESS</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>IN DEVELOPMENT</span><span>WORK IN PROGRESS</span></div><h3>Work in progress</h3><p className="tool-lead">A new tool is taking shape behind the scenes. More soon.</p></div></article>
             </div>
             <div className="tools-note"><span>THE MISSING WORKFLOW</span><p>Explore the complete tool collection, official thumbnails and future releases on Superhive — and find free resources for artists on Gumroad.</p><div className="tools-note-links"><a className="tools-note-link" href={superhiveCreatorUrl} target="_blank" rel="noreferrer">Visit Superhive <ArrowUpRight size={17} /></a><a className="tools-note-link" href={gumroadUrl} target="_blank" rel="noreferrer">Visit Gumroad <ArrowUpRight size={17} /></a></div></div>

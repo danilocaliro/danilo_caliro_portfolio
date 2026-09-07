@@ -483,3 +483,15 @@ img { display: block; max-width: 100%; }
 .work-gallery-simple .work-gallery-card { min-height: 118px; }
 @media (max-width: 980px) { .tools-grid-four { grid-template-columns: repeat(2, 1fr); } .work-gallery-simple { grid-template-columns: 1fr; } .work-gallery-simple .work-gallery-list { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 700px) { .tools-grid-four { grid-template-columns: 1fr; } .tools-grid-four .tool-visual { height: 230px; } }
+
+/* Chiaroscuro hero and Selected Works card hierarchy */
+.artist-hero-art { background-position: center right; }
+.artist-hero-art-wash { background: linear-gradient(90deg, #0b0d12 0%, rgba(11,13,18,.86) 24%, rgba(11,13,18,.35) 57%, rgba(11,13,18,.1) 100%), linear-gradient(0deg, #0b0d12 0%, transparent 33%, rgba(11,13,18,.42) 100%); }
+.work-gallery-simple .work-gallery-card { min-height: 118px; height: 118px; }
+.work-gallery-simple .work-gallery-card-top { top: 15px; align-items: center; justify-content: flex-start; gap: 12px; }
+.work-gallery-simple .work-gallery-card-top strong { color: rgba(240,237,229,.9); font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
+.work-gallery-simple .work-gallery-card-top svg { margin-left: auto; }
+.work-gallery-simple .work-gallery-card-bottom { right: 16px; bottom: 15px; display: block; }
+.work-gallery-simple .work-gallery-card-bottom span { display: block; max-width: 420px; color: rgba(240,237,229,.82); font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -.05em; line-height: 1.05; }
+.work-gallery-card-number { color: #f18b32; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .08em; }
+@media (max-width: 700px) { .artist-hero-art { background-position: 64% center; } .work-gallery-simple .work-gallery-card { height: 124px; min-height: 124px; } }
