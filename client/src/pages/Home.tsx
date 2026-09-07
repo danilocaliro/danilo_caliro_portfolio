@@ -4,6 +4,8 @@ import {
   ArrowUpRight,
   Check,
   ChevronDown,
+  ChevronLeft,
+  ChevronRight,
   ExternalLink,
   Menu,
   Play,
@@ -43,6 +45,7 @@ const workCases = [
     title: "Stories in light.",
     image: "/assets/work-entertainment-thumb.jpg",
     previewImage: "/assets/work-entertainment-preview.jpg",
+    galleryImages: ["/assets/work-entertainment-preview.jpg", "/assets/work-entertainment-thumb.jpg"],
     role: "Look Development / Lighting / CGI",
     summary: "Series TV, CGI and VFX work shaped through look development, lighting and compositing — building visual worlds that can hold a story from first frame to final delivery.",
     outcome: "A coherent visual language for narrative work, balancing character, atmosphere and technical control.",
@@ -55,6 +58,7 @@ const workCases = [
     title: "Making the complex clear.",
     image: "/assets/work-institutional-thumb.jpg",
     previewImage: "/assets/work-institutional-preview.jpg",
+    galleryImages: ["/assets/work-institutional-preview.jpg", "/assets/work-institutional-thumb.jpg"],
     role: "Technical Direction / Visual Communication",
     summary: "Films and visual products for organisations such as Leonardo and Thales Alenia Space, where technical subjects need clarity, credibility and visual impact.",
     outcome: "Complex information translated into precise, engaging images that communicate with authority.",
@@ -67,6 +71,7 @@ const workCases = [
     title: "Make the image do more.",
     image: "/assets/work-commercial-thumb.jpg",
     previewImage: "/assets/work-commercial-preview.jpg",
+    galleryImages: ["/assets/work-commercial-preview.jpg", "/assets/work-commercial-thumb.jpg"],
     role: "Look Development / Lighting / Rendering",
     summary: "Commercial CGI for campaigns including the Caffè Borbone spot, created entirely in a cartoon-driven visual language with controlled design and animation.",
     outcome: "A distinctive world where stylisation, timing and production craft work together to make the brand memorable.",
@@ -79,6 +84,7 @@ const workCases = [
     title: "Spaces to step into.",
     image: "/assets/work-cultural-thumb.jpg",
     previewImage: "/assets/work-cultural-preview.jpg",
+    galleryImages: ["/assets/work-cultural-preview.jpg", "/assets/work-cultural-thumb.jpg"],
     role: "Visual Development / Technical Art",
     summary: "Projects dedicated to culture and immersive experiences across VR, XR and MR, connecting visual storytelling with presence, space and interaction.",
     outcome: "Worlds designed to be explored — not only watched — with a visual language that serves the subject and the experience.",
@@ -110,6 +116,7 @@ export default function Home() {
   const [formSent, setFormSent] = useState(false);
   const [activeWorkId, setActiveWorkId] = useState("entertainment");
   const [expandedWorkImage, setExpandedWorkImage] = useState(false);
+  const [galleryIndex, setGalleryIndex] = useState(0);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 18);
@@ -121,6 +128,17 @@ export default function Home() {
     document.body.style.overflow = expandedWorkImage ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [expandedWorkImage]);
+
+  useEffect(() => {
+    if (!expandedWorkImage) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setExpandedWorkImage(false);
+      if (event.key === "ArrowRight") setGalleryIndex((index) => (index + 1) % (workCases.find((work) => work.id === activeWorkId)?.galleryImages.length ?? 1));
+      if (event.key === "ArrowLeft") setGalleryIndex((index) => (index - 1 + (workCases.find((work) => work.id === activeWorkId)?.galleryImages.length ?? 1)) % (workCases.find((work) => work.id === activeWorkId)?.galleryImages.length ?? 1));
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [expandedWorkImage, activeWorkId]);
 
   return (
     <div className="site-shell">
@@ -218,7 +236,7 @@ export default function Home() {
             <div className="section-heading split-heading"><div><SectionLabel>03 / SELECTED WORKS</SectionLabel><h2>Four areas.<br /><em>One practice.</em></h2></div><p>Selected work across entertainment, institutional, commercial and cultural projects.</p></div>
             <div className="work-gallery-simple">
               <div className="work-gallery-list">
-                {workCases.map((work) => <button key={work.id} type="button" className={`work-gallery-card ${activeWorkId === work.id ? "is-selected" : ""}`} onClick={() => { setActiveWorkId(work.id); setExpandedWorkImage(false); }}><span className="work-gallery-image" style={{ backgroundImage: `url(${work.image})` }} /><span className="work-gallery-card-overlay" /><span className="work-gallery-card-top"><span className="work-gallery-card-number">{work.number}</span><strong>{work.category}</strong><ArrowUpRight size={17} /></span><span className="work-gallery-card-bottom"><span>{work.title}</span></span></button>)}
+                {workCases.map((work) => <button key={work.id} type="button" className={`work-gallery-card ${activeWorkId === work.id ? "is-selected" : ""}`} onClick={() => { setActiveWorkId(work.id); setGalleryIndex(0); setExpandedWorkImage(false); }}><span className="work-gallery-image" style={{ backgroundImage: `url(${work.image})` }} /><span className="work-gallery-card-overlay" /><span className="work-gallery-card-top"><span className="work-gallery-card-number">{work.number}</span><strong>{work.category}</strong><ArrowUpRight size={17} /></span><span className="work-gallery-card-bottom"><span>{work.title}</span></span></button>)}
               </div>
               {(() => { const activeWork = workCases.find((work) => work.id === activeWorkId) ?? workCases[0]; return <article className="case-study-panel"><button type="button" className="case-study-image" onClick={() => setExpandedWorkImage(true)} aria-label="Open preview image" style={{ backgroundImage: `url(${activeWork.previewImage})` }} /><div className="case-study-content"><div className="case-study-heading"><span>{activeWork.role}</span><span>{activeWork.category}</span></div><h3>{activeWork.title}</h3><p>{activeWork.summary}</p><div className="case-study-outcome"><span>OUTCOME</span><strong>{activeWork.outcome}</strong></div><div className="case-study-tags">{activeWork.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>; })()}
             </div>
@@ -238,7 +256,7 @@ export default function Home() {
           </div>
         </section>
 
-        {expandedWorkImage && (() => { const activeWork = workCases.find((work) => work.id === activeWorkId) ?? workCases[0]; return <div className="work-image-lightbox" role="dialog" aria-modal="true" aria-label={`${activeWork.category} preview`} onClick={() => setExpandedWorkImage(false)}><button type="button" className="work-image-lightbox-image" onClick={() => setExpandedWorkImage(false)} aria-label="Close enlarged preview" style={{ backgroundImage: `url(${activeWork.previewImage})` }} /></div>; })()}
+        {expandedWorkImage && (() => { const activeWork = workCases.find((work) => work.id === activeWorkId) ?? workCases[0]; const gallery = activeWork.galleryImages; return <div className="work-image-lightbox" role="dialog" aria-modal="true" aria-label={`${activeWork.category} image gallery`} onClick={() => setExpandedWorkImage(false)}><div className="work-image-lightbox-stage" onClick={(event) => event.stopPropagation()}><button type="button" className="work-image-lightbox-close" onClick={() => setExpandedWorkImage(false)} aria-label="Close image gallery"><X size={20} /></button><button type="button" className="work-image-lightbox-arrow work-image-lightbox-prev" onClick={() => setGalleryIndex((index) => (index - 1 + gallery.length) % gallery.length)} aria-label="Previous image"><ChevronLeft size={28} /></button><div className="work-image-lightbox-image" role="img" aria-label={`${activeWork.category} image ${galleryIndex + 1} of ${gallery.length}`} style={{ backgroundImage: `url(${gallery[galleryIndex]})` }} /><button type="button" className="work-image-lightbox-arrow work-image-lightbox-next" onClick={() => setGalleryIndex((index) => (index + 1) % gallery.length)} aria-label="Next image"><ChevronRight size={28} /></button><span className="work-image-lightbox-counter">{galleryIndex + 1} / {gallery.length}</span></div></div>; })()}
 
 
         <section className="contact-section section-pad" id="contact"><div className="container contact-inner"><SectionLabel>05 / GET IN TOUCH</SectionLabel><h2>Let&apos;s make the image<br /><em>work harder.</em></h2><p>For production, technical direction, workflow development or tools.</p>{formSent ? <div className="form-success"><Check size={18} /> Thanks — your message is ready to be connected.</div> : <form className="contact-form" onSubmit={(event) => { event.preventDefault(); setFormSent(true); }}><div className="form-row"><label><span>Your name</span><input type="text" name="name" placeholder="Name" required /></label><label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required /></label></div><label><span>Message</span><textarea name="message" placeholder="Tell me about the project..." rows={4} required /></label><button className="button button-dark" type="submit">Send message <ArrowUpRight size={17} /></button><small>This form is ready for a form endpoint such as Formspree or Netlify Forms.</small></form>}</div></section>
