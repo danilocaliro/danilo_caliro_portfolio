@@ -845,3 +845,11 @@ img { display: block; max-width: 100%; }
 /* Selected Works: quieter inactive slots, slightly richer active slot */
 .work-gallery-simple .work-gallery-card:not(.is-selected) { filter: saturate(.78); }
 .work-gallery-simple .work-gallery-card.is-selected { filter: saturate(1.08); }
+
+/* Spotlight experiment: the Main image is reduced and blended into the right side of each work slot */
+.work-gallery-simple .work-gallery-card { isolation: isolate; }
+.work-gallery-simple .work-gallery-card::after { content: ''; position: absolute; z-index: 2; inset: 0; pointer-events: none; background-image: url('/assets/hero-chiaroscuro.webp'); background-repeat: no-repeat; background-position: right center; background-size: auto 175%; mix-blend-mode: multiply; opacity: .34; }
+.work-gallery-simple .work-gallery-card > * { z-index: 3; }
+.work-gallery-simple .work-gallery-card .work-gallery-image { z-index: 0; }
+.work-gallery-simple .work-gallery-card .work-gallery-card-overlay { z-index: 1; }
+@media (max-width: 700px) { .work-gallery-simple .work-gallery-card::after { background-size: auto 165%; opacity: .30; } }
