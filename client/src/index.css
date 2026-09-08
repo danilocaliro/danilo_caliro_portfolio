@@ -768,3 +768,12 @@ img { display: block; max-width: 100%; }
   .artist-about-section .about-details { grid-row: 7; }
   .artist-about-section .inline-arrow-link { grid-row: 8; }
 }
+
+/* Selected Works slot surfaces: no thumbnail downloads, one continuous blue family */
+.work-gallery-simple .work-gallery-image { background-size: 180% 180%; background-position: center; }
+.work-gallery-simple .slot-tone-entertainment { background: linear-gradient(135deg, #071522 0%, #0e3855 48%, #1c6b92 100%); }
+.work-gallery-simple .slot-tone-institutional { background: linear-gradient(135deg, #0a1c32 0%, #16466a 50%, #2a86a6 100%); }
+.work-gallery-simple .slot-tone-commercial { background: linear-gradient(135deg, #0d2944 0%, #1a5d80 50%, #42a2b2 100%); }
+.work-gallery-simple .slot-tone-cultural { background: linear-gradient(135deg, #123854 0%, #257494 50%, #66b9ba 100%); }
+.work-gallery-simple .slot-tone-virtual-reality { background: linear-gradient(135deg, #102644 0%, #245a8b 50%, #5483c4 100%); }
+.work-gallery-simple .slot-tone-personal { background: linear-gradient(135deg, #161f3d 0%, #304f87 50%, #7594d0 100%); }

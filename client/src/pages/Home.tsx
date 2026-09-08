@@ -47,7 +47,6 @@ const workCases = [
     number: "01",
     category: "Entertainment",
     title: "Stories in light.",
-    image: "/assets/placeholders/slots/thumb_slot_entertainment.webp",
     previewImage: "/assets/placeholders/previews/preview_entertainment_01.webp",
     galleryImages: ["/assets/placeholders/previews/preview_entertainment_01.webp", "/assets/placeholders/previews/preview_entertainment_02.webp", "/assets/placeholders/previews/preview_entertainment_03.webp", "/assets/placeholders/previews/preview_entertainment_04.webp"],
     role: "Look Development / Lighting / Pipeline",
@@ -60,7 +59,6 @@ const workCases = [
     number: "02",
     category: "Institutional",
     title: "Making the complex clear.",
-    image: "/assets/placeholders/slots/thumb_slot_institutional.webp",
     previewImage: "/assets/placeholders/previews/preview_institutional_01.webp",
     galleryImages: ["/assets/placeholders/previews/preview_institutional_01.webp", "/assets/placeholders/previews/preview_institutional_02.webp", "/assets/placeholders/previews/preview_institutional_03.webp", "/assets/placeholders/previews/preview_institutional_04.webp"],
     role: "Look Development / Technical Direction / Visual Communication",
@@ -73,7 +71,6 @@ const workCases = [
     number: "03",
     category: "Commercial",
     title: "Let the image do more.",
-    image: "/assets/placeholders/slots/thumb_slot_commercial.webp",
     previewImage: "/assets/placeholders/previews/preview_commercial_01.webp",
     galleryImages: ["/assets/placeholders/previews/preview_commercial_01.webp", "/assets/placeholders/previews/preview_commercial_02.webp", "/assets/placeholders/previews/preview_commercial_03.webp", "/assets/placeholders/previews/preview_commercial_04.webp"],
     role: "Look Development / Lighting / Rendering",
@@ -86,7 +83,6 @@ const workCases = [
     number: "04",
     category: "Cultural",
     title: "Spaces to step into.",
-    image: "/assets/placeholders/slots/thumb_slot_cultural.webp",
     previewImage: "/assets/placeholders/previews/preview_cultural_01.webp",
     galleryImages: ["/assets/placeholders/previews/preview_cultural_01.webp", "/assets/placeholders/previews/preview_cultural_02.webp", "/assets/placeholders/previews/preview_cultural_03.webp", "/assets/placeholders/previews/preview_cultural_04.webp"],
     role: "Visual Development / R&D / Virtual Experience",
@@ -99,7 +95,6 @@ const workCases = [
     number: "05",
     category: "Virtual Reality",
     title: "Beyond the frame.",
-    image: "/assets/placeholders/slots/thumb_slot_virtual_reality.webp",
     previewImage: "/assets/placeholders/previews/preview_virtual_reality_01.webp",
     galleryImages: ["/assets/placeholders/previews/preview_virtual_reality_01.webp", "/assets/placeholders/previews/preview_virtual_reality_02.webp", "/assets/placeholders/previews/preview_virtual_reality_03.webp", "/assets/placeholders/previews/preview_virtual_reality_04.webp"],
     role: "Look Development / Virtual & Mixed Reality",
@@ -112,7 +107,6 @@ const workCases = [
     number: "06",
     category: "Personal",
     title: "Room to explore.",
-    image: "/assets/placeholders/slots/thumb_slot_personal.webp",
     previewImage: "/assets/placeholders/previews/preview_personal_01.webp",
     galleryImages: ["/assets/placeholders/previews/preview_personal_01.webp", "/assets/placeholders/previews/preview_personal_02.webp", "/assets/placeholders/previews/preview_personal_03.webp", "/assets/placeholders/previews/preview_personal_04.webp"],
     role: "Look Development / Lighting / Tools Development",
@@ -260,7 +254,7 @@ export default function Home() {
             <div className="section-heading split-heading"><div><SectionLabel>03 / SELECTED WORKS</SectionLabel><h2>Six areas.<br /><em>One practice.</em></h2></div><p>Selected work across entertainment, institutional, commercial, cultural, virtual reality and personal projects.</p></div>
             <div className="work-gallery-simple">
               <div className="work-gallery-list">
-                {workCases.map((work) => <button key={work.id} type="button" className={`work-gallery-card ${activeWorkId === work.id ? "is-selected" : ""}`} onClick={() => { setActiveWorkId(work.id); setGalleryIndex(0); setExpandedWorkImage(false); }}><span className="work-gallery-image" style={{ backgroundImage: `url(${work.image})` }} /><span className="work-gallery-card-overlay" /><span className="work-gallery-card-top"><span className="work-gallery-card-number">{work.number}</span><strong>{work.category}</strong><ArrowUpRight size={17} /></span><span className="work-gallery-card-bottom"><span>{work.title}</span></span></button>)}
+                {workCases.map((work) => <button key={work.id} type="button" className={`work-gallery-card ${activeWorkId === work.id ? "is-selected" : ""}`} onClick={() => { setActiveWorkId(work.id); setGalleryIndex(0); setExpandedWorkImage(false); }}><span className={`work-gallery-image slot-tone-${work.id}`} /><span className="work-gallery-card-overlay" /><span className="work-gallery-card-top"><span className="work-gallery-card-number">{work.number}</span><strong>{work.category}</strong><ArrowUpRight size={17} /></span><span className="work-gallery-card-bottom"><span>{work.title}</span></span></button>)}
               </div>
               {(() => { const activeWork = workCases.find((work) => work.id === activeWorkId) ?? workCases[0]; const activeIndex = workCases.findIndex((work) => work.id === activeWork.id); const selectWork = (index: number) => { setActiveWorkId(workCases[index].id); setGalleryIndex(0); setExpandedWorkImage(false); }; const stopTouchScroll = (event: React.PointerEvent<HTMLButtonElement>) => { event.preventDefault(); }; return <article className="case-study-panel"><button type="button" className="case-study-image" onClick={() => setExpandedWorkImage(true)} aria-label="Open preview image" style={{ backgroundImage: `url(${activeWork.previewImage})` }} /><div className="case-study-content"><div className="case-study-heading"><span>{activeWork.role}</span><span>{activeWork.category}</span></div><h3>{activeWork.title}</h3><p>{activeWork.summary}</p><div className="case-study-outcome"><span>OUTCOME</span><strong>{activeWork.outcome}</strong></div></div><div className="case-study-panel-controls" aria-label="Change selected work"><button type="button" onPointerDown={stopTouchScroll} onClick={() => selectWork((activeIndex - 1 + workCases.length) % workCases.length)} aria-label="Previous selected work"><ChevronUp size={16} /></button><button type="button" onPointerDown={stopTouchScroll} onClick={() => selectWork((activeIndex + 1) % workCases.length)} aria-label="Next selected work"><ChevronDown size={16} /></button></div></article>; })()}
             </div>

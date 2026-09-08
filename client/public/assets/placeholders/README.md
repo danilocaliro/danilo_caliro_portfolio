@@ -1,11 +1,15 @@
 # Placeholder assets
 
-Sostituisci i file `.webp` mantenendo esattamente questi nomi.
+Sostituisci il file `.webp` della foto mantenendo esattamente questo nome:
 
-- `about/danilo_caliro_photo_placeholder.webp`: foto About Me, consigliata 1600×1600 px.
-- `slots/thumb_slot_<category>.webp`: thumbnail degli slot, 1000×500 px, rapporto 2:1.
-- `previews/preview_<category>_01.webp` fino a `_04.webp`: immagini galleria, 1600×900 px, rapporto 16:9.
+- `about/profile_pic_01.webp`: foto About Me, consigliata 1600×1600 px.
+
+Le anteprime grandi della galleria restano organizzate in `previews/`:
+
+- `preview_<category>_01.webp` fino a `_04.webp`: immagini galleria, 1600×900 px, rapporto 16:9.
 
 Categorie: `entertainment`, `institutional`, `commercial`, `cultural`, `virtual_reality`, `personal`.
 
-Formato consigliato: WebP, profilo sRGB, qualità 80–85%. Mantieni il rapporto e i nomi dei file per sostituire gli asset senza modificare il codice.
+Gli slot di Selected Works non usano più immagini: ogni pannello utilizza un gradiente blu CSS, così la griglia non richiede caricamenti aggiuntivi.
+
+Formato consigliato per le preview: WebP, profilo sRGB, qualità 80–85%. Mantieni il rapporto e i nomi dei file per sostituire gli asset senza modificare il codice.
