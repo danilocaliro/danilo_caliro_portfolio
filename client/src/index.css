@@ -831,3 +831,7 @@ img { display: block; max-width: 100%; }
 .work-section .section-end-arrow { color: #f18b32; border-color: #15181d; background: #15181d; }
 .work-section .section-end-arrow:hover { color: #15181d; border-color: #f18b32; background: #f18b32; }
 @media (max-width: 700px) { .section-end-arrow { margin-top: 72px; margin-bottom: -30px; } }
+
+/* Slightly stronger project label in the Tools footer note */
+.artist-tools-section .tools-note > span { font-size: 11px; }
+@media (max-width: 700px) { .artist-tools-section .tools-note > span { font-size: 10px; } }
