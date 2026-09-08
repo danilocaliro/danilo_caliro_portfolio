@@ -49,8 +49,8 @@ const workCases = [
     image: "/assets/work-entertainment-thumb.jpg",
     previewImage: "/assets/work-entertainment-preview.jpg",
     galleryImages: ["/assets/work-entertainment-preview.jpg", "/assets/work-entertainment-thumb.jpg"],
-    role: "Look Development / Lighting / CGI",
-    summary: "Series TV, CGI and VFX work shaped through look development, lighting and compositing — building visual worlds that can hold a story from first frame to final delivery.",
+    role: "Look Development / Lighting / Pipeline",
+    summary: "Series TV, CGI and VFX work shaped through look development, lighting and pipeline thinking — supporting narrative images from first frame to final delivery.",
     outcome: "A coherent visual language for narrative work, balancing character, atmosphere and technical control.",
     tags: ["Lookdev", "Lighting", "CGI"],
   },
@@ -62,8 +62,8 @@ const workCases = [
     image: "/assets/work-institutional-thumb.jpg",
     previewImage: "/assets/work-institutional-preview.jpg",
     galleryImages: ["/assets/work-institutional-preview.jpg", "/assets/work-institutional-thumb.jpg"],
-    role: "Technical Direction / Visual Communication",
-    summary: "Films and visual products for organisations such as Leonardo and Thales Alenia Space, where technical subjects need clarity, credibility and visual impact.",
+    role: "Look Development / Technical Direction / Visual Communication",
+    summary: "Films and visual products for organisations such as Leonardo and Thales Alenia Space, translating complex subjects into clear, credible visual communication.",
     outcome: "Complex information translated into precise, engaging images that communicate with authority.",
     tags: ["Direction", "Visualisation", "Pipeline"],
   },
@@ -88,10 +88,36 @@ const workCases = [
     image: "/assets/work-cultural-thumb.jpg",
     previewImage: "/assets/work-cultural-preview.jpg",
     galleryImages: ["/assets/work-cultural-preview.jpg", "/assets/work-cultural-thumb.jpg"],
-    role: "Visual Development / Technical Art",
-    summary: "Projects dedicated to culture and immersive experiences across VR, XR and MR, connecting visual storytelling with presence, space and interaction.",
-    outcome: "Worlds designed to be explored — not only watched — with a visual language that serves the subject and the experience.",
-    tags: ["Culture", "Experience", "Visual Development"],
+    role: "Visual Development / R&D / Virtual Experience",
+    summary: "Projects dedicated to culture, from visual research and development to experiences that bring ideas, places and stories closer to the audience.",
+    outcome: "Visual worlds that make cultural subjects feel immediate, open and inviting.",
+    tags: ["Culture", "R&D", "Visual Development"],
+  },
+  {
+    id: "virtual-reality",
+    number: "05",
+    category: "Virtual Reality",
+    title: "Beyond the frame.",
+    image: "/assets/work-cultural-thumb.jpg",
+    previewImage: "/assets/work-cultural-preview.jpg",
+    galleryImages: ["/assets/work-cultural-preview.jpg", "/assets/work-cultural-thumb.jpg"],
+    role: "Look Development / Virtual & Mixed Reality",
+    summary: "VR, XR and MR projects for companies, combining look development, technical research and focused tools to make virtual experiences feel clear and present.",
+    outcome: "Visual and technical solutions that help people move naturally between image, space and interaction.",
+    tags: ["VR", "XR", "MR", "Tools"],
+  },
+  {
+    id: "personal",
+    number: "06",
+    category: "Personal",
+    title: "Room to explore.",
+    image: "/assets/work-entertainment-thumb.jpg",
+    previewImage: "/assets/work-entertainment-preview.jpg",
+    galleryImages: ["/assets/work-entertainment-preview.jpg", "/assets/work-entertainment-thumb.jpg"],
+    role: "Look Development / Lighting / Tools Development",
+    summary: "Personal work where images, lighting and tools become a space for experiments, studies and ideas that can grow at their own pace.",
+    outcome: "A laboratory for visual language, workflow and the next image to make.",
+    tags: ["Personal", "Lighting", "Tools"],
   },
 ];
 
@@ -224,18 +250,18 @@ export default function Home() {
         <section className="about-section artist-about-section section-pad" id="about-me">
           <div className="container about-layout">
             <div className="about-portrait"><div className="about-portrait-grid" /><div className="about-initials">TD<span> / </span>CGI</div><div className="about-portrait-label">LOOKDEV / PIPELINE / LIGHTING</div></div>
-            <div className="about-copy"><SectionLabel>02 / ABOUT ME</SectionLabel><h2>Creative judgement.<br /><em>Technical precision.</em></h2><p className="about-lead">I&apos;m a Look Development TD, Pipeline TD and Technical Artist with a background in 3D, lighting, rendering, photography and CGI production.</p><p>Over the years, my role has evolved from hands-on production into a broader technical and supervisory position, combining artistic vision, technical problem-solving, pipeline development and workflow optimisation.</p><p>I work across animation, television, advertising, institutional content, immersive experiences and interactive projects — from visual development and asset creation to lighting, rendering, post-production and final delivery.</p><div className="about-details"><div><span>SELECTED PRODUCTIONS</span><strong>Uanema · Digitalcomoedia · RAI · Leonardo · Thales Alenia Space · Telespazio · Arkaevision · IAC · Voice of Heritages · Brancaccio · 5Senses · Event Planet · Cantico</strong></div><div><span>CORE PRACTICE</span><strong>Look Development · Lighting · Compositing · Set Dress · Pipeline TD · Tool Development</strong></div></div><a className="inline-arrow-link" href={linkedinUrl} target="_blank" rel="noreferrer">More on LinkedIn <ArrowUpRight size={17} /></a></div>
+            <div className="about-copy"><SectionLabel>02 / ABOUT ME</SectionLabel><h2>Creative judgement.<br /><em>Technical precision.</em></h2><p className="about-lead">I&apos;m a Look Development TD, Pipeline TD and Technical Artist with a background in 3D, lighting, rendering, photography and CGI production.</p><p>Over the years, my role has evolved from hands-on production into a broader technical and supervisory position, combining artistic vision, technical problem-solving, pipeline development and workflow optimisation.</p><p>I work across animation, television, advertising, institutional content, immersive experiences and interactive projects — from visual development and asset creation to lighting, rendering, post-production and final delivery.</p><div className="about-details"><div><span>SELECTED PRODUCTIONS</span><strong>Uanema · Digitalcomoedia · RAI · Leonardo · Thales Alenia Space · Telespazio · Arkaevision · IAC · Voice of Heritages · Brancaccio · 5Senses · Event Planet · Cantico</strong></div><div><span>CORE PRACTICE</span><strong>Look Development · Lighting · Compositing · Set Dress · Pipeline TD · Tool Development</strong></div><div><span>SOFTWARE</span><strong>Maya · 3dsMax · Arnold · Vray · Blender · Marmoset · Substance 3D Painter · Substance 3D Designer · Unreal Engine · Unity · Nuke · Photoshop · DaVinci Resolve</strong></div></div><a className="inline-arrow-link" href={linkedinUrl} target="_blank" rel="noreferrer">More on LinkedIn <ArrowUpRight size={17} /></a></div>
           </div>
         </section>
 
         <section className="work-section section-pad" id="work">
           <div className="container">
-            <div className="section-heading split-heading"><div><SectionLabel>03 / SELECTED WORKS</SectionLabel><h2>Four areas.<br /><em>One practice.</em></h2></div><p>Selected work across entertainment, institutional, commercial and cultural projects.</p></div>
+            <div className="section-heading split-heading"><div><SectionLabel>03 / SELECTED WORKS</SectionLabel><h2>Six areas.<br /><em>One practice.</em></h2></div><p>Selected work across entertainment, institutional, commercial, cultural, virtual reality and personal projects.</p></div>
             <div className="work-gallery-simple">
               <div className="work-gallery-list">
                 {workCases.map((work) => <button key={work.id} type="button" className={`work-gallery-card ${activeWorkId === work.id ? "is-selected" : ""}`} onClick={() => { setActiveWorkId(work.id); setGalleryIndex(0); setExpandedWorkImage(false); }}><span className="work-gallery-image" style={{ backgroundImage: `url(${work.image})` }} /><span className="work-gallery-card-overlay" /><span className="work-gallery-card-top"><span className="work-gallery-card-number">{work.number}</span><strong>{work.category}</strong><ArrowUpRight size={17} /></span><span className="work-gallery-card-bottom"><span>{work.title}</span></span></button>)}
               </div>
-              {(() => { const activeWork = workCases.find((work) => work.id === activeWorkId) ?? workCases[0]; return <article className="case-study-panel"><button type="button" className="case-study-image" onClick={() => setExpandedWorkImage(true)} aria-label="Open preview image" style={{ backgroundImage: `url(${activeWork.previewImage})` }} /><div className="case-study-content"><div className="case-study-heading"><span>{activeWork.role}</span><span>{activeWork.category}</span></div><h3>{activeWork.title}</h3><p>{activeWork.summary}</p><div className="case-study-outcome"><span>OUTCOME</span><strong>{activeWork.outcome}</strong></div><div className="case-study-tags">{activeWork.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></div></article>; })()}
+              {(() => { const activeWork = workCases.find((work) => work.id === activeWorkId) ?? workCases[0]; return <article className="case-study-panel"><button type="button" className="case-study-image" onClick={() => setExpandedWorkImage(true)} aria-label="Open preview image" style={{ backgroundImage: `url(${activeWork.previewImage})` }} /><div className="case-study-content"><div className="case-study-heading"><span>{activeWork.role}</span><span>{activeWork.category}</span></div><h3>{activeWork.title}</h3><p>{activeWork.summary}</p><div className="case-study-outcome"><span>OUTCOME</span><strong>{activeWork.outcome}</strong></div></div></article>; })()}
             </div>
           </div>
         </section>
@@ -259,7 +285,7 @@ export default function Home() {
         <section className="contact-section section-pad" id="contact"><div className="container contact-inner"><SectionLabel>05 / GET IN TOUCH</SectionLabel><h2>Let&apos;s turn ideas<br /><em>into images.</em></h2><p>For production, technical direction, workflow development or tools.</p>{formSent ? <div className="form-success"><Check size={18} /> Thanks — your message is ready to be connected.</div> : <form className="contact-form" onSubmit={(event) => { event.preventDefault(); setFormSent(true); }}><div className="form-row"><label><span>Your name</span><input type="text" name="name" placeholder="Name" required /></label><label><span>Email</span><input type="email" name="email" placeholder="you@example.com" required /></label></div><label><span>Message</span><textarea name="message" placeholder="Tell me about the project..." rows={4} required /></label><button className="button button-dark" type="submit">Send message <ArrowUpRight size={17} /></button><small>This form is ready for a form endpoint such as Formspree or Netlify Forms.</small></form>}</div></section>
       </main>
 
-      <footer className="site-footer" style={{textAlign: 'center'}}><div className="container footer-inner" style={{textAlign: 'center'}}><span className="footer-brand" style={{textAlign: 'center'}}>DANILO CALIRO</span><span style={{textAlign: 'center'}}>© 2026</span><div className="footer-links" style={{textAlign: 'center'}}><a href={linkedinUrl} target="_blank" rel="noreferrer" style={{textAlign: 'center'}}>LinkedIn</a><a href={superhiveCreatorUrl} target="_blank" rel="noreferrer" style={{textAlign: 'center'}}>Superhive</a><a href={gumroadUrl} target="_blank" rel="noreferrer" style={{textAlign: 'center'}}>Gumroad</a></div></div></footer>
+      <footer className="site-footer"><div className="container footer-inner"><span className="footer-brand">DANILO CALIRO</span><span>© 2026</span><div className="footer-links"><a href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn</a><a href={superhiveCreatorUrl} target="_blank" rel="noreferrer">Superhive</a><a href={gumroadUrl} target="_blank" rel="noreferrer">Gumroad</a></div></div></footer>
     </div>
   );
 }
