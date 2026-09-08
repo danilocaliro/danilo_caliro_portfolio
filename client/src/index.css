@@ -825,3 +825,9 @@ img { display: block; max-width: 100%; }
 .work-section .section-end-arrow { color: #f18b32; border-color: #123d5a; background: #123d5a; }
 .work-section .section-end-arrow:hover { color: #123d5a; border-color: #f18b32; background: #f18b32; }
 @media (max-width: 700px) { .section-end-arrow { margin-top: 55px; margin-bottom: -18px; } }
+
+/* Final arrow position and exact Selected Works preview blue */
+.section-end-arrow { margin-top: 91px; margin-bottom: -55px; }
+.work-section .section-end-arrow { color: #f18b32; border-color: #15181d; background: #15181d; }
+.work-section .section-end-arrow:hover { color: #15181d; border-color: #f18b32; background: #f18b32; }
+@media (max-width: 700px) { .section-end-arrow { margin-top: 72px; margin-bottom: -30px; } }
