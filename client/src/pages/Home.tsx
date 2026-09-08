@@ -14,14 +14,15 @@ import {
 } from "lucide-react";
 
 const heroImage = "/assets/hero-chiaroscuro.webp";
-const upcomingImage = "/assets/upcoming-tool.webp";
 const profileImage = "/assets/placeholders/about/profile_pic_01.webp";
 const emissionOfficialImage = "https://assets.superhivemarket.com/store/product/262099/image/xlarge_og-f81c24108fbdac02a484262bcca72c12.png";
 const colorSpaceOfficialImage = "https://assets.superhivemarket.com/store/product/263206/image/xlarge_og-80afdd45ad80acd114c971a73e9253fd.png";
+const uvEditProOfficialImage = "https://superhivemarket.com/products/uv-edit-pro/thumbnail.png";
 const gumroadUrl = "https://danilocaliro.gumroad.com";
 const gumroadEmissionUrl = "https://danilocaliro.gumroad.com/l/emission_pro";
 const gumroadColorSpaceUrl = "https://danilocaliro.gumroad.com/l/color_space_converter";
-const uvEditProUrl = "#";
+const uvEditProUrl = "https://superhivemarket.com/products/uv-edit-pro";
+const gumroadUvEditProUrl = "https://danilocaliro.gumroad.com/l/uv_edit_pro";
 
 // Replace these placeholders with your real URLs when ready.
 const superhiveCreatorUrl = "https://superhivemarket.com/creators/danilocaliro";
@@ -279,7 +280,7 @@ export default function Home() {
             <div className="tools-grid tools-grid-four">
               <article className="tool-card tool-card-featured"><div className="tool-visual"><img src={emissionOfficialImage} alt="Official Emission Pro thumbnail from Superhive" loading="lazy" /><span className="tool-number">01</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER<sup>®</sup> / LIGHTING &amp; SHADING</span></div><h3>Emission Pro</h3><p className="tool-lead">An advanced shader system for Blender<sup>®</sup>, built to make emissive looks faster to build, easier to control and more consistent to art-direct.</p><div className="tool-actions"><MarketplaceLink href={emissionProUrl}>View on Superhive</MarketplaceLink><MarketplaceLink href={gumroadEmissionUrl}>View on Gumroad</MarketplaceLink></div></div></article>
               <article className="tool-card"><div className="tool-visual"><img src={colorSpaceOfficialImage} alt="Official Color Space Converter thumbnail from Superhive" loading="lazy" /><span className="tool-number">02</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER<sup>®</sup> / COLOR MANAGEMENT</span></div><h3>Color Space Converter</h3><p className="tool-lead">A focused Blender<sup>®</sup> utility for moving between colour spaces with clarity and control inside the production workflow.</p><div className="tool-actions"><MarketplaceLink href={colorSpaceConverterUrl}>View on Superhive</MarketplaceLink><MarketplaceLink href={gumroadColorSpaceUrl}>View on Gumroad</MarketplaceLink></div></div></article>
-              <article className="tool-card"><div className="tool-visual"><img src={upcomingImage} alt="UV Edit Pro preview" loading="lazy" /><span className="tool-number">03</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER<sup>®</sup> / UV MAPPING</span></div><h3>UV Edit Pro</h3><p className="tool-lead">An industry-minded UV mapping workflow for Blender<sup>®</sup>, bringing focused editing functions into a faster, more direct interface.</p><div className="tool-actions"><MarketplaceLink href={uvEditProUrl}>Coming to Superhive</MarketplaceLink><MarketplaceLink href={gumroadUrl}>Visit Gumroad</MarketplaceLink></div></div></article>
+              <article className="tool-card"><div className="tool-visual"><img src={uvEditProOfficialImage} alt="Official UV Edit Pro thumbnail from Superhive" loading="lazy" /><span className="tool-number">03</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER<sup>®</sup> / UV MAPPING</span></div><h3>UV Edit Pro</h3><p className="tool-lead">An industry-minded UV mapping workflow for Blender<sup>®</sup>, bringing focused editing functions into a faster, more direct interface.</p><div className="tool-actions"><MarketplaceLink href={uvEditProUrl}>View on Superhive</MarketplaceLink><MarketplaceLink href={gumroadUvEditProUrl}>View on Gumroad</MarketplaceLink></div></div></article>
               <article className="tool-card tool-card-wip"><div className="tool-visual tool-visual-secondary"><div className="visual-lines" /><span className="tool-number">04</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>IN DEVELOPMENT</span></div><h3>Work in progress</h3><p className="tool-lead">A new tool is taking shape behind the scenes. More soon.</p></div></article>
             </div>
             <div className="tools-note"><span>THE MISSING WORKFLOW PROJECT</span><p>Explore the complete tool collection, add-ons and find free resources for artists.</p><div className="tools-note-links"><a className="tools-note-link" href={superhiveCreatorUrl} target="_blank" rel="noreferrer">Visit Superhive <ArrowUpRight size={17} /></a><a className="tools-note-link" href={gumroadUrl} target="_blank" rel="noreferrer">Visit Gumroad <ArrowUpRight size={17} /></a><a className="tools-note-link" href={missingWorkflowYoutubeUrl} target="_blank" rel="noreferrer">Visit YouTube <ArrowUpRight size={17} /></a></div></div>
