@@ -785,3 +785,7 @@ img { display: block; max-width: 100%; }
 .work-gallery-simple .slot-tone-cultural { background: linear-gradient(90deg, #123d5a 0%, #8c5438 58%, #e28a4f 100%); }
 .work-gallery-simple .slot-tone-virtual-reality { background: linear-gradient(90deg, #123d5a 0%, #5a4f87 58%, #927fd0 100%); }
 .work-gallery-simple .slot-tone-personal { background: linear-gradient(90deg, #123d5a 0%, #92734b 58%, #d0a765 100%); }
+
+/* Subtle render-tile cue on the custom-color side, generated in CSS with no extra asset */
+.work-gallery-simple .work-gallery-card-overlay::after { content: ''; position: absolute; inset: 0 0 0 44%; opacity: .16; background-image: linear-gradient(90deg, transparent 0 48%, rgba(236,234,227,.72) 49%, transparent 50%), linear-gradient(0deg, transparent 0 48%, rgba(236,234,227,.72) 49%, transparent 50%), linear-gradient(135deg, transparent 0 48%, rgba(236,234,227,.28) 49%, transparent 50%); background-size: 27px 27px, 27px 27px, 54px 54px; mix-blend-mode: screen; mask-image: linear-gradient(90deg, transparent, #000 22%, #000 82%, transparent); pointer-events: none; }
+.work-gallery-simple .work-gallery-card:hover .work-gallery-card-overlay::after, .work-gallery-simple .work-gallery-card.is-selected .work-gallery-card-overlay::after { opacity: .22; }
