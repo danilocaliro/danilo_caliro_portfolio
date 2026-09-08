@@ -611,3 +611,10 @@ img { display: block; max-width: 100%; }
 .case-study-panel-controls button:hover { border-color: #f18b32; background: rgba(5,7,9,.72); color: #f18b32; }
 .case-study-panel-controls button:focus-visible { outline: 1px solid #f18b32; outline-offset: 2px; }
 @media (max-width: 700px) { .case-study-panel-controls { right: 18px; bottom: 18px; } }
+
+/* Mobile Selected Works controls: reserve readable space and keep touch taps from scrolling the page */
+.case-study-panel-controls button { touch-action: none; }
+@media (max-width: 700px) {
+  .work-gallery-simple .case-study-content { padding-bottom: 82px; }
+  .work-gallery-simple .case-study-panel-controls { right: 14px; bottom: 14px; }
+}
