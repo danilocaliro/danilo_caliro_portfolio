@@ -31,7 +31,7 @@ const linkedinUrl = "https://www.linkedin.com/in/danilo-caliro/";
 const vimeoId = "1216793443";
 const vimeoUrl = "https://vimeo.com/1216793443";
 const youtubeUrl = "https://www.youtube.com/";
-const missingWorkflowYoutubeUrl = "https://www.youtube.com/";
+const missingWorkflowYoutubeUrl = "http://www.youtube.com/@themissingworkflow";
 
 const navItems = [
   // Primary navigation follows the artist-first information hierarchy.
