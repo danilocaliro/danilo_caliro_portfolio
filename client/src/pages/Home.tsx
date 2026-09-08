@@ -161,7 +161,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const targets = Array.from(document.querySelectorAll<HTMLElement>(".artist-reel-section .section-heading, .artist-about-section .about-copy > .section-label, .artist-about-section .about-copy > h2, .work-section .section-heading"));
+    const targets = Array.from(document.querySelectorAll<HTMLElement>(".artist-reel-section .section-heading, .artist-about-section .about-copy > .section-label, .artist-about-section .about-copy > h2, .work-section .section-heading, .artist-tools-section .section-heading, .contact-inner > .section-label, .contact-inner > h2, .contact-inner > p"));
     targets.forEach((target, index) => {
       target.classList.add("mobile-reveal-target");
       target.style.setProperty("--reveal-delay", `${Math.min(index * 35, 210)}ms`);
