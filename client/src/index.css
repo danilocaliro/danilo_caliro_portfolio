@@ -604,3 +604,10 @@ img { display: block; max-width: 100%; }
   .footer-inner { grid-template-columns: auto auto minmax(0, 1fr); gap: 9px; }
   .footer-inner > span:nth-child(2) { justify-self: start; }
 }
+
+.case-study-panel { position: relative; }
+.case-study-panel-controls { position: absolute; right: 24px; bottom: 22px; z-index: 3; display: inline-flex; gap: 5px; }
+.case-study-panel-controls button { display: grid; place-items: center; width: 27px; height: 27px; border: 1px solid rgba(240,237,229,.24); background: rgba(5,7,9,.36); color: rgba(240,237,229,.7); transition: border-color .2s ease, color .2s ease, background .2s ease; }
+.case-study-panel-controls button:hover { border-color: #f18b32; background: rgba(5,7,9,.72); color: #f18b32; }
+.case-study-panel-controls button:focus-visible { outline: 1px solid #f18b32; outline-offset: 2px; }
+@media (max-width: 700px) { .case-study-panel-controls { right: 18px; bottom: 18px; } }
