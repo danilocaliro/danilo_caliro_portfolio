@@ -633,3 +633,24 @@ img { display: block; max-width: 100%; }
   .work-gallery-simple .case-study-content { min-height: 360px; overflow: visible; }
   .work-gallery-simple .work-gallery-list { grid-template-columns: 1fr; }
 }
+
+/* Final responsive Selected Works layout */
+.case-study-panel { grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); }
+.case-study-image { aspect-ratio: 16 / 9; min-height: 0; height: auto; }
+@media (min-width: 981px) {
+  .work-gallery-simple .case-study-panel { grid-template-rows: 432px minmax(0, 1fr); }
+  .work-gallery-simple .case-study-image { height: 432px; aspect-ratio: 16 / 9; }
+}
+@media (max-width: 700px) {
+  .work-gallery-simple { gap: 14px; }
+  .work-gallery-simple .work-gallery-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+  .work-gallery-simple .work-gallery-card { height: 76px; min-height: 76px; }
+  .work-gallery-simple .work-gallery-card-top { top: 10px; left: 10px; right: 10px; gap: 4px; }
+  .work-gallery-simple .work-gallery-card-top strong { font-size: 8px; letter-spacing: .06em; }
+  .work-gallery-simple .work-gallery-card-bottom { left: 10px; right: 10px; bottom: 9px; }
+  .work-gallery-simple .work-gallery-card-bottom small { font-size: 7px; }
+  .work-gallery-simple .work-gallery-card-bottom span { display: none; }
+  .work-gallery-simple .case-study-panel { height: 650px; min-height: 650px; grid-template-rows: 360px minmax(0, 1fr); }
+  .work-gallery-simple .case-study-image { width: 100%; height: 360px; min-height: 0; aspect-ratio: 16 / 9; background-size: contain; background-repeat: no-repeat; background-color: #090b0f; }
+  .work-gallery-simple .case-study-content { min-height: 0; overflow: hidden; padding: 22px 19px 82px; }
+}
