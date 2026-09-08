@@ -769,15 +769,6 @@ img { display: block; max-width: 100%; }
   .artist-about-section .inline-arrow-link { grid-row: 8; }
 }
 
-/* Selected Works slot surfaces: no thumbnail downloads, one continuous blue family */
-.work-gallery-simple .work-gallery-image { background-size: 180% 180%; background-position: center; }
-.work-gallery-simple .slot-tone-entertainment { background: linear-gradient(135deg, #071522 0%, #0e3855 48%, #1c6b92 100%); }
-.work-gallery-simple .slot-tone-institutional { background: linear-gradient(135deg, #0a1c32 0%, #16466a 50%, #2a86a6 100%); }
-.work-gallery-simple .slot-tone-commercial { background: linear-gradient(135deg, #0d2944 0%, #1a5d80 50%, #42a2b2 100%); }
-.work-gallery-simple .slot-tone-cultural { background: linear-gradient(135deg, #123854 0%, #257494 50%, #66b9ba 100%); }
-.work-gallery-simple .slot-tone-virtual-reality { background: linear-gradient(135deg, #102644 0%, #245a8b 50%, #5483c4 100%); }
-.work-gallery-simple .slot-tone-personal { background: linear-gradient(135deg, #161f3d 0%, #304f87 50%, #7594d0 100%); }
-
 /* Selected Works: shared preview-blue left edge with one distinct right hue per slot */
 .work-gallery-simple .slot-tone-entertainment { background: linear-gradient(90deg, #123d5a 0%, #4c7180 58%, #79aeb0 100%); }
 .work-gallery-simple .slot-tone-institutional { background: linear-gradient(90deg, #123d5a 0%, #7b463b 58%, #b86750 100%); }
@@ -787,7 +778,7 @@ img { display: block; max-width: 100%; }
 .work-gallery-simple .slot-tone-personal { background: linear-gradient(90deg, #123d5a 0%, #92734b 58%, #d0a765 100%); }
 
 /* Subtle render-tile cue on the custom-color side, generated in CSS with no extra asset */
-.work-gallery-simple .work-gallery-card-overlay::after { content: ''; position: absolute; inset: 0 0 0 44%; opacity: .16; background-image: linear-gradient(90deg, transparent 0 48%, rgba(236,234,227,.72) 49%, transparent 50%), linear-gradient(0deg, transparent 0 48%, rgba(236,234,227,.72) 49%, transparent 50%), linear-gradient(135deg, transparent 0 48%, rgba(236,234,227,.28) 49%, transparent 50%); background-size: 27px 27px, 27px 27px, 54px 54px; mix-blend-mode: screen; mask-image: linear-gradient(90deg, transparent, #000 22%, #000 82%, transparent); pointer-events: none; }
+.work-gallery-simple .work-gallery-card-overlay::after { content: ''; position: absolute; inset: 0 0 0 44%; opacity: .24; background-image: linear-gradient(90deg, transparent 0 46%, rgba(236,234,227,.88) 48% 52%, transparent 54%), linear-gradient(0deg, transparent 0 46%, rgba(236,234,227,.88) 48% 52%, transparent 54%), linear-gradient(135deg, transparent 0 46%, rgba(236,234,227,.4) 48% 52%, transparent 54%); background-size: 30px 30px, 30px 30px, 60px 60px; background-repeat: repeat; mix-blend-mode: screen; mask-image: linear-gradient(90deg, transparent, #000 22%, #000 82%, transparent); pointer-events: none; }
 .work-gallery-simple .work-gallery-card:hover .work-gallery-card-overlay::after, .work-gallery-simple .work-gallery-card.is-selected .work-gallery-card-overlay::after { opacity: .22; }
 
 /* Mobile Tools links: larger labels while keeping one evenly spaced row */
