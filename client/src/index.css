@@ -1104,3 +1104,9 @@ img { display: block; max-width: 100%; }
 @media (min-width: 701px) {
   .contact-section { min-height: 100vh; }
 }
+
+/* Contact anchor correction: reveal the chapter below the fixed header, without a tall orange section */
+@media (min-width: 701px) {
+  .contact-section { min-height: unset !important; padding-top: 56px; padding-bottom: 58px; }
+  #contact { scroll-margin-top: 82px; }
+}
