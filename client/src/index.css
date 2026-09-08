@@ -1131,3 +1131,11 @@ img { display: block; max-width: 100%; }
   .mobile-nav { display: grid; gap: 0; padding: 11px 28px 19px; border-top: 1px solid rgba(236, 234, 227, .1); background: rgba(11, 13, 18, .96); backdrop-filter: blur(18px); }
   .mobile-nav a { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid rgba(236, 234, 227, .09); color: rgba(236, 234, 227, .78); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
 }
+
+/* Keep the full desktop navigation longer; switch to the compact menu only below 980px */
+@media (min-width: 701px) and (max-width: 980px) {
+  .desktop-nav { display: none; }
+  .mobile-menu-button { display: grid; place-items: center; }
+  .mobile-nav { display: grid; gap: 0; padding: 11px 28px 19px; border-top: 1px solid rgba(236, 234, 227, .1); background: rgba(11, 13, 18, .96); backdrop-filter: blur(18px); }
+  .mobile-nav a { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid rgba(236, 234, 227, .09); color: rgba(236, 234, 227, .78); font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+}
