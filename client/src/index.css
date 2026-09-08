@@ -778,10 +778,10 @@ img { display: block; max-width: 100%; }
 .work-gallery-simple .slot-tone-virtual-reality { background: linear-gradient(135deg, #102644 0%, #245a8b 50%, #5483c4 100%); }
 .work-gallery-simple .slot-tone-personal { background: linear-gradient(135deg, #161f3d 0%, #304f87 50%, #7594d0 100%); }
 
-/* Selected Works: shared preview-blue right edge with a distinct central hue per slot */
-.work-gallery-simple .slot-tone-entertainment { background: linear-gradient(90deg, #101c2d 0%, #7b463b 42%, #123d5a 100%); }
-.work-gallery-simple .slot-tone-institutional { background: linear-gradient(90deg, #101d2e 0%, #4c7180 42%, #123d5a 100%); }
-.work-gallery-simple .slot-tone-commercial { background: linear-gradient(90deg, #111c2b 0%, #92734b 42%, #123d5a 100%); }
-.work-gallery-simple .slot-tone-cultural { background: linear-gradient(90deg, #10222d 0%, #557b68 42%, #123d5a 100%); }
-.work-gallery-simple .slot-tone-virtual-reality { background: linear-gradient(90deg, #111b31 0%, #5a4f87 42%, #123d5a 100%); }
-.work-gallery-simple .slot-tone-personal { background: linear-gradient(90deg, #151c35 0%, #76608e 42%, #123d5a 100%); }
+/* Selected Works: shared preview-blue left edge with one distinct right hue per slot */
+.work-gallery-simple .slot-tone-entertainment { background: linear-gradient(90deg, #123d5a 0%, #7b463b 58%, #b86750 100%); }
+.work-gallery-simple .slot-tone-institutional { background: linear-gradient(90deg, #123d5a 0%, #4c7180 58%, #79aeb0 100%); }
+.work-gallery-simple .slot-tone-commercial { background: linear-gradient(90deg, #123d5a 0%, #92734b 58%, #d0a765 100%); }
+.work-gallery-simple .slot-tone-cultural { background: linear-gradient(90deg, #123d5a 0%, #557b68 58%, #86b27f 100%); }
+.work-gallery-simple .slot-tone-virtual-reality { background: linear-gradient(90deg, #123d5a 0%, #5a4f87 58%, #927fd0 100%); }
+.work-gallery-simple .slot-tone-personal { background: linear-gradient(90deg, #123d5a 0%, #76608e 58%, #b493ca 100%); }
