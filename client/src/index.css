@@ -979,3 +979,22 @@ img { display: block; max-width: 100%; }
   .work-gallery-simple .case-study-image { grid-column: 2; grid-row: 1; width: 100%; height: auto; aspect-ratio: 16 / 9; align-self: start; background-size: contain; background-position: center top; background-repeat: no-repeat; }
   .work-gallery-simple .case-study-panel-controls { grid-column: 2; grid-row: 2; align-self: start; }
 }
+
+/* Desktop preview refinement: compact stacked text blocks and slot-matched controls */
+@media (min-width: 981px) {
+  .work-gallery-simple .case-study-panel { grid-template-columns: minmax(320px, .78fr) minmax(480px, 1.22fr); }
+  .work-gallery-simple .case-study-content { display: flex; flex-direction: column; justify-content: space-between; gap: 24px; padding: 42px 44px 42px 38px; }
+  .work-gallery-simple .case-study-heading { margin-bottom: auto; }
+  .work-gallery-simple .case-study-content h3 { margin-top: 30px; }
+  .work-gallery-simple .case-study-content p { max-width: 34em; }
+  .work-gallery-simple .case-study-outcome { margin-top: auto; }
+  .work-gallery-simple .case-study-panel-controls { background: transparent; padding: 12px 0 14px; color: #f18b32; }
+  .work-gallery-simple .case-study-panel-controls button { border-color: currentColor; background: transparent; color: currentColor; }
+  .work-gallery-simple .case-study-panel-controls button:hover { background: currentColor; color: #0b0d12; border-color: currentColor; }
+  .work-gallery-simple .case-study-panel-entertainment .case-study-panel-controls { color: #79aeb0; }
+  .work-gallery-simple .case-study-panel-institutional .case-study-panel-controls { color: #b86750; }
+  .work-gallery-simple .case-study-panel-commercial .case-study-panel-controls { color: #86b27f; }
+  .work-gallery-simple .case-study-panel-cultural .case-study-panel-controls { color: #e28a4f; }
+  .work-gallery-simple .case-study-panel-virtual-reality .case-study-panel-controls { color: #927fd0; }
+  .work-gallery-simple .case-study-panel-personal .case-study-panel-controls { color: #d0a765; }
+}
