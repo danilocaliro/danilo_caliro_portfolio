@@ -1151,3 +1151,15 @@ img { display: block; max-width: 100%; }
   .mobile-menu-button { display: grid; place-items: center; }
   .mobile-nav { display: grid; }
 }
+
+/* Keep classic navigation above 1400px; compact menu below */
+@media (min-width: 1401px) {
+  .desktop-nav { display: flex; }
+  .mobile-menu-button { display: none; }
+  .mobile-nav { display: none; }
+}
+@media (min-width: 701px) and (max-width: 1400px) {
+  .desktop-nav { display: none; }
+  .mobile-menu-button { display: grid; place-items: center; }
+  .mobile-nav { display: grid; }
+}
