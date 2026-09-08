@@ -694,3 +694,14 @@ img { display: block; max-width: 100%; }
   .work-gallery-simple .case-study-image { width: 100%; height: auto; min-height: 0; aspect-ratio: 16 / 9; background-size: cover; }
   .work-gallery-simple .case-study-content { min-height: 0; height: auto; overflow: visible; padding-bottom: 82px; }
 }
+
+/* Fixed text canvas: slot changes never alter preview geometry */
+@media (min-width: 981px) {
+  .work-gallery-simple .case-study-content { height: 336px; overflow-y: auto; }
+}
+@media (max-width: 980px) {
+  .work-gallery-simple .case-study-content { height: 430px; min-height: 430px; max-height: 430px; overflow-y: auto; }
+}
+@media (max-width: 700px) {
+  .work-gallery-simple .case-study-content { height: 430px; min-height: 430px; max-height: 430px; overflow-y: auto; padding-bottom: 82px; }
+}
