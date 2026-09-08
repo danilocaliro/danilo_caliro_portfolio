@@ -654,3 +654,22 @@ img { display: block; max-width: 100%; }
   .work-gallery-simple .case-study-image { width: 100%; height: 360px; min-height: 0; aspect-ratio: 16 / 9; background-size: contain; background-repeat: no-repeat; background-color: #090b0f; }
   .work-gallery-simple .case-study-content { min-height: 0; overflow: hidden; padding: 22px 19px 82px; }
 }
+
+/* Selected Works: image dictates the panel layout at every viewport */
+.work-gallery-simple .case-study-panel { display: grid; grid-template-rows: auto minmax(0, 1fr); align-content: stretch; }
+.work-gallery-simple .case-study-image { width: 100%; height: auto; min-height: 0; aspect-ratio: 16 / 9; align-self: start; background-size: cover; background-repeat: no-repeat; }
+.work-gallery-simple .case-study-content { min-height: 0; overflow: auto; }
+@media (min-width: 981px) {
+  .work-gallery-simple .case-study-panel { height: 768px; min-height: 768px; }
+  .work-gallery-simple .case-study-image { height: auto; aspect-ratio: 16 / 9; }
+}
+@media (max-width: 980px) {
+  .work-gallery-simple .case-study-panel { height: auto; min-height: 0; }
+  .work-gallery-simple .case-study-image { height: auto; aspect-ratio: 16 / 9; }
+  .work-gallery-simple .case-study-content { min-height: 0; overflow: visible; }
+}
+@media (max-width: 700px) {
+  .work-gallery-simple .case-study-panel { height: auto; min-height: 0; grid-template-rows: auto auto; }
+  .work-gallery-simple .case-study-image { width: 100%; height: auto; min-height: 0; aspect-ratio: 16 / 9; background-size: cover; }
+  .work-gallery-simple .case-study-content { min-height: 0; height: auto; overflow: visible; padding-bottom: 82px; }
+}
