@@ -618,3 +618,10 @@ img { display: block; max-width: 100%; }
   .work-gallery-simple .case-study-content { padding-bottom: 82px; }
   .work-gallery-simple .case-study-panel-controls { right: 14px; bottom: 14px; }
 }
+
+/* Mobile Selected Works: fixed panel geometry prevents layout shifts between slots */
+@media (max-width: 700px) {
+  .work-gallery-simple .case-study-panel { height: 700px; min-height: 700px; grid-template-rows: 42% 58%; }
+  .work-gallery-simple .case-study-content { min-height: 0; overflow: hidden; padding-bottom: 82px; }
+  .work-gallery-simple .case-study-panel-controls { touch-action: none; }
+}
