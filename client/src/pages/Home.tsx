@@ -14,8 +14,7 @@ import {
 } from "lucide-react";
 
 const heroImage = "/assets/hero-chiaroscuro.webp";
-const emissionImage = "/assets/emission-pro.jpg";
-const upcomingImage = "/assets/upcoming-tool.jpg";
+const upcomingImage = "/assets/upcoming-tool.webp";
 const emissionOfficialImage = "https://assets.superhivemarket.com/store/product/262099/image/xlarge_og-f81c24108fbdac02a484262bcca72c12.png";
 const colorSpaceOfficialImage = "https://assets.superhivemarket.com/store/product/263206/image/xlarge_og-80afdd45ad80acd114c971a73e9253fd.png";
 const gumroadUrl = "https://danilocaliro.gumroad.com";
