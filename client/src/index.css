@@ -819,3 +819,9 @@ img { display: block; max-width: 100%; }
 /* Contact section uses the orange background, so its return arrow needs dark contrast */
 .contact-section .section-end-arrow { color: #17130e; border-color: rgba(23,19,14,.55); }
 .contact-section .section-end-arrow:hover { color: #f18b32; border-color: #17130e; background: #17130e; }
+
+/* Section arrows sit closer to the following tab */
+.section-end-arrow { margin-top: 70px; margin-bottom: -34px; }
+.work-section .section-end-arrow { color: #f18b32; border-color: #123d5a; background: #123d5a; }
+.work-section .section-end-arrow:hover { color: #123d5a; border-color: #f18b32; background: #f18b32; }
+@media (max-width: 700px) { .section-end-arrow { margin-top: 55px; margin-bottom: -18px; } }
