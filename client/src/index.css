@@ -789,3 +789,10 @@ img { display: block; max-width: 100%; }
 /* Subtle render-tile cue on the custom-color side, generated in CSS with no extra asset */
 .work-gallery-simple .work-gallery-card-overlay::after { content: ''; position: absolute; inset: 0 0 0 44%; opacity: .16; background-image: linear-gradient(90deg, transparent 0 48%, rgba(236,234,227,.72) 49%, transparent 50%), linear-gradient(0deg, transparent 0 48%, rgba(236,234,227,.72) 49%, transparent 50%), linear-gradient(135deg, transparent 0 48%, rgba(236,234,227,.28) 49%, transparent 50%); background-size: 27px 27px, 27px 27px, 54px 54px; mix-blend-mode: screen; mask-image: linear-gradient(90deg, transparent, #000 22%, #000 82%, transparent); pointer-events: none; }
 .work-gallery-simple .work-gallery-card:hover .work-gallery-card-overlay::after, .work-gallery-simple .work-gallery-card.is-selected .work-gallery-card-overlay::after { opacity: .22; }
+
+/* Mobile Tools links: larger labels while keeping one evenly spaced row */
+@media (max-width: 700px) {
+  .artist-tools-section .tools-note-links { gap: 8px; }
+  .artist-tools-section .tools-note-link { font-size: clamp(8px, 2.35vw, 10px); letter-spacing: .01em; gap: 3px; }
+  .artist-tools-section .tools-note-link svg { width: 12px; height: 12px; }
+}
