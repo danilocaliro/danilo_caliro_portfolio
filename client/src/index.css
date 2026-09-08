@@ -1035,3 +1035,8 @@ img { display: block; max-width: 100%; }
   .case-study-panel-controls button { border-color: rgba(241,139,50,.7); background: rgba(5,7,9,.72); color: #f18b32; }
   .case-study-panel-controls button:hover { border-color: #ffb16b; background: rgba(5,7,9,.86); color: #ffb16b; }
 }
+
+/* Desktop preview letterbox areas use the panel background, never black */
+@media (min-width: 701px) {
+  .work-gallery-simple .case-study-image { background-color: #15181d; }
+}
