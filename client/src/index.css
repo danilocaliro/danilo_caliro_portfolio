@@ -1110,3 +1110,9 @@ img { display: block; max-width: 100%; }
   .contact-section { min-height: unset !important; padding-top: 56px; padding-bottom: 58px; }
   #contact { scroll-margin-top: 82px; }
 }
+
+/* Narrow desktop/tablet web layout: shorten only the text panel when it moves below the image */
+@media (min-width: 701px) and (max-width: 980px) {
+  .work-gallery-simple .case-study-content { height: 344px; min-height: 344px; max-height: 344px; overflow-y: auto; padding: 26px 30px 30px; }
+  .work-gallery-simple .case-study-panel-controls { display: none !important; }
+}
