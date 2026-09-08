@@ -726,3 +726,18 @@ img { display: block; max-width: 100%; }
   .tools-note { align-items: end; }
   .tools-note-links { align-self: end; }
 }
+
+/* Final responsive corrections */
+.brand-mark-name small { margin-left: 5px; color: rgba(236,234,227,.45); font-family: 'DM Mono', monospace; font-size: .46em; font-weight: 400; letter-spacing: .14em; vertical-align: .2em; }
+.about-portrait img, .about-portrait-label { display: none; }
+.work-image-lightbox-stage { width: min(1120px, 88vw, calc(78vh * 1.7778)); height: auto; aspect-ratio: 16 / 9; max-height: 78vh; }
+.work-image-lightbox-image { width: 100%; height: 100%; aspect-ratio: 16 / 9; }
+@media (max-width: 700px) {
+  .brand-mark-name small { font-size: .43em; }
+  .work-image-lightbox-stage { width: min(92vw, calc(64vh * 1.7778)); height: auto; aspect-ratio: 16 / 9; max-height: 64vh; }
+  .work-image-lightbox-image { aspect-ratio: 16 / 9; }
+  .artist-tools-section .tools-note { display: grid; grid-template-columns: 1fr; gap: 14px; text-align: center; justify-items: center; }
+  .artist-tools-section .tools-note > span, .artist-tools-section .tools-note p { width: 100%; max-width: none; text-align: center; }
+  .artist-tools-section .tools-note-links { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; justify-content: stretch; align-items: center; }
+  .artist-tools-section .tools-note-link { width: 100%; justify-content: center; justify-self: stretch; font-size: clamp(7px, 2vw, 9px); letter-spacing: .015em; }
+}

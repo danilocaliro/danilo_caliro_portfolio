@@ -178,7 +178,7 @@ export default function Home() {
         <div className="header-inner">
             <a href="#main" className="brand-mark" aria-label="Home">
             <span className="brand-mark-symbol">/</span>
-            <span className="brand-mark-name">DANILO CALIRO</span>
+            <span className="brand-mark-name">DANILO CALIRO <small>PORTFOLIO</small></span>
           </a>
 
           <nav className="desktop-nav" aria-label="Primary navigation">
@@ -250,7 +250,7 @@ export default function Home() {
 
         <section className="about-section artist-about-section section-pad" id="about-me">
           <div className="container about-layout">
-            <div className="about-portrait"><img src="/assets/placeholders/about/danilo_caliro_photo_placeholder.webp" alt="Placeholder for Danilo Caliro portrait" /><div className="about-portrait-grid" /><div className="about-portrait-label">LOOKDEV / PIPELINE / LIGHTING</div></div>
+            <div className="about-portrait" aria-label="Placeholder for Danilo Caliro portrait"><div className="about-portrait-grid" /></div>
             <div className="about-copy"><SectionLabel>02 / ABOUT ME</SectionLabel><h2>Creative judgement.<br /><em>Technical precision.</em></h2><p className="about-lead">I&apos;m a Look Development TD, Pipeline TD and Technical Artist with a background in 3D, lighting, rendering, photography and CGI production.</p><p>Over the years, my role has evolved from hands-on production into a broader technical and supervisory position, combining artistic vision, technical problem-solving, pipeline development and workflow optimisation.</p><p>I work across animation, television, advertising, institutional content, immersive experiences and interactive projects — from visual development and asset creation to lighting, rendering, VFX, post-production and final delivery.</p><div className="about-details"><div><span>SELECTED PRODUCTIONS</span><strong>Uanema · Digitalcomoedia · RAI · Leonardo · Thales Alenia Space · Telespazio · Arkaevision · IAC · Voice of Heritages · Brancaccio · 5Senses · Event Planet · Cantico</strong></div><div><span>CORE PRACTICE</span><strong>Look Development · Lighting · Compositing · Set Dress · Pipeline TD · Tool Development</strong></div><div><span>SOFTWARE</span><strong>Maya · 3dsMax · Arnold · Vray · Blender · Marmoset · Substance 3D Painter · Substance 3D Designer · Unreal Engine · Unity · Nuke · Photoshop · DaVinci Resolve</strong></div></div><a className="inline-arrow-link" href={linkedinUrl} target="_blank" rel="noreferrer">More on LinkedIn <ArrowUpRight size={17} /></a></div>
           </div>
         </section>
