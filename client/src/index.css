@@ -564,3 +564,11 @@ img { display: block; max-width: 100%; }
 
 .reel-links { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 22px; }
 @media (max-width: 700px) { .reel-links { align-items: flex-start; flex-direction: column; gap: 10px; } }
+
+/* Responsive scroll cue: rules stop cleanly around the centered label */
+.hero-foot { gap: 14px; }
+.hero-foot-label { flex: 0 0 auto; white-space: nowrap; }
+.hero-foot-rule { min-width: 0; }
+@media (max-width: 700px) { .hero-foot { left: 20px; right: 20px; bottom: 21px; display: flex; gap: 10px; font-size: 8px; } .hero-foot .hero-foot-rule { display: block; } .hero-foot-label { font-size: 8px; } }
+
+@media (max-width: 700px) { .hero-foot span:last-child { display: block; } }
