@@ -1040,3 +1040,17 @@ img { display: block; max-width: 100%; }
 @media (min-width: 701px) {
   .work-gallery-simple .case-study-image { background-color: #15181d; }
 }
+
+/* Final preview framing: transparent letterbox and no dark overlay on desktop */
+@media (min-width: 701px) {
+  .work-gallery-simple .case-study-image { background-color: transparent !important; }
+  .work-gallery-simple .case-study-image::after { display: none; }
+}
+
+/* Mobile preview: 60% image, 40% text, with orange controls at the bottom */
+@media (max-width: 700px) {
+  .work-gallery-simple .case-study-panel { height: 100vw; min-height: 0; grid-template-rows: 60% 40%; }
+  .work-gallery-simple .case-study-image { width: 100%; height: 100%; min-height: 0; aspect-ratio: auto; background-size: contain; background-position: center; background-repeat: no-repeat; background-color: transparent; }
+  .work-gallery-simple .case-study-content { height: 100%; min-height: 0; overflow: hidden; padding: 16px 19px 58px; }
+  .work-gallery-simple .case-study-panel-controls { right: 14px; bottom: 12px; }
+}
