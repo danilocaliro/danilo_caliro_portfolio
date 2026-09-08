@@ -859,3 +859,6 @@ img { display: block; max-width: 100%; }
 
 /* Inactive work slots: almost monochrome, with only a minimal chromatic trace */
 .work-gallery-simple .work-gallery-card:not(.is-selected) { filter: saturate(.12); }
+
+/* Selected work slot: slightly richer color and a subtle lift in brightness */
+.work-gallery-simple .work-gallery-card.is-selected { filter: saturate(1.16) brightness(1.035); }
