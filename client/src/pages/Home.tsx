@@ -30,7 +30,7 @@ const colorSpaceConverterUrl = "https://superhivemarket.com/products/color-space
 const linkedinUrl = "https://www.linkedin.com/in/danilo-caliro/";
 const vimeoId = "1216793443";
 const vimeoUrl = "https://vimeo.com/1216793443";
-const youtubeUrl = "https://www.youtube.com/";
+const youtubeUrl = "https://youtu.be/aqn1gl72Wd8";
 const missingWorkflowYoutubeUrl = "http://www.youtube.com/@themissingworkflow";
 
 const navItems = [
