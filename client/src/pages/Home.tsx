@@ -161,6 +161,28 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    const targets = Array.from(document.querySelectorAll<HTMLElement>(".section-heading, .work-gallery-card, .case-study-panel, .tool-card, .about-portrait, .contact-inner"));
+    targets.forEach((target, index) => {
+      target.classList.add("mobile-reveal-target");
+      target.style.setProperty("--reveal-delay", `${Math.min(index * 35, 210)}ms`);
+    });
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+      targets.forEach((target) => target.classList.add("is-in-view"));
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    targets.forEach((target) => observer.observe(target));
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
     document.body.style.overflow = expandedWorkImage ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [expandedWorkImage]);

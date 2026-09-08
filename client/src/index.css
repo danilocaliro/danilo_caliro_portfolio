@@ -925,3 +925,12 @@ img { display: block; max-width: 100%; }
   .about-links a::after,
   .tools-note-link::after { transition: none; }
 }
+
+/* Mobile scroll reveal: content enters gently as it reaches the viewport */
+@media (max-width: 700px) {
+  .mobile-reveal-target { opacity: 0; transform: translateY(16px); transition: opacity .58s ease var(--reveal-delay, 0ms), transform .58s cubic-bezier(.23,1,.32,1) var(--reveal-delay, 0ms); }
+  .mobile-reveal-target.is-in-view { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobile-reveal-target { opacity: 1; transform: none; transition: none; }
+}
