@@ -901,3 +901,27 @@ img { display: block; max-width: 100%; }
 @media (max-width: 700px) {
   .work-gallery-simple .work-gallery-card-top svg { display: none; }
 }
+
+/* Editorial micro-interactions: restrained motion for hover and focus states */
+.work-gallery-simple .work-gallery-card { transition: border-color .28s ease, transform .28s cubic-bezier(.23,1,.32,1), filter .28s ease; }
+.work-gallery-simple .work-gallery-card::after { transition: opacity .35s ease, transform .65s cubic-bezier(.23,1,.32,1); }
+.work-gallery-simple .work-gallery-card:hover::after,
+.work-gallery-simple .work-gallery-card.is-selected::after { opacity: .42; transform: scale(1.035); }
+.work-gallery-simple .work-gallery-card-bottom span { transition: color .25s ease, transform .28s cubic-bezier(.23,1,.32,1); }
+.work-gallery-simple .work-gallery-card:hover .work-gallery-card-bottom span { color: #fff; transform: translateX(3px); }
+.case-study-image { transition: background-size .5s cubic-bezier(.23,1,.32,1), filter .35s ease; }
+.case-study-image:hover { filter: brightness(1.08); }
+.text-link, .inline-arrow-link, .reel-links a, .about-links a, .tools-note-link { position: relative; transition: color .22s ease, gap .22s ease; }
+.text-link::after, .inline-arrow-link::after, .reel-links a::after, .about-links a::after, .tools-note-link::after { content: ''; position: absolute; left: 0; right: 0; bottom: -5px; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .28s cubic-bezier(.23,1,.32,1); }
+.text-link:hover::after, .inline-arrow-link:hover::after, .reel-links a:hover::after, .about-links a:hover::after, .tools-note-link:hover::after { transform: scaleX(1); }
+@media (prefers-reduced-motion: reduce) {
+  .work-gallery-simple .work-gallery-card,
+  .work-gallery-simple .work-gallery-card::after,
+  .work-gallery-simple .work-gallery-card-bottom span,
+  .case-study-image,
+  .text-link::after,
+  .inline-arrow-link::after,
+  .reel-links a::after,
+  .about-links a::after,
+  .tools-note-link::after { transition: none; }
+}
