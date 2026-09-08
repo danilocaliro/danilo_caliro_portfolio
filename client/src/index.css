@@ -1021,3 +1021,17 @@ img { display: block; max-width: 100%; }
 
 /* Navigation arrows are temporarily removed from the preview in every viewport */
 .case-study-panel-controls { display: none !important; }
+
+/* Final compact Contact spacing */
+.contact-section { padding-top: 76px; padding-bottom: 78px; }
+
+/* Preview controls: hidden on desktop, restored at the bottom on mobile */
+@media (min-width: 701px) {
+  .case-study-panel-controls { display: none !important; }
+}
+@media (max-width: 700px) {
+  .contact-section { padding-top: 58px; padding-bottom: 68px; }
+  .case-study-panel-controls { display: inline-flex !important; right: 14px; bottom: 14px; color: #f18b32; }
+  .case-study-panel-controls button { border-color: rgba(241,139,50,.7); background: rgba(5,7,9,.72); color: #f18b32; }
+  .case-study-panel-controls button:hover { border-color: #ffb16b; background: rgba(5,7,9,.86); color: #ffb16b; }
+}
