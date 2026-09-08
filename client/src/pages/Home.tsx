@@ -15,6 +15,7 @@ import {
 
 const heroImage = "/assets/hero-chiaroscuro.webp";
 const upcomingImage = "/assets/upcoming-tool.webp";
+const profileImage = "/assets/placeholders/about/profile_pic_01.webp";
 const emissionOfficialImage = "https://assets.superhivemarket.com/store/product/262099/image/xlarge_og-f81c24108fbdac02a484262bcca72c12.png";
 const colorSpaceOfficialImage = "https://assets.superhivemarket.com/store/product/263206/image/xlarge_og-80afdd45ad80acd114c971a73e9253fd.png";
 const gumroadUrl = "https://danilocaliro.gumroad.com";
@@ -253,7 +254,7 @@ export default function Home() {
 
         <section className="about-section artist-about-section section-pad" id="about-me">
           <div className="container about-layout">
-            <div className="about-portrait" aria-label="Placeholder for Danilo Caliro portrait"><div className="about-portrait-grid" /></div>
+            <div className="about-portrait has-photo"><img src={profileImage} alt="Danilo Caliro" /><div className="about-portrait-grid" /></div>
             <div className="about-copy"><SectionLabel>02 / ABOUT ME</SectionLabel><h2>Creative judgement.<br /><em>Technical precision.</em></h2><p className="about-lead">I&apos;m a Look Development TD, Pipeline TD and Technical Artist with a background in 3D, lighting, rendering, photography and CGI production.</p><p>Over the years, my role has evolved from hands-on production into a broader technical and supervisory position, combining artistic vision, technical problem-solving, pipeline development and workflow optimisation.</p><p>I work across animation, television, advertising, institutional content, immersive experiences and interactive projects — from visual development and asset creation to lighting, rendering, VFX, post-production and final delivery.</p><div className="about-details"><div><span>SELECTED PRODUCTIONS</span><strong>Uanema · Digitalcomoedia · RAI · Leonardo · Thales Alenia Space · Telespazio · Arkaevision · IAC · Voice of Heritages · Brancaccio · 5Senses · Event Planet · Cantico</strong></div><div><span>CORE PRACTICE</span><strong>Look Development · Lighting · Compositing · Set Dress · Pipeline TD · Tool Development</strong></div><div><span>SOFTWARE</span><strong>Maya · 3dsMax · Arnold · Vray · Blender · Marmoset · Substance 3D Painter · Substance 3D Designer · Unreal Engine · Unity · Nuke · Photoshop · DaVinci Resolve</strong></div></div><div className="about-links"><a className="inline-arrow-link" href={linkedinUrl} target="_blank" rel="noreferrer">More on LinkedIn <ArrowUpRight size={17} /></a><a className="inline-arrow-link" href={artstationUrl} target="_blank" rel="noreferrer">Follow me on ArtStation <ArrowUpRight size={17} /></a></div></div>
           </div>
           <SectionEndArrow href="#work" label="Continue to Selected Works" />

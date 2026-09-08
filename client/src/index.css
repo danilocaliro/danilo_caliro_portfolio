@@ -835,3 +835,9 @@ img { display: block; max-width: 100%; }
 /* Slightly stronger project label in the Tools footer note */
 .artist-tools-section .tools-note > span { font-size: 11px; }
 @media (max-width: 700px) { .artist-tools-section .tools-note > span { font-size: 10px; } }
+
+/* Definitive About Me portrait: use the supplied photo instead of placeholder overlays */
+.about-portrait.has-photo::before,
+.about-portrait.has-photo::after { display: none; }
+.about-portrait.has-photo img { display: block; opacity: .86; }
+.about-portrait.has-photo .about-portrait-grid { opacity: .08; }
