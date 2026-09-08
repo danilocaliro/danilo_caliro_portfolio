@@ -998,3 +998,26 @@ img { display: block; max-width: 100%; }
   .work-gallery-simple .case-study-panel-virtual-reality .case-study-panel-controls { color: #927fd0; }
   .work-gallery-simple .case-study-panel-personal .case-study-panel-controls { color: #d0a765; }
 }
+
+/* Compact Selected Works desktop composition: image dictates total height, controls temporarily removed */
+@media (min-width: 981px) {
+  .work-section.section-pad { padding-top: 104px; padding-bottom: 72px; }
+  .work-gallery-simple .case-study-panel { height: auto; min-height: 0; grid-template-columns: minmax(300px, .78fr) minmax(480px, 1.22fr); grid-template-rows: auto; align-items: stretch; overflow: hidden; }
+  .work-gallery-simple .case-study-content { grid-column: 1; grid-row: 1; height: auto; min-height: 0; overflow: visible; display: flex; flex-direction: column; justify-content: space-between; gap: 18px; padding: 34px 42px 34px 36px; }
+  .work-gallery-simple .case-study-image { grid-column: 2; grid-row: 1; width: 100%; height: auto; min-height: 0; aspect-ratio: 16 / 9; align-self: stretch; background-size: contain; background-position: center; background-repeat: no-repeat; }
+  .work-gallery-simple .case-study-panel-controls { display: none; }
+}
+
+/* Restore the original orange arrow treatment for when controls return */
+.case-study-panel-controls { color: #f18b32; background: transparent; }
+.case-study-panel-controls button { border-color: rgba(240,237,229,.24); background: rgba(5,7,9,.36); color: #f0ede5; }
+.case-study-panel-controls button:hover { border-color: #f18b32; background: rgba(5,7,9,.72); color: #f18b32; }
+
+/* Shorter Contact section while keeping the complete form visible */
+.contact-section { padding-top: 104px; padding-bottom: 112px; }
+@media (max-width: 700px) {
+  .contact-section { padding-top: 78px; padding-bottom: 86px; }
+}
+
+/* Navigation arrows are temporarily removed from the preview in every viewport */
+.case-study-panel-controls { display: none !important; }
