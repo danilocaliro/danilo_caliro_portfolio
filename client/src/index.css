@@ -809,3 +809,9 @@ img { display: block; max-width: 100%; }
   .artist-tools-section .tools-note > p { align-self: baseline; }
   .artist-tools-section .tools-note-links { align-self: start; }
 }
+
+/* Section navigation: a quiet orange continuation cue at the end of every tab */
+.section-end-arrow { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; margin: 58px auto -22px; color: #f18b32; border: 1px solid rgba(241,139,50,.48); border-radius: 50%; transition: color .2s ease, border-color .2s ease, transform .2s ease, background .2s ease; }
+.section-end-arrow:hover { color: #17130e; border-color: #f18b32; background: #f18b32; transform: translateY(3px); }
+.section-end-arrow:focus-visible { outline: 2px solid #f18b32; outline-offset: 4px; }
+@media (max-width: 700px) { .section-end-arrow { margin-top: 46px; margin-bottom: -10px; } }
