@@ -801,3 +801,11 @@ img { display: block; max-width: 100%; }
 .tools-grid-four .tool-card-body { display: flex; flex: 1 1 auto; flex-direction: column; }
 .tools-grid-four .tool-lead { flex: 1 1 auto; }
 .tools-grid-four .tool-actions { margin-top: auto; }
+
+/* Desktop Tools note: orange label and white description read as one line */
+@media (min-width: 701px) {
+  .artist-tools-section .tools-note { align-items: baseline; }
+  .artist-tools-section .tools-note > span,
+  .artist-tools-section .tools-note > p { align-self: baseline; }
+  .artist-tools-section .tools-note-links { align-self: start; }
+}
