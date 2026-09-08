@@ -795,3 +795,9 @@ img { display: block; max-width: 100%; }
   .artist-tools-section .tools-note p { max-width: 460px; text-align: left; }
   .artist-tools-section .tools-note-links { align-self: start; }
 }
+
+/* Tools cards: description absorbs wrapping while divider and links stay pinned to the bottom */
+.tools-grid-four .tool-card { display: flex; flex-direction: column; }
+.tools-grid-four .tool-card-body { display: flex; flex: 1 1 auto; flex-direction: column; }
+.tools-grid-four .tool-lead { flex: 1 1 auto; }
+.tools-grid-four .tool-actions { margin-top: auto; }
