@@ -216,7 +216,7 @@ export default function Home() {
             <div className="artist-hero-copy">
               <div className="eyebrow reveal-up"><span className="eyebrow-line" /> LOOK DEVELOPMENT / LIGHTING / COMPOSITING / TECHNICAL DIRECTION / PIPELINE</div>
               <h1 className="artist-hero-title reveal-up delay-1">Images with<br /><em>intent.</em></h1>
-              <p className="artist-hero-intro reveal-up delay-2">I shape how images look and how they're made — lighting, lookdev, and the tools that hold a pipeline together.</p>
+              <p className="artist-hero-intro reveal-up delay-2">I shape how images look and how they're made.</p>
               <div className="hero-actions reveal-up delay-3">
                 <a className="button button-primary" href="#demoreel">Watch the reel <Play size={15} fill="currentColor" /></a>
                 <a className="text-link" href="#about-me">Read about me <ArrowDownRight size={16} /></a>
@@ -224,7 +224,7 @@ export default function Home() {
             </div>
             <div className="artist-hero-side reveal-up delay-3">
               <span className="artist-hero-side-kicker">A multidisciplinary practice</span>
-              <p>Moving between image-making, compositing, pipeline thinking and technical direction to shape both the frame and the way it comes together.</p>
+              <p>Moving between image-making, compositing, pipeline thinking and technical direction to connect the frame with the way it comes together.</p>
             </div>
             <div className="hero-foot reveal-up delay-3"><span className="hero-foot-rule" /><span className="hero-foot-label">SCROLL FOR MORE</span><span className="hero-foot-rule" /></div>
           </div>
