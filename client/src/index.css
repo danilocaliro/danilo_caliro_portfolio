@@ -741,3 +741,30 @@ img { display: block; max-width: 100%; }
   .artist-tools-section .tools-note-links { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; justify-content: stretch; align-items: center; }
   .artist-tools-section .tools-note-link { width: 100%; justify-content: center; justify-self: stretch; font-size: clamp(7px, 2vw, 9px); letter-spacing: .015em; }
 }
+
+/* Requested hierarchy refinements */
+.brand-mark-name small { font-size: .76em; color: rgba(236,234,227,.62); font-family: 'Space Grotesk', sans-serif; font-weight: 500; letter-spacing: -.04em; vertical-align: baseline; }
+.tools-note { align-items: start; }
+.tools-note-links { align-self: start; }
+@media (max-width: 700px) {
+  .brand-mark-name small { font-size: .68em; }
+  .artist-about-section .about-layout { display: grid; grid-template-columns: 1fr; }
+  .artist-about-section .about-copy { display: contents; }
+  .artist-about-section .about-copy > .section-label { grid-row: 1; }
+  .artist-about-section .about-portrait { grid-row: 2; }
+  .artist-about-section .about-copy > h2 { grid-row: 3; }
+  .artist-about-section .about-copy > .about-lead,
+  .artist-about-section .about-copy > p:not(.about-lead) { grid-row: 4; }
+  .artist-about-section .about-details { grid-row: 5; }
+  .artist-about-section .inline-arrow-link { grid-row: 6; }
+  .artist-tools-section .tools-note { align-items: center; }
+  .artist-tools-section .tools-note-links { align-self: center; }
+}
+
+@media (max-width: 700px) {
+  .artist-about-section .about-copy > .about-lead { grid-row: 4; }
+  .artist-about-section .about-copy > p:nth-of-type(2) { grid-row: 5; }
+  .artist-about-section .about-copy > p:nth-of-type(3) { grid-row: 6; }
+  .artist-about-section .about-details { grid-row: 7; }
+  .artist-about-section .inline-arrow-link { grid-row: 8; }
+}
