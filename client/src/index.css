@@ -1175,3 +1175,15 @@ img { display: block; max-width: 100%; }
   .mobile-menu-button { display: grid; place-items: center; }
   .mobile-nav { display: grid; }
 }
+
+/* Lightbox gallery: arrows and image counter share one bottom control row */
+.work-image-lightbox-arrow { top: auto; bottom: -38px; width: 44px; height: 34px; transform: none; }
+.work-image-lightbox-prev { left: 0; }
+.work-image-lightbox-next { right: 0; }
+.work-image-lightbox-prev:hover,
+.work-image-lightbox-next:hover { transform: scale(1.05); }
+@media (max-width: 700px) {
+  .work-image-lightbox-arrow { bottom: -36px; width: 40px; height: 32px; }
+  .work-image-lightbox-prev { left: 0; }
+  .work-image-lightbox-next { right: 0; }
+}
