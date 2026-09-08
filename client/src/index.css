@@ -856,3 +856,6 @@ img { display: block; max-width: 100%; }
 
 /* Inactive work slots: near-monochrome with only a restrained trace of color */
 .work-gallery-simple .work-gallery-card:not(.is-selected) { filter: saturate(.26); }
+
+/* Inactive work slots: almost monochrome, with only a minimal chromatic trace */
+.work-gallery-simple .work-gallery-card:not(.is-selected) { filter: saturate(.12); }
