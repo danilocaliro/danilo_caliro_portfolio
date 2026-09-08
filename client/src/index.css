@@ -853,3 +853,6 @@ img { display: block; max-width: 100%; }
 .work-gallery-simple .work-gallery-card .work-gallery-image { z-index: 0; }
 .work-gallery-simple .work-gallery-card .work-gallery-card-overlay { z-index: 1; }
 @media (max-width: 700px) { .work-gallery-simple .work-gallery-card::after { background-size: auto 165%; opacity: .30; } }
+
+/* Inactive work slots: near-monochrome with only a restrained trace of color */
+.work-gallery-simple .work-gallery-card:not(.is-selected) { filter: saturate(.26); }
