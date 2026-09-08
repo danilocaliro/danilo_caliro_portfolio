@@ -796,3 +796,7 @@ img { display: block; max-width: 100%; }
   .artist-tools-section .tools-note-link { font-size: clamp(8px, 2.35vw, 10px); letter-spacing: .01em; gap: 3px; }
   .artist-tools-section .tools-note-link svg { width: 12px; height: 12px; }
 }
+
+.form-honey { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important; }
+.form-error { margin: 0 0 14px !important; color: #8d2d1d !important; font-size: 12px !important; line-height: 1.5 !important; }
+.contact-form button:disabled { cursor: wait; opacity: .62; }
