@@ -247,7 +247,7 @@ export default function Home() {
             </div>
             <div className="artist-hero-side reveal-up delay-3">
               <span className="artist-hero-side-kicker">A multidisciplinary practice</span>
-              <p>Moving between image-making, compositing, pipeline thinking and technical direction to connect the frame with the way it comes together.</p>
+              <p>Moving between shading, lighting, compositing, pipeline thinking and technical direction to connect the frame with the way it comes together.</p>
             </div>
             <div className="hero-foot reveal-up delay-3"><span className="hero-foot-rule" /><span className="hero-foot-label">SCROLL FOR MORE</span><span className="hero-foot-rule" /></div>
           </div>
