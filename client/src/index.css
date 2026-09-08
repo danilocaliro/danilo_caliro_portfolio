@@ -1089,3 +1089,13 @@ img { display: block; max-width: 100%; }
   .work-gallery-simple .case-study-panel-controls { bottom: 12px; }
   #contact { scroll-margin-top: 70px; }
 }
+
+/* Preview heading metadata: category stays on the right without wrapping */
+.case-study-heading { min-width: 0; align-items: flex-start; }
+.case-study-heading span:first-child { min-width: 0; }
+.case-study-heading span:last-child { flex: 0 0 auto; margin-left: auto; white-space: nowrap; text-align: right; }
+
+/* Desktop Contact anchor: give the compact section enough viewport height to land at its top */
+@media (min-width: 701px) {
+  .contact-section { min-height: calc(100vh - 82px); box-sizing: border-box; }
+}
