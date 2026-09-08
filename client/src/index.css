@@ -625,3 +625,11 @@ img { display: block; max-width: 100%; }
   .work-gallery-simple .case-study-content { min-height: 0; overflow: hidden; padding-bottom: 82px; }
   .work-gallery-simple .case-study-panel-controls { touch-action: none; }
 }
+
+/* Mobile preview keeps the same horizontal composition as desktop */
+@media (max-width: 700px) {
+  .work-gallery-simple .case-study-panel { height: auto; min-height: 0; grid-template-rows: auto auto; }
+  .work-gallery-simple .case-study-image { width: 100%; height: auto; min-height: 0; aspect-ratio: 16 / 9; }
+  .work-gallery-simple .case-study-content { min-height: 360px; overflow: visible; }
+  .work-gallery-simple .work-gallery-list { grid-template-columns: 1fr; }
+}
