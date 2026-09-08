@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://danilocaliro.github.io/sitemap.xml
