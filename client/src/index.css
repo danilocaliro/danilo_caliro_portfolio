@@ -800,3 +800,10 @@ img { display: block; max-width: 100%; }
 .form-honey { position: absolute !important; left: -10000px !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important; }
 .form-error { margin: 0 0 14px !important; color: #8d2d1d !important; font-size: 12px !important; line-height: 1.5 !important; }
 .contact-form button:disabled { cursor: wait; opacity: .62; }
+
+/* Desktop Tools note: label and description share the same top-aligned row */
+@media (min-width: 701px) {
+  .artist-tools-section .tools-note { grid-template-columns: max-content minmax(0, 1fr) auto; align-items: start; }
+  .artist-tools-section .tools-note p { max-width: 460px; text-align: left; }
+  .artist-tools-section .tools-note-links { align-self: start; }
+}
