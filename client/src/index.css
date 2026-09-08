@@ -715,3 +715,14 @@ img { display: block; max-width: 100%; }
   .tools-note-link { font-size: 7px; letter-spacing: .02em; gap: 2px; }
   .tools-note-link svg { width: 11px; height: 11px; }
 }
+
+/* Placeholder portrait and bottom-aligned project links */
+.about-portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .72; }
+.about-portrait .about-portrait-grid { z-index: 1; }
+.about-portrait .about-portrait-label { z-index: 2; }
+.tools-note { align-items: end; }
+.tools-note-links { align-self: end; }
+@media (max-width: 980px) {
+  .tools-note { align-items: end; }
+  .tools-note-links { align-self: end; }
+}

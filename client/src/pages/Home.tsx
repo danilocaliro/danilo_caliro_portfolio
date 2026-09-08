@@ -47,9 +47,9 @@ const workCases = [
     number: "01",
     category: "Entertainment",
     title: "Stories in light.",
-    image: "/assets/work-entertainment-thumb.jpg",
-    previewImage: "/assets/work-entertainment-preview.jpg",
-    galleryImages: ["/assets/work-entertainment-preview.jpg", "/assets/work-entertainment-thumb.jpg"],
+    image: "/assets/placeholders/slots/thumb_slot_entertainment.webp",
+    previewImage: "/assets/placeholders/previews/preview_entertainment_01.webp",
+    galleryImages: ["/assets/placeholders/previews/preview_entertainment_01.webp", "/assets/placeholders/previews/preview_entertainment_02.webp", "/assets/placeholders/previews/preview_entertainment_03.webp", "/assets/placeholders/previews/preview_entertainment_04.webp"],
     role: "Look Development / Lighting / Pipeline",
     summary: "Series TV, CGI and VFX work shaped through look development, lighting and pipeline thinking — supporting narrative images from first frame to final delivery.",
     outcome: "A coherent visual language for narrative work, balancing character, atmosphere and technical control.",
@@ -60,9 +60,9 @@ const workCases = [
     number: "02",
     category: "Institutional",
     title: "Making the complex clear.",
-    image: "/assets/work-institutional-thumb.jpg",
-    previewImage: "/assets/work-institutional-preview.jpg",
-    galleryImages: ["/assets/work-institutional-preview.jpg", "/assets/work-institutional-thumb.jpg"],
+    image: "/assets/placeholders/slots/thumb_slot_institutional.webp",
+    previewImage: "/assets/placeholders/previews/preview_institutional_01.webp",
+    galleryImages: ["/assets/placeholders/previews/preview_institutional_01.webp", "/assets/placeholders/previews/preview_institutional_02.webp", "/assets/placeholders/previews/preview_institutional_03.webp", "/assets/placeholders/previews/preview_institutional_04.webp"],
     role: "Look Development / Technical Direction / Visual Communication",
     summary: "Films and visual products for organisations such as Leonardo and Thales Alenia Space, translating complex subjects into clear, credible visual communication.",
     outcome: "Complex information translated into precise, engaging images that communicate with authority.",
@@ -73,9 +73,9 @@ const workCases = [
     number: "03",
     category: "Commercial",
     title: "Let the image do more.",
-    image: "/assets/work-commercial-thumb.jpg",
-    previewImage: "/assets/work-commercial-preview.jpg",
-    galleryImages: ["/assets/work-commercial-preview.jpg", "/assets/work-commercial-thumb.jpg"],
+    image: "/assets/placeholders/slots/thumb_slot_commercial.webp",
+    previewImage: "/assets/placeholders/previews/preview_commercial_01.webp",
+    galleryImages: ["/assets/placeholders/previews/preview_commercial_01.webp", "/assets/placeholders/previews/preview_commercial_02.webp", "/assets/placeholders/previews/preview_commercial_03.webp", "/assets/placeholders/previews/preview_commercial_04.webp"],
     role: "Look Development / Lighting / Rendering",
     summary: "Commercial CGI for campaigns including the Caffè Borbone spot, created entirely in a cartoon-driven visual language with controlled design and animation.",
     outcome: "A distinctive world where stylisation, timing and production craft work together to make the brand memorable.",
@@ -86,9 +86,9 @@ const workCases = [
     number: "04",
     category: "Cultural",
     title: "Spaces to step into.",
-    image: "/assets/work-cultural-thumb.jpg",
-    previewImage: "/assets/work-cultural-preview.jpg",
-    galleryImages: ["/assets/work-cultural-preview.jpg", "/assets/work-cultural-thumb.jpg"],
+    image: "/assets/placeholders/slots/thumb_slot_cultural.webp",
+    previewImage: "/assets/placeholders/previews/preview_cultural_01.webp",
+    galleryImages: ["/assets/placeholders/previews/preview_cultural_01.webp", "/assets/placeholders/previews/preview_cultural_02.webp", "/assets/placeholders/previews/preview_cultural_03.webp", "/assets/placeholders/previews/preview_cultural_04.webp"],
     role: "Visual Development / R&D / Virtual Experience",
     summary: "Projects dedicated to culture, from visual research and development to experiences that bring ideas, places and stories closer to the audience.",
     outcome: "Visual worlds that make cultural subjects feel immediate, open and inviting.",
@@ -99,9 +99,9 @@ const workCases = [
     number: "05",
     category: "Virtual Reality",
     title: "Beyond the frame.",
-    image: "/assets/work-cultural-thumb.jpg",
-    previewImage: "/assets/work-cultural-preview.jpg",
-    galleryImages: ["/assets/work-cultural-preview.jpg", "/assets/work-cultural-thumb.jpg"],
+    image: "/assets/placeholders/slots/thumb_slot_virtual_reality.webp",
+    previewImage: "/assets/placeholders/previews/preview_virtual_reality_01.webp",
+    galleryImages: ["/assets/placeholders/previews/preview_virtual_reality_01.webp", "/assets/placeholders/previews/preview_virtual_reality_02.webp", "/assets/placeholders/previews/preview_virtual_reality_03.webp", "/assets/placeholders/previews/preview_virtual_reality_04.webp"],
     role: "Look Development / Virtual & Mixed Reality",
     summary: "VR, XR and MR projects for companies, combining look development, technical research and focused tools to make virtual experiences feel clear and present.",
     outcome: "Visual and technical solutions that help people move naturally between image, space and interaction.",
@@ -112,11 +112,11 @@ const workCases = [
     number: "06",
     category: "Personal",
     title: "Room to explore.",
-    image: "/assets/work-entertainment-thumb.jpg",
-    previewImage: "/assets/work-entertainment-preview.jpg",
-    galleryImages: ["/assets/work-entertainment-preview.jpg", "/assets/work-entertainment-thumb.jpg"],
+    image: "/assets/placeholders/slots/thumb_slot_personal.webp",
+    previewImage: "/assets/placeholders/previews/preview_personal_01.webp",
+    galleryImages: ["/assets/placeholders/previews/preview_personal_01.webp", "/assets/placeholders/previews/preview_personal_02.webp", "/assets/placeholders/previews/preview_personal_03.webp", "/assets/placeholders/previews/preview_personal_04.webp"],
     role: "Look Development / Lighting / Tools Development",
-    summary: "Personal work where images, lighting and tools become a space for experiments, studies and ideas that can grow at their own pace.",
+    summary: "Personal work where images, lighting and tools become a space for experiments, studies and ideas that can grow at their own pace. A small room for artists to test, learn and follow a visual intuition.",
     outcome: "A laboratory for visual language, workflow and the next image to make.",
     tags: ["Personal", "Lighting", "Tools"],
   },
@@ -250,7 +250,7 @@ export default function Home() {
 
         <section className="about-section artist-about-section section-pad" id="about-me">
           <div className="container about-layout">
-            <div className="about-portrait"><div className="about-portrait-grid" /><div className="about-initials">TD<span> / </span>CGI</div><div className="about-portrait-label">LOOKDEV / PIPELINE / LIGHTING</div></div>
+            <div className="about-portrait"><img src="/assets/placeholders/about/danilo_caliro_photo_placeholder.webp" alt="Placeholder for Danilo Caliro portrait" /><div className="about-portrait-grid" /><div className="about-portrait-label">LOOKDEV / PIPELINE / LIGHTING</div></div>
             <div className="about-copy"><SectionLabel>02 / ABOUT ME</SectionLabel><h2>Creative judgement.<br /><em>Technical precision.</em></h2><p className="about-lead">I&apos;m a Look Development TD, Pipeline TD and Technical Artist with a background in 3D, lighting, rendering, photography and CGI production.</p><p>Over the years, my role has evolved from hands-on production into a broader technical and supervisory position, combining artistic vision, technical problem-solving, pipeline development and workflow optimisation.</p><p>I work across animation, television, advertising, institutional content, immersive experiences and interactive projects — from visual development and asset creation to lighting, rendering, VFX, post-production and final delivery.</p><div className="about-details"><div><span>SELECTED PRODUCTIONS</span><strong>Uanema · Digitalcomoedia · RAI · Leonardo · Thales Alenia Space · Telespazio · Arkaevision · IAC · Voice of Heritages · Brancaccio · 5Senses · Event Planet · Cantico</strong></div><div><span>CORE PRACTICE</span><strong>Look Development · Lighting · Compositing · Set Dress · Pipeline TD · Tool Development</strong></div><div><span>SOFTWARE</span><strong>Maya · 3dsMax · Arnold · Vray · Blender · Marmoset · Substance 3D Painter · Substance 3D Designer · Unreal Engine · Unity · Nuke · Photoshop · DaVinci Resolve</strong></div></div><a className="inline-arrow-link" href={linkedinUrl} target="_blank" rel="noreferrer">More on LinkedIn <ArrowUpRight size={17} /></a></div>
           </div>
         </section>
@@ -274,9 +274,9 @@ export default function Home() {
               <article className="tool-card tool-card-featured"><div className="tool-visual"><img src={emissionOfficialImage} alt="Official Emission Pro thumbnail from Superhive" loading="lazy" /><span className="tool-number">01</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER<sup>®</sup> / LIGHTING &amp; SHADING</span></div><h3>Emission Pro</h3><p className="tool-lead">An advanced shader system for Blender<sup>®</sup>, built to make emissive looks faster to build, easier to control and more consistent to art-direct.</p><div className="tool-actions"><MarketplaceLink href={emissionProUrl}>View on Superhive</MarketplaceLink><MarketplaceLink href={gumroadEmissionUrl}>View on Gumroad</MarketplaceLink></div></div></article>
               <article className="tool-card"><div className="tool-visual"><img src={colorSpaceOfficialImage} alt="Official Color Space Converter thumbnail from Superhive" loading="lazy" /><span className="tool-number">02</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER<sup>®</sup> / COLOR MANAGEMENT</span></div><h3>Color Space Converter</h3><p className="tool-lead">A focused Blender<sup>®</sup> utility for moving between colour spaces with clarity and control inside the production workflow.</p><div className="tool-actions"><MarketplaceLink href={colorSpaceConverterUrl}>View on Superhive</MarketplaceLink><MarketplaceLink href={gumroadColorSpaceUrl}>View on Gumroad</MarketplaceLink></div></div></article>
               <article className="tool-card"><div className="tool-visual"><img src={upcomingImage} alt="UV Edit Pro preview" loading="lazy" /><span className="tool-number">03</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER<sup>®</sup> / UV MAPPING</span></div><h3>UV Edit Pro</h3><p className="tool-lead">An industry-minded UV mapping workflow for Blender<sup>®</sup>, bringing focused editing functions into a faster, more direct interface.</p><div className="tool-actions"><MarketplaceLink href={uvEditProUrl}>Coming to Superhive</MarketplaceLink><MarketplaceLink href={gumroadUrl}>Visit Gumroad</MarketplaceLink></div></div></article>
-              <article className="tool-card tool-card-wip"><div className="tool-visual tool-visual-secondary"><div className="visual-lines" /><span className="tool-number">04</span><span className="visual-caption">BLENDER<sup>®</sup> / WORK IN PROGRESS</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>IN DEVELOPMENT</span></div><h3>Work in progress</h3><p className="tool-lead">A new tool is taking shape behind the scenes. More soon.</p></div></article>
+              <article className="tool-card tool-card-wip"><div className="tool-visual tool-visual-secondary"><div className="visual-lines" /><span className="tool-number">04</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>IN DEVELOPMENT</span></div><h3>Work in progress</h3><p className="tool-lead">A new tool is taking shape behind the scenes. More soon.</p></div></article>
             </div>
-            <div className="tools-note"><span>THE MISSING WORKFLOW PROJECT</span><p>Explore the complete tool collection, add-ons and find free resources for artists. A place to share practical ideas and useful workflows.</p><div className="tools-note-links"><a className="tools-note-link" href={superhiveCreatorUrl} target="_blank" rel="noreferrer">Visit Superhive <ArrowUpRight size={17} /></a><a className="tools-note-link" href={gumroadUrl} target="_blank" rel="noreferrer">Visit Gumroad <ArrowUpRight size={17} /></a><a className="tools-note-link" href={missingWorkflowYoutubeUrl} target="_blank" rel="noreferrer">Visit YouTube <ArrowUpRight size={17} /></a></div></div>
+            <div className="tools-note"><span>THE MISSING WORKFLOW PROJECT</span><p>Explore the complete tool collection, add-ons and find free resources for artists.</p><div className="tools-note-links"><a className="tools-note-link" href={superhiveCreatorUrl} target="_blank" rel="noreferrer">Visit Superhive <ArrowUpRight size={17} /></a><a className="tools-note-link" href={gumroadUrl} target="_blank" rel="noreferrer">Visit Gumroad <ArrowUpRight size={17} /></a><a className="tools-note-link" href={missingWorkflowYoutubeUrl} target="_blank" rel="noreferrer">Visit YouTube <ArrowUpRight size={17} /></a></div></div>
           </div>
         </section>
 
