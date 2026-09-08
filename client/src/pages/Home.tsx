@@ -265,12 +265,12 @@ export default function Home() {
               ) : (
                 <div className="reel-placeholder">
                   <div className="reel-placeholder-orbit orbit-a" /><div className="reel-placeholder-orbit orbit-b" />
-                  <div className="reel-placeholder-copy"><div className="reel-play-button"><Play size={22} fill="currentColor" /></div><span className="reel-kicker">VIMEO DEMOREEL</span><h3>Selected work, in motion.</h3><p>Drop your Vimeo video ID into <code>Home.tsx</code> to activate this player.</p></div>
+                  <div className="reel-placeholder-copy"><div className="reel-play-button"><Play size={22} fill="currentColor" /></div><span className="reel-kicker">VIMEO DEMOREEL</span><h3>Selected works, in motion.</h3><p>Drop your Vimeo video ID into <code>Home.tsx</code> to activate this player.</p></div>
                   <span className="reel-corner top-left">CGI / LOOKDEV / LIGHTING</span><span className="reel-corner bottom-right">REEL COMING ONLINE</span>
                 </div>
               )}
             </div>
-            <div className="reel-caption"><span>Demoreel / Selected work / 2026</span><div className="reel-links"><a href={vimeoUrl} target="_blank" rel="noreferrer">Open Vimeo <ExternalLink size={14} /></a><a href={youtubeUrl} target="_blank" rel="noreferrer">Open YouTube <ExternalLink size={14} /></a></div></div>
+            <div className="reel-caption"><span>Demoreel / Selected Works / 2026</span><div className="reel-links"><a href={vimeoUrl} target="_blank" rel="noreferrer">Open Vimeo <ExternalLink size={14} /></a><a href={youtubeUrl} target="_blank" rel="noreferrer">Open YouTube <ExternalLink size={14} /></a></div></div>
             <SectionEndArrow href="#about-me" label="Continue to About Me" />
           </div>
         </section>
@@ -305,7 +305,7 @@ export default function Home() {
               <article className="tool-card"><div className="tool-visual"><img src={uvEditProOfficialImage} alt="Official UV Edit Pro thumbnail from Superhive" loading="lazy" /><span className="tool-number">03</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER<sup>®</sup> / UV MAPPING</span></div><h3>UV Edit Pro</h3><p className="tool-lead">An industry-minded UV mapping workflow for Blender<sup>®</sup>, bringing focused editing functions into a faster, more direct interface.</p><div className="tool-actions"><MarketplaceLink href={uvEditProUrl}>View on Superhive</MarketplaceLink><MarketplaceLink href={gumroadUvEditProUrl}>View on Gumroad</MarketplaceLink></div></div></article>
               <article className="tool-card tool-card-wip"><div className="tool-visual tool-visual-secondary"><div className="visual-lines" /><span className="tool-number">04</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>IN DEVELOPMENT</span></div><h3>Work in progress</h3><p className="tool-lead">A new tool is taking shape behind the scenes. More soon.</p></div></article>
             </div>
-            <div className="tools-note"><span>THE MISSING WORKFLOW PROJECT</span><p>Explore the complete tool collection, add-ons and find free resources for artists.</p><div className="tools-note-links"><a className="tools-note-link" href={superhiveCreatorUrl} target="_blank" rel="noreferrer">Visit Superhive <ArrowUpRight size={17} /></a><a className="tools-note-link" href={gumroadUrl} target="_blank" rel="noreferrer">Visit Gumroad <ArrowUpRight size={17} /></a><a className="tools-note-link" href={missingWorkflowYoutubeUrl} target="_blank" rel="noreferrer">Visit YouTube <ArrowUpRight size={17} /></a></div></div>
+            <div className="tools-note"><span>THE MISSING WORKFLOW PROJECT</span><p>Explore the complete tool collection and find free resources for artists.</p><div className="tools-note-links"><a className="tools-note-link" href={superhiveCreatorUrl} target="_blank" rel="noreferrer">Visit Superhive <ArrowUpRight size={17} /></a><a className="tools-note-link" href={gumroadUrl} target="_blank" rel="noreferrer">Visit Gumroad <ArrowUpRight size={17} /></a><a className="tools-note-link" href={missingWorkflowYoutubeUrl} target="_blank" rel="noreferrer">Visit YouTube <ArrowUpRight size={17} /></a></div></div>
             <SectionEndArrow href="#contact" label="Continue to Get in Touch" />
           </div>
         </section>
