@@ -941,3 +941,21 @@ img { display: block; max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   .mobile-reveal-target { opacity: 1; transform: none; transition: none; }
 }
+
+/* Mobile About Me: portrait and Creative Judgement title share a compact two-column intro */
+@media (max-width: 700px) {
+  .artist-about-section .about-layout { grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); gap: 18px; align-items: center; }
+  .artist-about-section .about-copy > .section-label { grid-column: 1 / -1; grid-row: 1; }
+  .artist-about-section .about-portrait { grid-column: 1; grid-row: 2; width: 100%; }
+  .artist-about-section .about-copy > h2 { grid-column: 2; grid-row: 2; align-self: center; margin: 0; font-size: clamp(26px, 7.8vw, 42px); }
+  .artist-about-section .about-copy > .about-lead,
+  .artist-about-section .about-copy > p:nth-of-type(2),
+  .artist-about-section .about-copy > p:nth-of-type(3),
+  .artist-about-section .about-details,
+  .artist-about-section .about-links { grid-column: 1 / -1; }
+  .artist-about-section .about-copy > .about-lead { grid-row: 3; }
+  .artist-about-section .about-copy > p:nth-of-type(2) { grid-row: 4; }
+  .artist-about-section .about-copy > p:nth-of-type(3) { grid-row: 5; }
+  .artist-about-section .about-details { grid-row: 6; }
+  .artist-about-section .about-links { grid-row: 7; }
+}
