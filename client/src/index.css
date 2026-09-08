@@ -841,3 +841,7 @@ img { display: block; max-width: 100%; }
 .about-portrait.has-photo::after { display: none; }
 .about-portrait.has-photo img { display: block; opacity: .86; }
 .about-portrait.has-photo .about-portrait-grid { opacity: .08; }
+
+/* Selected Works: quieter inactive slots, slightly richer active slot */
+.work-gallery-simple .work-gallery-card:not(.is-selected) { filter: saturate(.78); }
+.work-gallery-simple .work-gallery-card.is-selected { filter: saturate(1.08); }
