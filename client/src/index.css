@@ -705,3 +705,13 @@ img { display: block; max-width: 100%; }
 @media (max-width: 700px) {
   .work-gallery-simple .case-study-content { height: 430px; min-height: 430px; max-height: 430px; overflow-y: auto; padding-bottom: 82px; }
 }
+
+/* Keep the three project links on one adaptive row */
+.tools-note-links { flex-wrap: nowrap; justify-content: flex-end; gap: clamp(8px, 2.2vw, 24px); }
+.tools-note-link { flex: 0 1 auto; min-width: 0; white-space: nowrap; font-size: clamp(8px, 1vw, 10px); gap: 4px; }
+.tools-note-link svg { width: 13px; height: 13px; flex: 0 0 auto; }
+@media (max-width: 700px) {
+  .tools-note-links { width: 100%; gap: 7px; justify-content: space-between; }
+  .tools-note-link { font-size: 7px; letter-spacing: .02em; gap: 2px; }
+  .tools-note-link svg { width: 11px; height: 11px; }
+}
