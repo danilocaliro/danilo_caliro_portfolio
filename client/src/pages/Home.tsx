@@ -19,8 +19,8 @@ const upcomingImage = "/assets/upcoming-tool.jpg";
 const emissionOfficialImage = "https://assets.superhivemarket.com/store/product/262099/image/xlarge_og-f81c24108fbdac02a484262bcca72c12.png";
 const colorSpaceOfficialImage = "https://assets.superhivemarket.com/store/product/263206/image/xlarge_og-80afdd45ad80acd114c971a73e9253fd.png";
 const gumroadUrl = "https://danilocaliro.gumroad.com";
-const gumroadEmissionUrl = "https://danilocaliro.gumroad.com/l/emission_pro?layout=profile";
-const gumroadColorSpaceUrl = "https://danilocaliro.gumroad.com/l/color_space_converter?layout=profile";
+const gumroadEmissionUrl = "https://danilocaliro.gumroad.com/l/emission_pro";
+const gumroadColorSpaceUrl = "https://danilocaliro.gumroad.com/l/color_space_converter";
 const uvEditProUrl = "#";
 
 // Replace these placeholders with your real URLs when ready.
