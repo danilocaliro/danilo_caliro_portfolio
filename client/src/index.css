@@ -1069,3 +1069,12 @@ img { display: block; max-width: 100%; }
   .work-gallery-simple .case-study-content > p,
   .work-gallery-simple .case-study-outcome strong { overflow: visible; }
 }
+
+/* Mobile Selected Works: identical preview height for every active slot */
+@media (max-width: 700px) {
+  .work-gallery-simple .case-study-panel { height: auto; min-height: 0; grid-template-rows: auto 480px; }
+  .work-gallery-simple .case-study-content { height: 480px; min-height: 480px; max-height: 480px; overflow: hidden; }
+}
+
+/* Tools-to-Contact anchor starts at the actual beginning of the orange section */
+#contact { scroll-margin-top: 0; }
