@@ -862,3 +862,32 @@ img { display: block; max-width: 100%; }
 
 /* Selected work slot: slightly richer color and a subtle lift in brightness */
 .work-gallery-simple .work-gallery-card.is-selected { filter: saturate(1.16) brightness(1.035); }
+
+/* Selected Works: compact 3×2 grid at every viewport, followed by a full-width preview */
+.work-gallery-simple { display: flex; flex-direction: column; gap: 18px; }
+.work-gallery-simple .work-gallery-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; order: 1; }
+.work-gallery-simple .work-gallery-card { width: 100%; min-width: 0; height: 118px; min-height: 118px; }
+.work-gallery-simple .case-study-panel { order: 2; width: 100%; min-height: 0; grid-template-rows: auto auto; }
+.work-gallery-simple .case-study-image { width: 100%; min-height: 0; aspect-ratio: 16 / 9; background-size: cover; }
+.work-gallery-simple .case-study-content { min-height: 0; padding: 24px 27px 25px; }
+.work-gallery-simple .case-study-content h3 { margin-top: 15px; }
+
+/* Reduce the excess breathing room at section ends without changing the hero */
+.section-pad { padding-top: 120px; padding-bottom: 112px; }
+.section-end-arrow { margin-top: 54px; margin-bottom: -34px; }
+
+@media (max-width: 700px) {
+  .work-gallery-simple { gap: 14px; }
+  .work-gallery-simple .work-gallery-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+  .work-gallery-simple .work-gallery-card { height: 92px; min-height: 92px; }
+  .work-gallery-simple .work-gallery-card-top { top: 11px; left: 11px; right: 11px; gap: 5px; }
+  .work-gallery-simple .work-gallery-card-top strong { font-size: 8px; letter-spacing: .06em; }
+  .work-gallery-simple .work-gallery-card-number { font-size: 8px; }
+  .work-gallery-simple .work-gallery-card-bottom { left: 11px; right: 11px; bottom: 11px; }
+  .work-gallery-simple .work-gallery-card-bottom span { display: none; }
+  .work-gallery-simple .case-study-content { padding: 18px 19px 20px; }
+  .work-gallery-simple .case-study-content h3 { margin: 13px 0 9px; font-size: clamp(28px, 8vw, 42px); }
+  .work-gallery-simple .case-study-content > p { font-size: 13px; line-height: 1.55; }
+  .section-pad { padding-top: 78px; padding-bottom: 82px; }
+  .section-end-arrow { margin-top: 46px; margin-bottom: -26px; }
+}
