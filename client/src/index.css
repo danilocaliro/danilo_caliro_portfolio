@@ -1099,3 +1099,8 @@ img { display: block; max-width: 100%; }
 @media (min-width: 701px) {
   .contact-section { min-height: calc(100vh - 82px); box-sizing: border-box; }
 }
+
+/* Contact must be tall enough for the browser to align its orange top edge exactly */
+@media (min-width: 701px) {
+  .contact-section { min-height: 100vh; }
+}
