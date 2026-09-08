@@ -561,3 +561,6 @@ img { display: block; max-width: 100%; }
 
 .about-links { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }
 @media (max-width: 700px) { .about-links { align-items: flex-start; flex-direction: column; gap: 14px; } }
+
+.reel-links { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 22px; }
+@media (max-width: 700px) { .reel-links { align-items: flex-start; flex-direction: column; gap: 10px; } }

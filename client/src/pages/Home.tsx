@@ -28,11 +28,13 @@ const emissionProUrl = "https://superhivemarket.com/products/emission-pro";
 const colorSpaceConverterUrl = "https://superhivemarket.com/products/color-space-converter";
 const linkedinUrl = "https://www.linkedin.com/in/danilo-caliro/";
 const vimeoId = "1216793443";
+const vimeoUrl = "https://vimeo.com/1216793443";
+const youtubeUrl = "https://www.youtube.com/";
 
 const navItems = [
   // Primary navigation follows the artist-first information hierarchy.
-  { label: "Demoreel", href: "#reel" },
-  { label: "About me", href: "#about" },
+  { label: "Demoreel", href: "#demoreel" },
+  { label: "About me", href: "#about-me" },
   { label: "Works", href: "#work" },
   { label: "The Missing Workflow", href: "#tools" },
 ];
@@ -146,7 +148,7 @@ export default function Home() {
     <div className="site-shell">
       <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
         <div className="header-inner">
-          <a href="#top" className="brand-mark" aria-label="Home">
+            <a href="#main" className="brand-mark" aria-label="Home">
             <span className="brand-mark-symbol">/</span>
             <span className="brand-mark-name">DANILO CALIRO</span>
           </a>
@@ -173,7 +175,7 @@ export default function Home() {
         )}
       </header>
 
-      <main id="top">
+      <main id="main">
         <section className="artist-hero-section">
           <div className="artist-hero-art" style={{ backgroundImage: `url(${heroImage})` }}>
             <div className="artist-hero-art-wash" />
@@ -185,8 +187,8 @@ export default function Home() {
               <h1 className="artist-hero-title reveal-up delay-1">Images with<br /><em>intent.</em></h1>
               <p className="artist-hero-intro reveal-up delay-2">I shape how images look and how they're made — lighting, lookdev, and the tools that hold a pipeline together.</p>
               <div className="hero-actions reveal-up delay-3">
-                <a className="button button-primary" href="#reel">Watch the reel <Play size={15} fill="currentColor" /></a>
-                <a className="text-link" href="#about">Read about me <ArrowDownRight size={16} /></a>
+                <a className="button button-primary" href="#demoreel">Watch the reel <Play size={15} fill="currentColor" /></a>
+                <a className="text-link" href="#about-me">Read about me <ArrowDownRight size={16} /></a>
               </div>
             </div>
             <div className="artist-hero-side reveal-up delay-3">
@@ -197,11 +199,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="artist-ticker" aria-label="Disciplines">
-          <div className="ticker-track"><div className="ticker-set"><span>LOOK DEVELOPMENT</span><i>✳</i><span>LIGHTING</span><i>✳</i><span>COMPOSITING</span><i>✳</i><span>RENDERING</span><i>✳</i><span>PIPELINE TD</span><i>✳</i><span>TECHNICAL ART</span><i>✳</i></div><div className="ticker-set" aria-hidden="true"><span>LOOK DEVELOPMENT</span><i>✳</i><span>LIGHTING</span><i>✳</i><span>COMPOSITING</span><i>✳</i><span>RENDERING</span><i>✳</i><span>PIPELINE TD</span><i>✳</i><span>TECHNICAL ART</span><i>✳</i></div></div>
-        </section>
-
-        <section className="reel-section artist-reel-section section-pad" id="reel">
+        <section className="reel-section artist-reel-section section-pad" id="demoreel">
           <div className="container">
             <div className="section-heading split-heading reel-heading">
               <div><SectionLabel>01 / DEMOREEL</SectionLabel><h2>Frame by<br /><em>frame.</em></h2></div>
@@ -218,14 +216,14 @@ export default function Home() {
                 </div>
               )}
             </div>
-            <div className="reel-caption"><span>Demoreel / Selected work / 2026</span><a href="https://vimeo.com/" target="_blank" rel="noreferrer">Open Vimeo <ExternalLink size={14} /></a></div>
+            <div className="reel-caption"><span>Demoreel / Selected work / 2026</span><div className="reel-links"><a href={vimeoUrl} target="_blank" rel="noreferrer">Open Vimeo <ExternalLink size={14} /></a><a href={youtubeUrl} target="_blank" rel="noreferrer">Open YouTube <ExternalLink size={14} /></a></div></div>
           </div>
         </section>
 
-        <section className="about-section artist-about-section section-pad" id="about">
+        <section className="about-section artist-about-section section-pad" id="about-me">
           <div className="container about-layout">
             <div className="about-portrait"><div className="about-portrait-grid" /><div className="about-initials">TD<span> / </span>CGI</div><div className="about-portrait-label">LOOKDEV / PIPELINE / LIGHTING</div></div>
-            <div className="about-copy"><SectionLabel>02 / ABOUT ME</SectionLabel><h2>Creative judgement.<br /><em>Technical precision.</em></h2><p className="about-lead">I&apos;m a Look Development TD, Pipeline TD and Technical Artist with a background in 3D, lighting, rendering, photography and CGI production.</p><p>Over the years, my role has evolved from hands-on production into a broader technical and supervisory position, combining artistic vision, technical problem-solving, pipeline development and workflow optimisation.</p><p>I work across animation, television, advertising, institutional content, immersive experiences and interactive projects — from visual development and asset creation to lighting, rendering, post-production and final delivery.</p><div className="about-details"><div><span>SELECTED PRODUCTIONS</span><strong>Uanema · Digitalcomoedia · RAI · Leonardo · Thales Alenia Space · Telespazio · Arkaevision · IAC · Voice of Heritages · Brancaccio · 5Senses</strong></div><div><span>CORE PRACTICE</span><strong>Look Development · Lighting · Compositing · Set Dress · Pipeline TD · Tool Development</strong></div></div><div className="about-links"><a className="inline-arrow-link" href={linkedinUrl} target="_blank" rel="noreferrer">More on LinkedIn <ArrowUpRight size={17} /></a><a className="inline-arrow-link" href="/assets/danilo-caliro-cv.pdf" download>Download CV <ArrowDownRight size={17} /></a></div></div>
+            <div className="about-copy"><SectionLabel>02 / ABOUT ME</SectionLabel><h2>Creative judgement.<br /><em>Technical precision.</em></h2><p className="about-lead">I&apos;m a Look Development TD, Pipeline TD and Technical Artist with a background in 3D, lighting, rendering, photography and CGI production.</p><p>Over the years, my role has evolved from hands-on production into a broader technical and supervisory position, combining artistic vision, technical problem-solving, pipeline development and workflow optimisation.</p><p>I work across animation, television, advertising, institutional content, immersive experiences and interactive projects — from visual development and asset creation to lighting, rendering, post-production and final delivery.</p><div className="about-details"><div><span>SELECTED PRODUCTIONS</span><strong>Uanema · Digitalcomoedia · RAI · Leonardo · Thales Alenia Space · Telespazio · Arkaevision · IAC · Voice of Heritages · Brancaccio · 5Senses · Event Planet · Cantico</strong></div><div><span>CORE PRACTICE</span><strong>Look Development · Lighting · Compositing · Set Dress · Pipeline TD · Tool Development</strong></div></div><a className="inline-arrow-link" href={linkedinUrl} target="_blank" rel="noreferrer">More on LinkedIn <ArrowUpRight size={17} /></a></div>
           </div>
         </section>
 
@@ -250,7 +248,7 @@ export default function Home() {
               <article className="tool-card"><div className="tool-visual"><img src={upcomingImage} alt="UV Edit Pro preview" loading="lazy" /><span className="tool-number">03</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>BLENDER / UV MAPPING</span><span>UV EDIT PRO</span></div><h3>UV Edit Pro</h3><p className="tool-lead">An industry-minded UV mapping workflow for Blender, bringing focused editing functions into a faster, more direct interface.</p><div className="tool-actions"><MarketplaceLink href={uvEditProUrl}>Coming to Superhive</MarketplaceLink><MarketplaceLink href={gumroadUrl}>Visit Gumroad</MarketplaceLink></div></div></article>
               <article className="tool-card tool-card-wip"><div className="tool-visual tool-visual-secondary"><div className="visual-lines" /><span className="tool-number">04</span><span className="visual-caption">BLENDER / WORK IN PROGRESS</span></div><div className="tool-card-body"><div className="tool-card-meta"><span>IN DEVELOPMENT</span><span>WORK IN PROGRESS</span></div><h3>Work in progress</h3><p className="tool-lead">A new tool is taking shape behind the scenes. More soon.</p></div></article>
             </div>
-            <div className="tools-note"><span>THE MISSING WORKFLOW</span><p>Explore the complete tool collection, add-ons and find free resources for artists.</p><div className="tools-note-links"><a className="tools-note-link" href={superhiveCreatorUrl} target="_blank" rel="noreferrer">Visit Superhive <ArrowUpRight size={17} /></a><a className="tools-note-link" href={gumroadUrl} target="_blank" rel="noreferrer">Visit Gumroad <ArrowUpRight size={17} /></a></div></div>
+            <div className="tools-note"><span>THE MISSING WORKFLOW PROJECT</span><p>Explore the complete tool collection, add-ons and find free resources for artists.</p><div className="tools-note-links"><a className="tools-note-link" href={superhiveCreatorUrl} target="_blank" rel="noreferrer">Visit Superhive <ArrowUpRight size={17} /></a><a className="tools-note-link" href={gumroadUrl} target="_blank" rel="noreferrer">Visit Gumroad <ArrowUpRight size={17} /></a></div></div>
           </div>
         </section>
 
