@@ -815,3 +815,7 @@ img { display: block; max-width: 100%; }
 .section-end-arrow:hover { color: #17130e; border-color: #f18b32; background: #f18b32; transform: translateY(3px); }
 .section-end-arrow:focus-visible { outline: 2px solid #f18b32; outline-offset: 4px; }
 @media (max-width: 700px) { .section-end-arrow { margin-top: 46px; margin-bottom: -10px; } }
+
+/* Contact section uses the orange background, so its return arrow needs dark contrast */
+.contact-section .section-end-arrow { color: #17130e; border-color: rgba(23,19,14,.55); }
+.contact-section .section-end-arrow:hover { color: #f18b32; border-color: #17130e; background: #17130e; }
