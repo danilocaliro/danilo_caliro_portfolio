@@ -1233,3 +1233,17 @@ img { display: block; max-width: 100%; }
 .work-gallery-simple .case-study-panel-virtual-reality .case-study-outcome { color: #927fd0; border-top-color: #927fd0; }
 .work-gallery-simple .case-study-panel-personal .case-study-heading span:last-child,
 .work-gallery-simple .case-study-panel-personal .case-study-outcome { color: #c9c27a; border-top-color: #c9c27a; }
+
+/* Final slot palette swap: Cultural takes Personal's yellow-green, Personal takes Cultural's orange */
+.work-gallery-simple .slot-tone-cultural { background: linear-gradient(90deg, #123d5a 0%, #8f804f 58%, #c9c27a 100%); }
+.work-gallery-simple .slot-tone-personal { background: linear-gradient(90deg, #123d5a 0%, #8c5438 58%, #e28a4f 100%); }
+/* Institutional: infinitesimal shift from magenta-red toward orange */
+.work-gallery-simple .slot-tone-institutional { background: linear-gradient(90deg, #123d5a 0%, #733c4c 58%, #ad5f68 100%); }
+
+/* Keep preview category labels and Outcome rules aligned with the final slot palette */
+.work-gallery-simple .case-study-panel-institutional .case-study-heading span:last-child,
+.work-gallery-simple .case-study-panel-institutional .case-study-outcome { color: #ad5f68; border-top-color: #ad5f68; }
+.work-gallery-simple .case-study-panel-cultural .case-study-heading span:last-child,
+.work-gallery-simple .case-study-panel-cultural .case-study-outcome { color: #c9c27a; border-top-color: #c9c27a; }
+.work-gallery-simple .case-study-panel-personal .case-study-heading span:last-child,
+.work-gallery-simple .case-study-panel-personal .case-study-outcome { color: #e28a4f; border-top-color: #e28a4f; }
