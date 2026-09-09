@@ -64,7 +64,7 @@ const workCases = [
     title: "Making the complex clear.",
     previewImage: "/assets/placeholders/previews/preview_institutional_01.webp",
     galleryImages: ["/assets/placeholders/previews/preview_institutional_01.webp", "/assets/placeholders/previews/preview_institutional_02.webp", "/assets/placeholders/previews/preview_institutional_03.webp", "/assets/placeholders/previews/preview_institutional_04.webp"],
-    role: "Look Development / Technical Direction / Visual Communication",
+    role: "Look Development / TD / Visual Communication",
     summary: "Films and visual products for organisations such as Leonardo and Thales Alenia Space, translating complex subjects into clear, credible visual communication.",
     outcome: "Complex information translated into precise, engaging images that communicate with authority.",
     tags: ["Direction", "Visualisation", "Pipeline"],
