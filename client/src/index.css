@@ -1247,3 +1247,7 @@ img { display: block; max-width: 100%; }
 .work-gallery-simple .case-study-panel-cultural .case-study-outcome { color: #c9c27a; border-top-color: #c9c27a; }
 .work-gallery-simple .case-study-panel-personal .case-study-heading span:last-child,
 .work-gallery-simple .case-study-panel-personal .case-study-outcome { color: #e28a4f; border-top-color: #e28a4f; }
+
+/* Slot labels: no hover slide or color animation; keep only the white hover state */
+.work-gallery-simple .work-gallery-card-bottom span { transition: none !important; }
+.work-gallery-simple .work-gallery-card:hover .work-gallery-card-bottom span { color: #fff; transform: none !important; }
