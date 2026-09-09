@@ -1251,3 +1251,8 @@ img { display: block; max-width: 100%; }
 /* Slot labels: no hover slide or color animation; keep only the white hover state */
 .work-gallery-simple .work-gallery-card-bottom span { transition: none !important; }
 .work-gallery-simple .work-gallery-card:hover .work-gallery-card-bottom span { color: #fff; transform: none !important; }
+
+/* Portrait phones: make the 3x2 work slots slightly wider and shorter */
+@media (max-width: 700px) and (orientation: portrait) {
+  .work-gallery-simple .work-gallery-card { height: 78px; min-height: 78px; }
+}
