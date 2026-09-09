@@ -1187,3 +1187,6 @@ img { display: block; max-width: 100%; }
   .work-image-lightbox-prev { left: 0; }
   .work-image-lightbox-next { right: 0; }
 }
+
+/* Institutional slot: shift the warm red subtly toward magenta for clearer separation from Cultural */
+.work-gallery-simple .slot-tone-institutional { background: linear-gradient(90deg, #123d5a 0%, #71394f 58%, #aa5870 100%); }
