@@ -237,7 +237,7 @@ export default function Home() {
           <div className="artist-hero-grid" />
           <div className="container artist-hero-content">
             <div className="artist-hero-copy">
-              <div className="eyebrow reveal-up"><span className="eyebrow-line" /> LOOK DEVELOPMENT / LIGHTING / COMPOSITING / TECHNICAL DIRECTION / PIPELINE</div>
+              <div className="eyebrow reveal-up"><span className="eyebrow-line" /> LOOK DEVELOPMENT / LIGHTING / COMPOSITING / TECHNICAL DIRECTION / PIPELINE / TOOLS</div>
               <h1 className="artist-hero-title reveal-up delay-1">Images with<br /><em>intent.</em></h1>
               <p className="artist-hero-intro reveal-up delay-2">I shape how images look and how they're made.</p>
               <div className="hero-actions reveal-up delay-3">
