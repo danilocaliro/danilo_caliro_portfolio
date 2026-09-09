@@ -32,7 +32,7 @@ const linkedinUrl = "https://www.linkedin.com/in/danilo-caliro/";
 const artstationUrl = "https://www.artstation.com/danilocaliro";
 const vimeoId = "1216793443";
 const vimeoUrl = "https://vimeo.com/1216793443";
-const youtubeUrl = "https://youtu.be/aqn1gl72Wd8";
+const youtubeUrl = "https://www.youtube.com/watch?v=dTvx43oC8xI";
 const missingWorkflowYoutubeUrl = "https://www.youtube.com/@themissingworkflow";
 const contactFormEndpoint = "https://formspree.io/f/meaqpgog";
 
