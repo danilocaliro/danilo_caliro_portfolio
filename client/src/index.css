@@ -1217,3 +1217,19 @@ img { display: block; max-width: 100%; }
 @media (max-width: 700px) {
   .work-gallery-simple .work-gallery-card.is-selected { transform: scale(1.008) !important; }
 }
+
+/* Selected Works preview: active slot color carries into the category name and Outcome rule */
+.work-gallery-simple .case-study-heading span:last-child { color: #f0ede5; }
+.work-gallery-simple .case-study-outcome { border-top-width: 1.5px; }
+.work-gallery-simple .case-study-panel-entertainment .case-study-heading span:last-child,
+.work-gallery-simple .case-study-panel-entertainment .case-study-outcome { color: #79aeb0; border-top-color: #79aeb0; }
+.work-gallery-simple .case-study-panel-institutional .case-study-heading span:last-child,
+.work-gallery-simple .case-study-panel-institutional .case-study-outcome { color: #aa5870; border-top-color: #aa5870; }
+.work-gallery-simple .case-study-panel-commercial .case-study-heading span:last-child,
+.work-gallery-simple .case-study-panel-commercial .case-study-outcome { color: #86b27f; border-top-color: #86b27f; }
+.work-gallery-simple .case-study-panel-cultural .case-study-heading span:last-child,
+.work-gallery-simple .case-study-panel-cultural .case-study-outcome { color: #e28a4f; border-top-color: #e28a4f; }
+.work-gallery-simple .case-study-panel-virtual-reality .case-study-heading span:last-child,
+.work-gallery-simple .case-study-panel-virtual-reality .case-study-outcome { color: #927fd0; border-top-color: #927fd0; }
+.work-gallery-simple .case-study-panel-personal .case-study-heading span:last-child,
+.work-gallery-simple .case-study-panel-personal .case-study-outcome { color: #c9c27a; border-top-color: #c9c27a; }
