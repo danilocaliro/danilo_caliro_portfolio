@@ -1261,3 +1261,7 @@ img { display: block; max-width: 100%; }
 @media (max-width: 700px) and (orientation: portrait) {
   .work-gallery-simple .work-gallery-card { height: 68px; min-height: 68px; }
 }
+
+/* Institutional preview accent: shift the metadata color subtly from magenta toward red */
+.work-gallery-simple .case-study-panel-institutional .case-study-heading span:last-child,
+.work-gallery-simple .case-study-panel-institutional .case-study-outcome { color: #b45560; border-top-color: #b45560; }
