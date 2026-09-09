@@ -1190,3 +1190,6 @@ img { display: block; max-width: 100%; }
 
 /* Institutional slot: shift the warm red subtly toward magenta for clearer separation from Cultural */
 .work-gallery-simple .slot-tone-institutional { background: linear-gradient(90deg, #123d5a 0%, #71394f 58%, #aa5870 100%); }
+
+/* Personal slot: a restrained shift from yellow toward green, with a slight lift in brightness */
+.work-gallery-simple .slot-tone-personal { background: linear-gradient(90deg, #123d5a 0%, #8f804f 58%, #c9c27a 100%); }
