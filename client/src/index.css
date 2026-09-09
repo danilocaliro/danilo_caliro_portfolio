@@ -1193,3 +1193,16 @@ img { display: block; max-width: 100%; }
 
 /* Personal slot: a restrained shift from yellow toward green, with a slight lift in brightness */
 .work-gallery-simple .slot-tone-personal { background: linear-gradient(90deg, #123d5a 0%, #8f804f 58%, #c9c27a 100%); }
+
+/* Desktop slot hover: keep the card fixed and zoom only the internal spotlight image */
+@media (min-width: 701px) {
+  .work-gallery-simple .work-gallery-card,
+  .work-gallery-simple .work-gallery-card:hover,
+  .work-gallery-simple .work-gallery-card.is-selected { transform: none !important; }
+  .work-gallery-simple .work-gallery-card::after { transform-origin: right center; transition: opacity .35s ease, transform .65s cubic-bezier(.23,1,.32,1); }
+  .work-gallery-simple .work-gallery-card:hover::after { transform: scale(1.1); }
+}
+@media (max-width: 700px) {
+  .work-gallery-simple .work-gallery-card:hover,
+  .work-gallery-simple .work-gallery-card:hover::after { transform: none !important; }
+}
