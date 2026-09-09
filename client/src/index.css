@@ -1256,3 +1256,8 @@ img { display: block; max-width: 100%; }
 @media (max-width: 700px) and (orientation: portrait) {
   .work-gallery-simple .work-gallery-card { height: 78px; min-height: 78px; }
 }
+
+/* Portrait phones: one further compact step for the horizontal 3x2 slots */
+@media (max-width: 700px) and (orientation: portrait) {
+  .work-gallery-simple .work-gallery-card { height: 68px; min-height: 68px; }
+}
