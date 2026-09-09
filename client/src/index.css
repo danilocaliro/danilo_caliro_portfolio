@@ -1206,3 +1206,14 @@ img { display: block; max-width: 100%; }
   .work-gallery-simple .work-gallery-card:hover,
   .work-gallery-simple .work-gallery-card:hover::after { transform: none !important; }
 }
+
+/* Selected Works: static slot text, with only a restrained centered scale after selection */
+.work-gallery-simple .work-gallery-card-bottom span,
+.work-gallery-simple .work-gallery-card-top,
+.work-gallery-simple .work-gallery-card-top strong,
+.work-gallery-simple .work-gallery-card-number { transition: none !important; }
+.work-gallery-simple .work-gallery-card:hover { transform: none !important; }
+.work-gallery-simple .work-gallery-card.is-selected { transform: scale(1.012) !important; transform-origin: center center; transition: transform .28s cubic-bezier(.23,1,.32,1), filter .28s ease; }
+@media (max-width: 700px) {
+  .work-gallery-simple .work-gallery-card.is-selected { transform: scale(1.008) !important; }
+}
