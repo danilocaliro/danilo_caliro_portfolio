@@ -1281,3 +1281,7 @@ img { display: block; max-width: 100%; }
   z-index: 2;
 }
 .reel-frame iframe { position: relative; z-index: 1; }
+
+/* Vimeo demoreel: remove the decorative frame entirely, keep only the responsive 16:9 video */
+.reel-frame { border: 0; }
+.reel-frame::after { display: none; }
