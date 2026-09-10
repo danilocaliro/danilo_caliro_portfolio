@@ -1265,3 +1265,19 @@ img { display: block; max-width: 100%; }
 /* Institutional preview accent: shift the metadata color subtly from magenta toward red */
 .work-gallery-simple .case-study-panel-institutional .case-study-heading span:last-child,
 .work-gallery-simple .case-study-panel-institutional .case-study-outcome { color: #b45560; border-top-color: #b45560; }
+
+/* Vimeo demoreel: preserve the video's 16:9 format and add a responsive decorative frame */
+.reel-frame {
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(236, 234, 227, .2);
+  background: #080a0e;
+}
+.reel-frame::after {
+  content: '';
+  position: absolute;
+  inset: clamp(8px, 1.15vw, 16px);
+  border: 1px solid rgba(236, 234, 227, .72);
+  pointer-events: none;
+  z-index: 2;
+}
+.reel-frame iframe { position: relative; z-index: 1; }
