@@ -1285,3 +1285,6 @@ img { display: block; max-width: 100%; }
 /* Vimeo demoreel: remove the decorative frame entirely, keep only the responsive 16:9 video */
 .reel-frame { border: 0; }
 .reel-frame::after { display: none; }
+
+/* Vimeo demoreel: a single hairline border separates the 16:9 frame from the background */
+.reel-frame { border: 1px solid rgba(236, 234, 227, .28); }
