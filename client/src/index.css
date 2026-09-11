@@ -3303,3 +3303,14 @@ body,
     transform: translateY(calc(-100% - env(safe-area-inset-top)));
   }
 }
+
+/* Final mobile Main refinement: lower the complete hero copy block and speed up header fade */
+@media (max-width: 700px) {
+  .artist-hero-content {
+    padding-top: 124px;
+  }
+
+  .site-header {
+    transition: transform .08s cubic-bezier(.23, 1, .32, 1), opacity .08s ease-out, background-color .12s ease;
+  }
+}
