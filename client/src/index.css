@@ -2448,3 +2448,55 @@ body,
     text-align: right;
   }
 }
+
+/* Selected Works corrected order: chapter left, orange role right */
+@media (min-width: 701px) {
+  .work-gallery-simple .case-study-heading span:first-child {
+    left: auto;
+    right: 0;
+    width: 40%;
+    padding-left: 24px;
+    padding-right: 0;
+    color: #f18b32;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .work-gallery-simple .case-study-heading span:last-child {
+    left: 0;
+    right: auto;
+    width: 60%;
+    padding-left: 0;
+    padding-right: 24px;
+    text-align: left;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .work-gallery-simple .case-study-heading span:first-child {
+    grid-column: 2;
+    grid-row: 1;
+    width: auto;
+    min-width: 0;
+    padding: 0;
+    color: #f18b32;
+    font-size: 8px;
+    line-height: 1.35;
+    text-align: right;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .work-gallery-simple .case-study-heading span:last-child {
+    grid-column: 1;
+    grid-row: 1;
+    width: auto;
+    min-width: 0;
+    padding: 0;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
