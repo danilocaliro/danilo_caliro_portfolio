@@ -1460,3 +1460,11 @@ img { display: block; max-width: 100%; }
     justify-self: end;
   }
 }
+
+/* Wide desktop About Me: scale the fixed-shape portrait to span from Creative Judgement to the Selected Productions rule */
+@media (min-width: 1300px) {
+  .artist-about-section .about-portrait {
+    transform: scale(1.16);
+    transform-origin: top right;
+  }
+}
