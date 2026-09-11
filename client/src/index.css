@@ -2213,3 +2213,21 @@ body,
     backdrop-filter: none;
   }
 }
+
+/* Final Vimeo frame cleanup: no extra border or shadow at any viewport */
+.reel-frame {
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+  background: transparent;
+}
+.reel-frame::before,
+.reel-frame::after {
+  display: none !important;
+  content: none !important;
+}
+.reel-frame iframe {
+  display: block;
+  border: 0 !important;
+  outline: 0 !important;
+}
