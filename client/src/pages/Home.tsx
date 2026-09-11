@@ -178,9 +178,9 @@ export default function Home() {
       if (!isMobile) {
         setMobileHeaderHidden(false);
         setMobileHeaderFade(1);
-      } else if (currentScrollY <= 72) {
+      } else if (currentScrollY <= 48) {
         setMobileHeaderHidden(false);
-        setMobileHeaderFade(Math.max(0, 1 - currentScrollY / 72));
+        setMobileHeaderFade(Math.max(0, 1 - currentScrollY / 48));
       } else if (currentScrollY > lastScrollY + 2) {
         setMobileHeaderHidden(true);
         setMobileHeaderFade(0);

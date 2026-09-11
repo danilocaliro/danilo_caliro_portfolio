@@ -3330,3 +3330,11 @@ body,
     box-shadow: none !important;
   }
 }
+
+/* Final mobile Main spacing and earlier header disappearance */
+@media (max-width: 700px) {
+  .artist-hero-content { padding-top: 132px; }
+  .site-header {
+    transition: transform .03s cubic-bezier(.23, 1, .32, 1), opacity .03s linear, background-color .05s ease, border-color .03s linear;
+  }
+}
