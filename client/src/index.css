@@ -1688,3 +1688,10 @@ img { display: block; max-width: 100%; }
     transition: none !important;
   }
 }
+
+/* Fade timing refinement: make the subtle grade clearly ease in and out */
+@media (min-width: 701px) {
+  .artist-about-section .about-portrait.has-photo::after {
+    transition: opacity .8s ease-in-out !important;
+  }
+}
