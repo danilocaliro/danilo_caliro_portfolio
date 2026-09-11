@@ -3394,3 +3394,36 @@ body,
     cursor: zoom-out;
   }
 }
+
+/* Compact web preview: chapter on the first row, orange role directly beneath it */
+@media (min-width: 701px) and (max-width: 980px) {
+  .work-gallery-simple .case-study-heading {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: auto auto !important;
+    gap: 5px;
+    align-items: start;
+  }
+
+  .work-gallery-simple .case-study-heading span:last-child {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    width: 100% !important;
+    max-width: none;
+    text-align: left !important;
+    white-space: nowrap;
+  }
+
+  .work-gallery-simple .case-study-heading span:first-child {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+    width: 100% !important;
+    max-width: none;
+    margin: 0;
+    color: #f18b32;
+    text-align: left !important;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
