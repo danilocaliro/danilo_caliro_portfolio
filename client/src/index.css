@@ -3436,3 +3436,12 @@ body,
     bottom: auto;
   }
 }
+
+/* Compact web: keep arrows on the chapter row below the fixed 16:9 preview at every resize */
+@media (min-width: 701px) and (max-width: 980px) {
+  .work-gallery-simple .case-study-panel-controls {
+    top: calc((100vw - 48px) * .5625 + 24px);
+    right: 14px;
+    bottom: auto;
+  }
+}
