@@ -3074,3 +3074,65 @@ body,
     opacity: .42 !important;
   }
 }
+
+/* Restore the complete pre-unification spotlight: image plus chapter-color overlays */
+@media (min-width: 981px) {
+  .work-gallery-simple .case-study-content::after {
+    display: block !important;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image:
+      linear-gradient(90deg, #15181d 0%, #15181d 42%, rgba(21, 24, 29, .94) 58%, rgba(21, 24, 29, .42) 78%, rgba(21, 24, 29, .10) 100%),
+      linear-gradient(105deg, rgba(18, 61, 90, .12) 0%, var(--chapter-glow, rgba(146, 127, 208, .20)) 100%),
+      url('/assets/hero-chiaroscuro.webp');
+    background-position: center, center, right center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 100% 100%, auto 190%;
+    background-blend-mode: normal, screen, multiply;
+    content: '';
+    opacity: .46 !important;
+    pointer-events: none;
+  }
+
+  .work-gallery-simple .case-study-panel-entertainment .case-study-content::after { --chapter-glow: rgba(121, 174, 176, .22); }
+  .work-gallery-simple .case-study-panel-institutional .case-study-content::after { --chapter-glow: rgba(180, 85, 96, .22); }
+  .work-gallery-simple .case-study-panel-commercial .case-study-content::after { --chapter-glow: rgba(134, 178, 127, .22); }
+  .work-gallery-simple .case-study-panel-cultural .case-study-content::after { --chapter-glow: rgba(201, 194, 122, .22); }
+  .work-gallery-simple .case-study-panel-virtual-reality .case-study-content::after { --chapter-glow: rgba(146, 127, 208, .22); }
+  .work-gallery-simple .case-study-panel-personal .case-study-content::after { --chapter-glow: rgba(226, 138, 79, .22); }
+}
+
+@media (min-width: 701px) and (max-width: 980px) {
+  .work-gallery-simple .case-study-content::after {
+    display: block !important;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image:
+      linear-gradient(90deg, #15181d 0%, #15181d 34%, rgba(21, 24, 29, .9) 55%, rgba(21, 24, 29, .24) 100%),
+      linear-gradient(105deg, rgba(18, 61, 90, .12) 0%, var(--chapter-glow, rgba(146, 127, 208, .20)) 100%),
+      url('/assets/hero-chiaroscuro.webp');
+    background-position: center, center, right center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 100% 100%, auto 165%;
+    background-blend-mode: normal, screen, multiply;
+    content: '';
+    opacity: .42 !important;
+    pointer-events: none;
+  }
+
+  .work-gallery-simple .case-study-panel-entertainment .case-study-content::after { --chapter-glow: rgba(121, 174, 176, .34); }
+  .work-gallery-simple .case-study-panel-institutional .case-study-content::after { --chapter-glow: rgba(180, 85, 96, .34); }
+  .work-gallery-simple .case-study-panel-commercial .case-study-content::after { --chapter-glow: rgba(134, 178, 127, .34); }
+  .work-gallery-simple .case-study-panel-cultural .case-study-content::after { --chapter-glow: rgba(201, 194, 122, .34); }
+  .work-gallery-simple .case-study-panel-virtual-reality .case-study-content::after { --chapter-glow: rgba(146, 127, 208, .34); }
+  .work-gallery-simple .case-study-panel-personal .case-study-content::after { --chapter-glow: rgba(226, 138, 79, .34); }
+}
+
+@media (max-width: 700px) {
+  .work-gallery-simple .case-study-content::after {
+    display: none !important;
+    content: none !important;
+  }
+}
