@@ -3486,3 +3486,26 @@ body,
     overflow-wrap: anywhere;
   }
 }
+
+/* Extended web preview: compact spacing and chapter controls under the image */
+@media (min-width: 981px) {
+  .work-gallery-simple .case-study-heading {
+    gap: 5px;
+  }
+
+  .work-gallery-simple .case-study-panel-controls {
+    display: inline-flex !important;
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    justify-self: end;
+    padding: 12px 14px 14px 0;
+    color: #f18b32;
+  }
+
+  .work-gallery-simple .case-study-panel-controls button {
+    border-color: rgba(240,237,229,.24);
+    background: rgba(5,7,9,.36);
+    color: #f0ede5;
+  }
+}
