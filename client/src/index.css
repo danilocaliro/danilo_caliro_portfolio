@@ -1739,3 +1739,102 @@ img { display: block; max-width: 100%; }
     display: none !important;
   }
 }
+
+/* Selected Works refinement: move category to the left and restore numbered tabs */
+@media (min-width: 981px) {
+  .work-gallery-simple .work-gallery-card-number {
+    display: inline-block !important;
+    flex: 0 0 auto;
+    color: #f18b32;
+    font-size: 9px;
+    line-height: 1;
+    letter-spacing: .08em;
+  }
+
+  .work-gallery-simple .work-gallery-card-top {
+    align-items: center;
+    gap: 8px;
+  }
+
+  .work-gallery-simple .case-study-content h3 {
+    font-size: clamp(25px, 2.35vw, 40px);
+  }
+
+  .work-gallery-simple .case-study-heading {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    position: relative;
+    display: block;
+    min-height: 20px;
+    padding: 0;
+  }
+
+  .work-gallery-simple .case-study-heading span:first-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    padding-left: 30px;
+    text-align: left;
+  }
+
+  .work-gallery-simple .case-study-heading span:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    padding-right: 30px;
+    border-right: 1px solid currentColor;
+    text-align: right;
+  }
+
+  .work-gallery-simple .case-study-content h3 {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 14px;
+  }
+
+  .work-gallery-simple .case-study-content > p {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .work-gallery-simple .case-study-outcome {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .work-gallery-simple .case-study-content {
+    grid-template-rows: auto auto auto;
+  }
+
+  .work-gallery-simple .case-study-content::before {
+    top: 25px;
+    bottom: 27px;
+  }
+}
+
+@media (max-width: 700px) {
+  .work-gallery-simple .work-gallery-card {
+    height: 68px;
+    min-height: 68px;
+  }
+
+  .work-gallery-simple .work-gallery-card-number {
+    display: inline-block !important;
+    flex: 0 0 auto;
+    color: #f18b32;
+    font-size: 8px;
+    line-height: 1;
+    letter-spacing: .06em;
+  }
+
+  .work-gallery-simple .work-gallery-card-top {
+    align-items: center;
+    gap: 5px;
+  }
+
+  .work-gallery-simple .work-gallery-card-bottom {
+    display: none !important;
+  }
+}
