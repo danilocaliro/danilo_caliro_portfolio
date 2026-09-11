@@ -1526,3 +1526,19 @@ img { display: block; max-width: 100%; }
   }
   .artist-about-section .about-portrait.has-photo .about-portrait-grid { position: relative; z-index: 2; }
 }
+
+/* Final portrait cleanup: the supplied photo is the only visible visual layer */
+.artist-about-section .about-portrait.has-photo {
+  background: #0b0d12;
+}
+.artist-about-section .about-portrait.has-photo::before,
+.artist-about-section .about-portrait.has-photo::after {
+  display: none !important;
+  content: none !important;
+}
+.artist-about-section .about-portrait.has-photo .about-portrait-grid {
+  display: none !important;
+}
+.artist-about-section .about-portrait.has-photo img {
+  filter: none !important;
+}
