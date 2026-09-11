@@ -3195,3 +3195,15 @@ body,
 .work-gallery-simple .case-study-panel-cultural .case-study-content::after { --chapter-glow: rgba(201, 194, 122, .16); }
 .work-gallery-simple .case-study-panel-virtual-reality .case-study-content::after { --chapter-glow: rgba(146, 127, 208, .16); }
 .work-gallery-simple .case-study-panel-personal .case-study-content::after { --chapter-glow: rgba(226, 138, 79, .16); }
+
+/* Slightly stronger chapter gradients: still restrained, but more readable */
+.work-gallery-simple .case-study-content::after {
+  opacity: .34 !important;
+}
+
+.work-gallery-simple .case-study-panel-entertainment .case-study-content::after { --chapter-glow: rgba(121, 174, 176, .22); }
+.work-gallery-simple .case-study-panel-institutional .case-study-content::after { --chapter-glow: rgba(180, 85, 96, .22); }
+.work-gallery-simple .case-study-panel-commercial .case-study-content::after { --chapter-glow: rgba(134, 178, 127, .22); }
+.work-gallery-simple .case-study-panel-cultural .case-study-content::after { --chapter-glow: rgba(201, 194, 122, .22); }
+.work-gallery-simple .case-study-panel-virtual-reality .case-study-content::after { --chapter-glow: rgba(146, 127, 208, .22); }
+.work-gallery-simple .case-study-panel-personal .case-study-content::after { --chapter-glow: rgba(226, 138, 79, .22); }
