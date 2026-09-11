@@ -1573,3 +1573,29 @@ img { display: block; max-width: 100%; }
     filter: brightness(1.045) contrast(1.055) saturate(1.025);
   }
 }
+
+/* Working teal-and-orange relight: explicitly restore the hover light layer after portrait cleanup */
+@media (min-width: 701px) {
+  .artist-about-section .about-portrait.has-photo::after {
+    content: '' !important;
+    display: block !important;
+    position: absolute;
+    z-index: 1;
+    inset: -10%;
+    pointer-events: none;
+    opacity: 0;
+    background:
+      radial-gradient(ellipse 60% 82% at 92% 42%, rgba(255, 176, 104, .42), transparent 64%),
+      radial-gradient(ellipse 64% 86% at 8% 66%, rgba(38, 178, 171, .24), transparent 68%),
+      linear-gradient(105deg, rgba(19, 102, 108, .16) 0%, transparent 36%, rgba(255, 196, 132, .26) 86%, transparent 100%);
+    transform: translateX(20%);
+    transition: opacity .18s ease, transform .9s cubic-bezier(.23,1,.32,1);
+  }
+  .artist-about-section .about-portrait.has-photo:hover::after {
+    opacity: 1;
+    transform: translateX(-14%);
+  }
+  .artist-about-section .about-portrait.has-photo:hover img {
+    filter: brightness(1.08) contrast(1.1) saturate(1.12) sepia(.05) !important;
+  }
+}
