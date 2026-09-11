@@ -1599,3 +1599,27 @@ img { display: block; max-width: 100%; }
     filter: brightness(1.08) contrast(1.1) saturate(1.12) sepia(.05) !important;
   }
 }
+
+/* Portrait hover final: full-image teal-to-orange grade, with no visible shape or light geometry */
+@media (min-width: 701px) {
+  .artist-about-section .about-portrait.has-photo::after {
+    content: '' !important;
+    display: block !important;
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    background: linear-gradient(90deg, rgba(24, 139, 151, .34) 0%, rgba(38, 149, 151, .12) 34%, rgba(243, 151, 74, .14) 68%, rgba(255, 177, 102, .38) 100%);
+    mix-blend-mode: color;
+    transform: none;
+    transition: opacity .65s cubic-bezier(.23,1,.32,1);
+  }
+  .artist-about-section .about-portrait.has-photo:hover::after {
+    opacity: 1;
+  }
+  .artist-about-section .about-portrait.has-photo img {
+    filter: contrast(1.06) saturate(1.14) brightness(1.025) !important;
+    transition: filter .65s cubic-bezier(.23,1,.32,1);
+  }
+}
