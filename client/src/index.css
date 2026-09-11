@@ -2787,3 +2787,118 @@ body,
     line-height: 1.02;
   }
 }
+
+/* Definitive metadata geometry: edge-to-edge row with a deliberate center gap */
+@media (min-width: 701px) and (max-width: 980px) {
+  .work-gallery-simple .case-study-content {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: #15181d;
+  }
+
+  .work-gallery-simple .case-study-content::after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image:
+      linear-gradient(90deg, #15181d 0%, #15181d 34%, rgba(21, 24, 29, .9) 55%, rgba(21, 24, 29, .24) 100%),
+      url('/assets/hero-chiaroscuro.webp');
+    background-position: center, right center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, auto 165%;
+    background-blend-mode: normal, multiply;
+    content: '';
+    opacity: .42;
+    pointer-events: none;
+  }
+
+  .work-gallery-simple .case-study-heading {
+    position: relative;
+    z-index: 1;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) max-content !important;
+    align-items: start;
+    justify-content: normal;
+    width: 100%;
+    min-height: 18px;
+    margin: 0;
+    gap: 24px;
+  }
+
+  .work-gallery-simple .case-study-heading span:last-child {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    width: auto !important;
+    min-width: 0;
+    margin: 0;
+    padding: 0 !important;
+    text-align: left !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .work-gallery-simple .case-study-heading span:first-child {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    width: auto !important;
+    min-width: 0;
+    margin: 0;
+    padding: 0 !important;
+    color: #f18b32;
+    text-align: right !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 700px) {
+  .work-gallery-simple .case-study-content::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .work-gallery-simple .case-study-heading {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) max-content !important;
+    align-items: start;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .work-gallery-simple .case-study-heading span:last-child {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    width: auto !important;
+    min-width: 0;
+    margin: 0;
+    padding: 0 !important;
+    text-align: left !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .work-gallery-simple .case-study-heading span:first-child {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    width: auto !important;
+    max-width: 42vw;
+    min-width: 0;
+    margin: 0;
+    padding: 0 !important;
+    color: #f18b32;
+    font-size: 7px;
+    line-height: 1.2;
+    text-align: right !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
