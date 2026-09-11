@@ -2257,3 +2257,32 @@ body,
   display: none !important;
   content: none !important;
 }
+
+/* Vimeo final correction: black letterbox base, cropped player seams, uniform outer frame */
+.reel-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9 !important;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid rgba(236, 234, 227, .38) !important;
+  background: #000 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+.reel-frame iframe {
+  position: absolute;
+  inset: -2px;
+  display: block;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 0 !important;
+  outline: 0 !important;
+  background: #000 !important;
+}
+.reel-frame::before,
+.reel-frame::after {
+  display: none !important;
+  content: none !important;
+}
