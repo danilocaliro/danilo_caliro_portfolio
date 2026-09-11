@@ -1300,3 +1300,16 @@ img { display: block; max-width: 100%; }
     justify-self: start;
   }
 }
+
+/* Desktop About Me: keep the portrait locked to the title top and closer to the copy */
+@media (min-width: 981px) {
+  .artist-about-section .about-layout {
+    grid-template-columns: minmax(300px, 360px) minmax(0, 1fr);
+    column-gap: 48px;
+    align-items: start;
+  }
+  .artist-about-section .about-portrait {
+    align-self: start;
+    margin-top: 40px;
+  }
+}
