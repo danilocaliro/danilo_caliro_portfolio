@@ -2902,3 +2902,89 @@ body,
     text-overflow: ellipsis;
   }
 }
+
+/* Final mobile metadata: chapter first, orange role on the following left-aligned row */
+@media (max-width: 700px) {
+  .work-gallery-simple .case-study-heading {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto !important;
+    gap: 5px;
+    align-items: start;
+  }
+
+  .work-gallery-simple .case-study-heading span:last-child {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    width: 100% !important;
+    max-width: none;
+    text-align: left !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .work-gallery-simple .case-study-heading span:first-child {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+    width: 100% !important;
+    max-width: none;
+    margin: 0;
+    color: #f18b32;
+    font-size: 7px;
+    line-height: 1.25;
+    text-align: left !important;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    overflow: visible;
+    text-overflow: clip;
+  }
+}
+
+/* Web/tablet spotlight: use the original image without chapter-color overlays */
+@media (min-width: 701px) {
+  .work-gallery-simple .case-study-content {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: #15181d;
+  }
+
+  .work-gallery-simple .case-study-content::after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: url('/assets/hero-chiaroscuro.webp');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: auto 165%;
+    background-blend-mode: normal;
+    content: '';
+    opacity: .42;
+    pointer-events: none;
+  }
+}
+
+/* Intermediate web/tablet: restore preview navigation controls */
+@media (min-width: 701px) and (max-width: 980px) {
+  .work-gallery-simple .case-study-panel-controls {
+    display: inline-flex !important;
+    right: 14px;
+    bottom: 14px;
+    color: #f18b32;
+  }
+
+  .work-gallery-simple .case-study-panel-controls button {
+    border-color: rgba(241,139,50,.7);
+    background: rgba(5,7,9,.72);
+    color: #f18b32;
+  }
+
+  .work-gallery-simple .case-study-panel-controls button:hover {
+    border-color: #ffb16b;
+    background: rgba(5,7,9,.86);
+    color: #ffb16b;
+  }
+}
