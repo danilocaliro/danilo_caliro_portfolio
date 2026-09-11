@@ -2286,3 +2286,57 @@ body,
   display: none !important;
   content: none !important;
 }
+
+/* Selected Works preview refinement: chapter color drives the spotlight, image supplies the lighting */
+@media (min-width: 981px) {
+  .work-gallery-simple .case-study-content::after {
+    background-image:
+      linear-gradient(90deg, #15181d 0%, #15181d 38%, rgba(21, 24, 29, .62) 58%, rgba(21, 24, 29, .08) 100%),
+      linear-gradient(90deg, rgba(18, 61, 90, .72) 0%, var(--chapter-color, rgba(146, 127, 208, .82)) 100%),
+      url('/assets/hero-chiaroscuro.webp');
+    background-position: center, center, right center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 100% 100%, auto 190%;
+    background-blend-mode: normal, multiply, multiply;
+    opacity: .78;
+  }
+
+  .work-gallery-simple .case-study-panel-entertainment .case-study-content::after { --chapter-color: rgba(121, 174, 176, .82); }
+  .work-gallery-simple .case-study-panel-institutional .case-study-content::after { --chapter-color: rgba(180, 85, 96, .82); }
+  .work-gallery-simple .case-study-panel-commercial .case-study-content::after { --chapter-color: rgba(134, 178, 127, .82); }
+  .work-gallery-simple .case-study-panel-cultural .case-study-content::after { --chapter-color: rgba(201, 194, 122, .82); }
+  .work-gallery-simple .case-study-panel-virtual-reality .case-study-content::after { --chapter-color: rgba(146, 127, 208, .82); }
+  .work-gallery-simple .case-study-panel-personal .case-study-content::after { --chapter-color: rgba(226, 138, 79, .82); }
+
+  /* Descriptive copy only: title, chapter metadata, and orange role remain unchanged */
+  .work-gallery-simple .case-study-content > p {
+    max-width: 58ch;
+    font-size: 15px;
+    line-height: 1.68;
+  }
+
+  .work-gallery-simple .case-study-outcome {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: right;
+    padding-left: 28px;
+    padding-right: 4px;
+  }
+
+  .work-gallery-simple .case-study-outcome span {
+    width: 100%;
+    text-align: right;
+    font-size: 10px;
+  }
+
+  .work-gallery-simple .case-study-outcome strong {
+    width: 100%;
+    max-width: 25ch;
+    margin-top: 9px;
+    font-size: 15px;
+    line-height: 1.58;
+    text-align: right;
+  }
+}
