@@ -1313,3 +1313,25 @@ img { display: block; max-width: 100%; }
     margin-top: 40px;
   }
 }
+
+/* Desktop About Me refinement: preserve the copy position and move only the portrait toward it */
+@media (min-width: 981px) {
+  .artist-about-section .about-copy { transform: translateX(62px); }
+  .artist-about-section .about-portrait { transform: translateX(62px); }
+}
+
+/* Intermediate web widths: keep the portrait top-aligned before the mobile layout takes over */
+@media (min-width: 701px) and (max-width: 980px) {
+  .artist-about-section .about-layout { align-items: start; }
+  .artist-about-section .about-portrait { align-self: start; margin-top: 40px; }
+}
+
+/* Final desktop correction: restore the copy column and translate only the portrait toward it */
+@media (min-width: 981px) {
+  .artist-about-section .about-layout {
+    grid-template-columns: minmax(300px, .8fr) 1.2fr;
+    column-gap: 110px;
+  }
+  .artist-about-section .about-copy { transform: none; }
+  .artist-about-section .about-portrait { transform: translateX(clamp(0px, 13vw, 190px)); }
+}
