@@ -1543,160 +1543,22 @@ img { display: block; max-width: 100%; }
   filter: none !important;
 }
 
-/* Desktop portrait hover test: soft cinematic relight entering from the lit right side */
-@media (min-width: 701px) {
-  .artist-about-section .about-portrait.has-photo {
-    isolation: isolate;
-  }
-  .artist-about-section .about-portrait.has-photo::after {
-    content: '';
-    display: block !important;
-    position: absolute;
-    z-index: 1;
-    inset: -12%;
-    pointer-events: none;
-    opacity: 0;
-    background:
-      radial-gradient(ellipse 52% 76% at 88% 42%, rgba(255, 214, 163, .22), transparent 68%),
-      linear-gradient(105deg, transparent 24%, rgba(255, 191, 125, .08) 55%, rgba(255, 228, 194, .16) 86%, transparent 100%);
-    transform: translateX(18%);
-    transition: opacity .22s ease, transform 1s cubic-bezier(.23,1,.32,1);
-  }
-  .artist-about-section .about-portrait.has-photo img {
-    transition: filter 1s cubic-bezier(.23,1,.32,1);
-  }
-  .artist-about-section .about-portrait.has-photo:hover::after {
-    opacity: 1;
-    transform: translateX(-12%);
-  }
-  .artist-about-section .about-portrait.has-photo:hover img {
-    filter: brightness(1.045) contrast(1.055) saturate(1.025);
-  }
-}
-
-/* Working teal-and-orange relight: explicitly restore the hover light layer after portrait cleanup */
-@media (min-width: 701px) {
-  .artist-about-section .about-portrait.has-photo::after {
-    content: '' !important;
-    display: block !important;
-    position: absolute;
-    z-index: 1;
-    inset: -10%;
-    pointer-events: none;
-    opacity: 0;
-    background:
-      radial-gradient(ellipse 60% 82% at 92% 42%, rgba(255, 176, 104, .42), transparent 64%),
-      radial-gradient(ellipse 64% 86% at 8% 66%, rgba(38, 178, 171, .24), transparent 68%),
-      linear-gradient(105deg, rgba(19, 102, 108, .16) 0%, transparent 36%, rgba(255, 196, 132, .26) 86%, transparent 100%);
-    transform: translateX(20%);
-    transition: opacity .18s ease, transform .9s cubic-bezier(.23,1,.32,1);
-  }
-  .artist-about-section .about-portrait.has-photo:hover::after {
-    opacity: 1;
-    transform: translateX(-14%);
-  }
-  .artist-about-section .about-portrait.has-photo:hover img {
-    filter: brightness(1.08) contrast(1.1) saturate(1.12) sepia(.05) !important;
-  }
-}
-
-/* Portrait hover final: full-image teal-to-orange grade, with no visible shape or light geometry */
-@media (min-width: 701px) {
-  .artist-about-section .about-portrait.has-photo::after {
-    content: '' !important;
-    display: block !important;
-    position: absolute;
-    z-index: 1;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0;
-    background: linear-gradient(90deg, rgba(24, 139, 151, .34) 0%, rgba(38, 149, 151, .12) 34%, rgba(243, 151, 74, .14) 68%, rgba(255, 177, 102, .38) 100%);
-    mix-blend-mode: color;
-    transform: none;
-    transition: opacity .65s cubic-bezier(.23,1,.32,1);
-  }
-  .artist-about-section .about-portrait.has-photo:hover::after {
-    opacity: 1;
-  }
-  .artist-about-section .about-portrait.has-photo img {
-    filter: contrast(1.06) saturate(1.14) brightness(1.025) !important;
-    transition: filter .65s cubic-bezier(.23,1,.32,1);
-  }
-}
-
-/* Final portrait hover: rectangular full-frame grade only, with no circular geometry or contrast */
+/* Final portrait state: static supplied photo, no hover grade or animation */
 .artist-about-section .about-portrait.has-photo::before,
-.artist-about-section .about-portrait.has-photo .about-portrait-grid {
+.artist-about-section .about-portrait.has-photo::after {
   display: none !important;
   content: none !important;
   background: none !important;
   border: 0 !important;
   box-shadow: none !important;
+  opacity: 0 !important;
+  transition: none !important;
+}
+.artist-about-section .about-portrait.has-photo img {
+  filter: none !important;
+  transition: none !important;
 }
 
-@media (min-width: 701px) {
-  .artist-about-section .about-portrait.has-photo::after {
-    content: '' !important;
-    display: block !important;
-    position: absolute;
-    z-index: 1;
-    inset: 0 !important;
-    width: 100%;
-    height: 100%;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    pointer-events: none;
-    opacity: 0;
-    background: linear-gradient(90deg, rgba(24, 139, 151, .34) 0%, rgba(38, 149, 151, .12) 36%, rgba(243, 151, 74, .12) 68%, rgba(255, 177, 102, .34) 100%);
-    mix-blend-mode: color;
-    transform: none !important;
-    transition: opacity .9s cubic-bezier(.23, 1, .32, 1);
-  }
-  .artist-about-section .about-portrait.has-photo:hover::after { opacity: 1; }
-  .artist-about-section .about-portrait.has-photo img {
-    filter: none !important;
-    transition: none !important;
-  }
-}
-
-/* Portrait hover refinement: subtle luminance-aware overlay, no contrast treatment */
-@media (min-width: 701px) {
-  .artist-about-section .about-portrait.has-photo::after {
-    content: '' !important;
-    display: block !important;
-    position: absolute;
-    z-index: 1;
-    inset: 0 !important;
-    width: 100%;
-    height: 100%;
-    border: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    pointer-events: none;
-    opacity: 0;
-    background:
-      radial-gradient(ellipse 76% 80% at 78% 38%, rgba(232, 139, 71, .20), transparent 74%),
-      radial-gradient(ellipse 74% 84% at 20% 70%, rgba(35, 137, 145, .16), transparent 76%);
-    mix-blend-mode: overlay;
-    transform: none !important;
-    transition: opacity .5s ease;
-  }
-  .artist-about-section .about-portrait.has-photo:hover::after { opacity: .38; }
-  .artist-about-section .about-portrait.has-photo img {
-    filter: none !important;
-    transition: none !important;
-  }
-}
-
-/* Fade timing refinement: make the subtle grade clearly ease in and out */
-@media (min-width: 701px) {
-  .artist-about-section .about-portrait.has-photo::after {
-    transition: opacity .8s ease-in-out !important;
-  }
-}
-
-/* Final portrait state: static supplied photo, no hover grade or animation */
 .artist-about-section .about-portrait.has-photo::before,
 .artist-about-section .about-portrait.has-photo::after {
   display: none !important;
