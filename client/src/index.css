@@ -3375,3 +3375,22 @@ body,
     cursor: pointer;
   }
 }
+
+/* Final desktop cursor hierarchy: zoom-in only before opening, arrow over the opened image */
+@media (min-width: 701px) {
+  .work-gallery-simple .case-study-image {
+    cursor: zoom-in;
+  }
+
+  .work-image-lightbox-image {
+    cursor: default;
+  }
+
+  .work-image-lightbox-arrow {
+    cursor: pointer;
+  }
+
+  .work-image-lightbox {
+    cursor: zoom-out;
+  }
+}
