@@ -1948,3 +1948,63 @@ img { display: block; max-width: 100%; }
     height: 13px;
   }
 }
+
+/* Selected Works preview refinement: 70/30 split with one full-height colored divider */
+@media (min-width: 981px) {
+  .work-gallery-simple .case-study-content {
+    grid-template-columns: minmax(0, 7fr) minmax(230px, 3fr);
+  }
+
+  .work-gallery-simple .case-study-content::before {
+    left: 70%;
+    background: #123d5a;
+  }
+
+  .work-gallery-simple .case-study-heading span:first-child {
+    width: 30%;
+    padding-left: 24px;
+    white-space: nowrap;
+  }
+
+  .work-gallery-simple .case-study-heading span:last-child {
+    width: 70%;
+    padding-right: 24px;
+    border-right: 0 !important;
+    white-space: nowrap;
+  }
+
+  .work-gallery-simple .case-study-content h3 {
+    max-width: none;
+    margin-top: 0;
+    font-size: clamp(26px, 2.45vw, 42px);
+    line-height: 1.04;
+    white-space: nowrap;
+  }
+
+  .work-gallery-simple .case-study-content > p {
+    padding-right: 24px;
+    font-size: 13px;
+    line-height: 1.58;
+  }
+
+  .work-gallery-simple .case-study-outcome {
+    padding-left: 24px;
+  }
+
+  .work-gallery-simple .case-study-outcome span {
+    font-size: 10px;
+    letter-spacing: .1em;
+  }
+
+  .work-gallery-simple .case-study-outcome strong {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .work-gallery-simple .case-study-panel-entertainment .case-study-content::before { background: #79aeb0; }
+  .work-gallery-simple .case-study-panel-institutional .case-study-content::before { background: #b45560; }
+  .work-gallery-simple .case-study-panel-commercial .case-study-content::before { background: #86b27f; }
+  .work-gallery-simple .case-study-panel-cultural .case-study-content::before { background: #c9c27a; }
+  .work-gallery-simple .case-study-panel-virtual-reality .case-study-content::before { background: #927fd0; }
+  .work-gallery-simple .case-study-panel-personal .case-study-content::before { background: #e28a4f; }
+}
