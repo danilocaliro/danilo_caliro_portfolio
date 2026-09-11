@@ -1476,3 +1476,8 @@ img { display: block; max-width: 100%; }
     transform-origin: top right;
   }
 }
+
+/* Portrait micro-adjustment: move the image down by only four pixels without changing layout geometry */
+@media (min-width: 701px) {
+  .artist-about-section .about-portrait { position: relative; top: 4px; }
+}
