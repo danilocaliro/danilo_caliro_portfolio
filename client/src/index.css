@@ -2109,3 +2109,49 @@ img { display: block; max-width: 100%; }
     min-height: 58px;
   }
 }
+
+/* Desktop preview spotlight revision: one subtle image gradient behind the complete text area */
+@media (min-width: 981px) {
+  .work-gallery-simple .case-study-content {
+    isolation: isolate;
+    overflow: hidden;
+    background: #15181d;
+  }
+
+  .work-gallery-simple .case-study-content::after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image:
+      linear-gradient(90deg, #15181d 0%, #15181d 42%, rgba(21, 24, 29, .94) 58%, rgba(21, 24, 29, .42) 78%, rgba(21, 24, 29, .10) 100%),
+      linear-gradient(105deg, rgba(18, 61, 90, .12) 0%, var(--chapter-glow, rgba(146, 127, 208, .20)) 100%),
+      url('/assets/hero-chiaroscuro.webp');
+    background-position: center, center, right center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, 100% 100%, auto 190%;
+    background-blend-mode: normal, screen, multiply;
+    content: '';
+    opacity: .46;
+    pointer-events: none;
+  }
+
+  .work-gallery-simple .case-study-heading,
+  .work-gallery-simple .case-study-content h3,
+  .work-gallery-simple .case-study-content > p,
+  .work-gallery-simple .case-study-outcome {
+    position: relative;
+    z-index: 1;
+  }
+
+  .work-gallery-simple .case-study-outcome::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  .work-gallery-simple .case-study-panel-entertainment .case-study-content::after { --chapter-glow: rgba(121, 174, 176, .22); }
+  .work-gallery-simple .case-study-panel-institutional .case-study-content::after { --chapter-glow: rgba(180, 85, 96, .22); }
+  .work-gallery-simple .case-study-panel-commercial .case-study-content::after { --chapter-glow: rgba(134, 178, 127, .22); }
+  .work-gallery-simple .case-study-panel-cultural .case-study-content::after { --chapter-glow: rgba(201, 194, 122, .22); }
+  .work-gallery-simple .case-study-panel-virtual-reality .case-study-content::after { --chapter-glow: rgba(146, 127, 208, .22); }
+  .work-gallery-simple .case-study-panel-personal .case-study-content::after { --chapter-glow: rgba(226, 138, 79, .22); }
+}
