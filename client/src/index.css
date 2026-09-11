@@ -1491,3 +1491,8 @@ img { display: block; max-width: 100%; }
 @media (min-width: 701px) {
   .artist-about-section .about-portrait { top: 6px; }
 }
+
+/* Portrait micro-adjustment: final eight-pixel downward offset */
+@media (min-width: 701px) {
+  .artist-about-section .about-portrait { top: 8px; }
+}
