@@ -145,6 +145,7 @@ function SectionEndArrow({ href, label, direction = "down" }: { href: string; la
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mobileHeaderHidden, setMobileHeaderHidden] = useState(false);
   const [formSent, setFormSent] = useState(false);
   const [formSending, setFormSending] = useState(false);
   const [formError, setFormError] = useState("");
@@ -165,7 +166,22 @@ export default function Home() {
   const [mobileImagePanY, setMobileImagePanY] = useState(0);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 18);
+    let lastScrollY = window.scrollY;
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+      const isMobile = window.matchMedia("(max-width: 700px)").matches;
+      setScrolled(currentScrollY > 18);
+      if (!isMobile) {
+        setMobileHeaderHidden(false);
+      } else if (currentScrollY <= 72) {
+        setMobileHeaderHidden(false);
+      } else if (currentScrollY > lastScrollY + 2) {
+        setMobileHeaderHidden(true);
+      } else if (currentScrollY < lastScrollY - 2) {
+        setMobileHeaderHidden(false);
+      }
+      lastScrollY = currentScrollY;
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -210,7 +226,7 @@ export default function Home() {
 
   return (
     <div className="site-shell">
-      <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
+      <header className={`site-header ${scrolled ? "is-scrolled" : ""} ${mobileHeaderHidden ? "is-mobile-hidden" : ""}`}>
         <div className="header-inner">
             <a href="#main" className="brand-mark" aria-label="Home">
             <span className="brand-mark-symbol">/</span>
