@@ -3445,3 +3445,10 @@ body,
     bottom: auto;
   }
 }
+
+/* Compact web: align arrows with the first colored chapter row, slightly above the divider */
+@media (min-width: 701px) and (max-width: 980px) {
+  .work-gallery-simple .case-study-panel-controls {
+    top: calc((100vw - 48px) * .5625 + 14px);
+  }
+}
