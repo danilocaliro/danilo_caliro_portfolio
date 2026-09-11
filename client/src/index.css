@@ -3366,3 +3366,12 @@ body,
     cursor: default;
   }
 }
+
+/* Desktop gallery controls: use a hand cursor on clickable images and navigation arrows */
+@media (min-width: 701px) {
+  .work-gallery-simple .case-study-image,
+  .work-image-lightbox-image,
+  .work-image-lightbox-arrow {
+    cursor: pointer;
+  }
+}
