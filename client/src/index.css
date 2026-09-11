@@ -3155,3 +3155,43 @@ body,
     content: none !important;
   }
 }
+
+/* Preview background final: no spotlight image, only a barely perceptible chapter gradient on the right 30% */
+.work-gallery-simple .case-study-content {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #15181d;
+}
+
+.work-gallery-simple .case-study-content::after {
+  display: block !important;
+  position: absolute;
+  z-index: 0 !important;
+  inset: 0;
+  background-image: linear-gradient(
+    90deg,
+    rgba(21, 24, 29, 0) 0%,
+    rgba(21, 24, 29, 0) 67%,
+    var(--chapter-glow, rgba(146, 127, 208, .10)) 100%
+  ) !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+  background-blend-mode: normal !important;
+  content: '' !important;
+  opacity: .22 !important;
+  pointer-events: none;
+}
+
+.work-gallery-simple .case-study-content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.work-gallery-simple .case-study-panel-entertainment .case-study-content::after { --chapter-glow: rgba(121, 174, 176, .16); }
+.work-gallery-simple .case-study-panel-institutional .case-study-content::after { --chapter-glow: rgba(180, 85, 96, .16); }
+.work-gallery-simple .case-study-panel-commercial .case-study-content::after { --chapter-glow: rgba(134, 178, 127, .16); }
+.work-gallery-simple .case-study-panel-cultural .case-study-content::after { --chapter-glow: rgba(201, 194, 122, .16); }
+.work-gallery-simple .case-study-panel-virtual-reality .case-study-content::after { --chapter-glow: rgba(146, 127, 208, .16); }
+.work-gallery-simple .case-study-panel-personal .case-study-content::after { --chapter-glow: rgba(226, 138, 79, .16); }
