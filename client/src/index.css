@@ -3136,3 +3136,22 @@ body,
     content: none !important;
   }
 }
+
+/* Spotlight visibility fix: keep the image above the panel background and below all content */
+@media (min-width: 701px) {
+  .work-gallery-simple .case-study-content::after {
+    z-index: 0 !important;
+  }
+
+  .work-gallery-simple .case-study-content > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .work-gallery-simple .case-study-content::after {
+    display: none !important;
+    content: none !important;
+  }
+}
