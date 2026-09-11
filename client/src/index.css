@@ -1335,3 +1335,32 @@ img { display: block; max-width: 100%; }
   .artist-about-section .about-copy { transform: none; }
   .artist-about-section .about-portrait { transform: translateX(clamp(0px, 13vw, 190px)); }
 }
+
+/* About Me portrait: scale with the available desktop column instead of translating into the copy */
+@media (min-width: 981px) {
+  .artist-about-section .about-portrait {
+    width: clamp(240px, 26vw, 360px);
+    height: auto;
+    aspect-ratio: 1 / 1.13;
+    margin-top: 40px;
+    transform: none;
+    justify-self: start;
+  }
+}
+
+/* Narrow web widths: reduce the portrait before the mobile breakpoint to prevent overlap */
+@media (min-width: 701px) and (max-width: 980px) {
+  .artist-about-section .about-layout {
+    grid-template-columns: minmax(220px, .8fr) 1.2fr;
+    column-gap: 50px;
+    align-items: start;
+  }
+  .artist-about-section .about-portrait {
+    width: min(100%, 300px);
+    height: auto;
+    aspect-ratio: 1 / 1.13;
+    margin-top: 40px;
+    transform: none;
+    justify-self: start;
+  }
+}
