@@ -1838,3 +1838,113 @@ img { display: block; max-width: 100%; }
     display: none !important;
   }
 }
+
+/* Selected Works final tabs: chapter labels at the bottom, orange arrow at top-right */
+.work-gallery-simple .work-gallery-card {
+  position: relative;
+  overflow: hidden;
+}
+.work-gallery-simple .work-gallery-card-top {
+  position: absolute;
+  inset: 0;
+  display: block;
+  padding: 0;
+}
+.work-gallery-simple .work-gallery-card-number {
+  position: absolute;
+  left: 14px;
+  bottom: 13px;
+  display: inline-block !important;
+  color: #f18b32;
+  font-size: 9px;
+  line-height: 1;
+  letter-spacing: .08em;
+}
+.work-gallery-simple .work-gallery-card-top strong {
+  position: absolute;
+  left: 34px;
+  right: 28px;
+  bottom: 12px;
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  color: rgba(236, 234, 227, .82);
+  font-size: clamp(8px, .72vw, 11px);
+  line-height: 1;
+  letter-spacing: .075em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.work-gallery-simple .work-gallery-card-top svg {
+  position: absolute;
+  top: 12px;
+  right: 13px;
+  display: block !important;
+  width: 15px;
+  height: 15px;
+  color: #f18b32;
+}
+
+/* Wide desktop: fixed-height single row; it does not stretch during resize */
+@media (min-width: 981px) {
+  .work-gallery-simple .work-gallery-list {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .work-gallery-simple .work-gallery-card {
+    height: 82px;
+    min-height: 82px;
+  }
+}
+
+/* Web/tablet limit: switch directly to the compact 3x2 grid */
+@media (min-width: 701px) and (max-width: 980px) {
+  .work-gallery-simple .work-gallery-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .work-gallery-simple .work-gallery-card {
+    height: 92px;
+    min-height: 92px;
+  }
+  .work-gallery-simple .work-gallery-card-number {
+    left: 12px;
+    bottom: 12px;
+  }
+  .work-gallery-simple .work-gallery-card-top strong {
+    left: 31px;
+    bottom: 11px;
+    font-size: 9px;
+  }
+}
+
+/* Phones: same chapter-only treatment, slightly shorter 3x2 tabs */
+@media (max-width: 700px) {
+  .work-gallery-simple .work-gallery-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+  }
+  .work-gallery-simple .work-gallery-card {
+    height: 64px;
+    min-height: 64px;
+  }
+  .work-gallery-simple .work-gallery-card-number {
+    left: 9px;
+    bottom: 10px;
+    font-size: 8px;
+  }
+  .work-gallery-simple .work-gallery-card-top strong {
+    left: 25px;
+    right: 8px;
+    bottom: 9px;
+    font-size: 7px;
+    letter-spacing: .045em;
+  }
+  .work-gallery-simple .work-gallery-card-top svg {
+    top: 9px;
+    right: 9px;
+    width: 13px;
+    height: 13px;
+  }
+}
