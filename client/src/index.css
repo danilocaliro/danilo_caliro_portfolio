@@ -3061,3 +3061,16 @@ body,
     content: none !important;
   }
 }
+
+/* Restore the pre-change spotlight opacity values only */
+@media (min-width: 981px) {
+  .work-gallery-simple .case-study-content::after {
+    opacity: .46 !important;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 980px) {
+  .work-gallery-simple .case-study-content::after {
+    opacity: .42 !important;
+  }
+}
