@@ -1364,3 +1364,15 @@ img { display: block; max-width: 100%; }
     justify-self: start;
   }
 }
+
+/* Desktop About Me: anchor the scalable portrait to the copy side, not the viewport edge */
+@media (min-width: 981px) {
+  .artist-about-section .about-layout { column-gap: 48px; }
+  .artist-about-section .about-portrait { justify-self: end; }
+}
+
+/* Intermediate web widths: preserve the same copy-side anchor and spacing logic */
+@media (min-width: 701px) and (max-width: 980px) {
+  .artist-about-section .about-layout { column-gap: 48px; }
+  .artist-about-section .about-portrait { justify-self: end; }
+}
