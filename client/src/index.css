@@ -3314,3 +3314,19 @@ body,
     transition: transform .08s cubic-bezier(.23, 1, .32, 1), opacity .08s ease-out, background-color .12s ease;
   }
 }
+/* Mobile header final fade: remove the transient light seam while accelerating transparency */
+@media (max-width: 700px) {
+  .site-header,
+  .site-header.is-scrolled,
+  .site-header.is-mobile-hidden {
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+    transition: transform .05s cubic-bezier(.23, 1, .32, 1), opacity .05s linear, background-color .08s ease, border-color .05s linear;
+  }
+
+  .site-header::before,
+  .site-header::after {
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
