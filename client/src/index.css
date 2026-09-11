@@ -1410,3 +1410,28 @@ img { display: block; max-width: 100%; }
     aspect-ratio: auto;
   }
 }
+
+/* Final About Me portrait geometry: fixed shape, proportional scale, top-right pivot */
+@media (min-width: 981px) {
+  .artist-about-section .about-portrait {
+    width: min(100%, 360px);
+    height: auto;
+    aspect-ratio: 1 / 1.13;
+    transform: scale(1.08);
+    transform-origin: top right;
+    margin-top: 40px;
+    justify-self: end;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 980px) {
+  .artist-about-section .about-portrait {
+    width: min(100%, 300px);
+    height: auto;
+    aspect-ratio: 1 / 1.13;
+    transform: scale(1.02);
+    transform-origin: top right;
+    margin-top: 40px;
+    justify-self: end;
+  }
+}
