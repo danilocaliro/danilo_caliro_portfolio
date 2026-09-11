@@ -1288,3 +1288,15 @@ img { display: block; max-width: 100%; }
 
 /* Vimeo demoreel: a single hairline border separates the 16:9 frame from the background */
 .reel-frame { border: 1px solid rgba(236, 234, 227, .28); }
+
+/* Desktop About Me: a smaller portrait aligned with the Creative Judgement block and the Selected Productions divider */
+@media (min-width: 981px) {
+  .artist-about-section .about-layout { align-items: start; }
+  .artist-about-section .about-portrait {
+    width: min(100%, 360px);
+    height: 410px;
+    aspect-ratio: auto;
+    margin-top: 64px;
+    justify-self: start;
+  }
+}
