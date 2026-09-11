@@ -146,6 +146,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileHeaderHidden, setMobileHeaderHidden] = useState(false);
+  const [mobileHeaderFade, setMobileHeaderFade] = useState(1);
   const [formSent, setFormSent] = useState(false);
   const [formSending, setFormSending] = useState(false);
   const [formError, setFormError] = useState("");
@@ -173,12 +174,16 @@ export default function Home() {
       setScrolled(currentScrollY > 18);
       if (!isMobile) {
         setMobileHeaderHidden(false);
+        setMobileHeaderFade(1);
       } else if (currentScrollY <= 72) {
         setMobileHeaderHidden(false);
+        setMobileHeaderFade(Math.max(0, 1 - currentScrollY / 72));
       } else if (currentScrollY > lastScrollY + 2) {
         setMobileHeaderHidden(true);
+        setMobileHeaderFade(0);
       } else if (currentScrollY < lastScrollY - 2) {
         setMobileHeaderHidden(false);
+        setMobileHeaderFade(1);
       }
       lastScrollY = currentScrollY;
     };
@@ -226,7 +231,7 @@ export default function Home() {
 
   return (
     <div className="site-shell">
-      <header className={`site-header ${scrolled ? "is-scrolled" : ""} ${mobileHeaderHidden ? "is-mobile-hidden" : ""}`}>
+      <header className={`site-header ${scrolled ? "is-scrolled" : ""} ${mobileHeaderHidden ? "is-mobile-hidden" : ""}`} style={{ "--mobile-header-fade": mobileHeaderFade } as React.CSSProperties}>
         <div className="header-inner">
             <a href="#main" className="brand-mark" aria-label="Home">
             <span className="brand-mark-symbol">/</span>
