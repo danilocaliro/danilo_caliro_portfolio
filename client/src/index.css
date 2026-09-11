@@ -2008,3 +2008,62 @@ img { display: block; max-width: 100%; }
   .work-gallery-simple .case-study-panel-virtual-reality .case-study-content::before { background: #927fd0; }
   .work-gallery-simple .case-study-panel-personal .case-study-content::before { background: #e28a4f; }
 }
+
+/* Selected Works web final: 60/40 split, role above title on the left */
+@media (min-width: 981px) {
+  .work-gallery-simple .case-study-content {
+    grid-template-columns: minmax(0, 6fr) minmax(230px, 4fr);
+  }
+
+  .work-gallery-simple .case-study-content::before {
+    left: 60%;
+  }
+
+  .work-gallery-simple .case-study-heading span:first-child {
+    left: 0;
+    right: auto;
+    width: 60%;
+    padding-left: 0;
+    padding-right: 24px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .work-gallery-simple .case-study-heading span:last-child {
+    left: auto;
+    right: 0;
+    width: 40%;
+    padding-left: 24px;
+    padding-right: 0;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .work-gallery-simple .case-study-content h3 {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 14px;
+    padding-right: 24px;
+  }
+
+  .work-gallery-simple .case-study-content > p {
+    grid-column: 1;
+    grid-row: 3;
+    padding-right: 24px;
+  }
+
+  .work-gallery-simple .case-study-outcome {
+    grid-column: 2;
+    grid-row: 3;
+    padding-left: 24px;
+  }
+
+  .work-gallery-simple .work-gallery-card-bottom {
+    display: none !important;
+  }
+}
+
+/* Slot labels contain only number, chapter and arrow at every viewport */
+.work-gallery-simple .work-gallery-card-bottom {
+  display: none !important;
+}
