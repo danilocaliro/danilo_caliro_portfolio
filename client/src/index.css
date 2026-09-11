@@ -1542,3 +1542,34 @@ img { display: block; max-width: 100%; }
 .artist-about-section .about-portrait.has-photo img {
   filter: none !important;
 }
+
+/* Desktop portrait hover test: soft cinematic relight entering from the lit right side */
+@media (min-width: 701px) {
+  .artist-about-section .about-portrait.has-photo {
+    isolation: isolate;
+  }
+  .artist-about-section .about-portrait.has-photo::after {
+    content: '';
+    display: block !important;
+    position: absolute;
+    z-index: 1;
+    inset: -12%;
+    pointer-events: none;
+    opacity: 0;
+    background:
+      radial-gradient(ellipse 52% 76% at 88% 42%, rgba(255, 214, 163, .22), transparent 68%),
+      linear-gradient(105deg, transparent 24%, rgba(255, 191, 125, .08) 55%, rgba(255, 228, 194, .16) 86%, transparent 100%);
+    transform: translateX(18%);
+    transition: opacity .22s ease, transform 1s cubic-bezier(.23,1,.32,1);
+  }
+  .artist-about-section .about-portrait.has-photo img {
+    transition: filter 1s cubic-bezier(.23,1,.32,1);
+  }
+  .artist-about-section .about-portrait.has-photo:hover::after {
+    opacity: 1;
+    transform: translateX(-12%);
+  }
+  .artist-about-section .about-portrait.has-photo:hover img {
+    filter: brightness(1.045) contrast(1.055) saturate(1.025);
+  }
+}
