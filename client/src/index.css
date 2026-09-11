@@ -1435,3 +1435,28 @@ img { display: block; max-width: 100%; }
     justify-self: end;
   }
 }
+
+/* Final About Me margins: keep equal breathing room before the portrait and before the copy */
+@media (min-width: 981px) {
+  .artist-about-section .about-portrait {
+    width: min(calc(100% - 48px), 360px);
+    max-width: 360px;
+    margin-left: 48px;
+    margin-right: 0;
+    transform: none;
+    transform-origin: top right;
+    justify-self: end;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 980px) {
+  .artist-about-section .about-portrait {
+    width: min(calc(100% - 48px), 300px);
+    max-width: 300px;
+    margin-left: 48px;
+    margin-right: 0;
+    transform: none;
+    transform-origin: top right;
+    justify-self: end;
+  }
+}
