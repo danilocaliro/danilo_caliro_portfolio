@@ -1468,3 +1468,11 @@ img { display: block; max-width: 100%; }
     transform-origin: top right;
   }
 }
+
+/* Wide desktop correction: keep the portrait within the Selected Productions divider */
+@media (min-width: 1300px) {
+  .artist-about-section .about-portrait {
+    transform: scale(1.06);
+    transform-origin: top right;
+  }
+}
