@@ -1496,3 +1496,33 @@ img { display: block; max-width: 100%; }
 @media (min-width: 701px) {
   .artist-about-section .about-portrait { top: 8px; }
 }
+
+/* Desktop portrait hover test: a restrained diagonal light sweep for a lighting/lookdev cue */
+@media (min-width: 701px) {
+  .artist-about-section .about-portrait.has-photo { isolation: isolate; }
+  .artist-about-section .about-portrait.has-photo img {
+    position: relative;
+    z-index: 0;
+    transition: filter .7s cubic-bezier(.23,1,.32,1);
+  }
+  .artist-about-section .about-portrait.has-photo::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    inset: -24% -45%;
+    pointer-events: none;
+    opacity: 0;
+    background: linear-gradient(112deg, transparent 39%, rgba(255, 244, 220, .28) 48%, rgba(241, 139, 50, .12) 52%, transparent 62%);
+    transform: translateX(-58%) skewX(-12deg);
+    transition: opacity .25s ease, transform .8s cubic-bezier(.23,1,.32,1);
+  }
+  .artist-about-section .about-portrait.has-photo:hover img {
+    filter: brightness(1.04) contrast(1.04);
+  }
+  .artist-about-section .about-portrait.has-photo:hover::after {
+    opacity: 1;
+    transform: translateX(58%) skewX(-12deg);
+  }
+  .artist-about-section .about-portrait.has-photo .about-portrait-grid { position: relative; z-index: 2; }
+}
