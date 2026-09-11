@@ -2718,3 +2718,72 @@ body,
     overflow-wrap: anywhere;
   }
 }
+
+/* Final responsive metadata row: chapter left and orange role right before mobile */
+@media (min-width: 701px) and (max-width: 980px) {
+  .work-gallery-simple .case-study-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 6fr) minmax(0, 4fr);
+    align-items: start;
+    width: 100%;
+    order: 0;
+    min-height: 18px;
+  }
+
+  .work-gallery-simple .case-study-heading span:last-child {
+    grid-column: 1;
+    grid-row: 1;
+    width: auto;
+    min-width: 0;
+    padding: 0;
+    text-align: left !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .work-gallery-simple .case-study-heading span:first-child {
+    grid-column: 2;
+    grid-row: 1;
+    width: auto;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    color: #f18b32;
+    font-size: 9px;
+    line-height: 1.25;
+    text-align: right !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* Mobile metadata row: keep both labels on one line whenever possible */
+@media (max-width: 700px) {
+  .work-gallery-simple .case-study-heading {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 4fr);
+  }
+
+  .work-gallery-simple .case-study-heading span:last-child {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .work-gallery-simple .case-study-heading span:first-child {
+    min-width: 0;
+    font-size: 7px;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-wrap: normal;
+  }
+
+  .work-gallery-simple .case-study-content h3 {
+    font-size: clamp(24px, 6.8vw, 36px);
+    line-height: 1.02;
+  }
+}
