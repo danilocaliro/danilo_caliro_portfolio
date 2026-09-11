@@ -3338,3 +3338,31 @@ body,
     transition: transform .03s cubic-bezier(.23, 1, .32, 1), opacity .03s linear, background-color .05s ease, border-color .03s linear;
   }
 }
+
+/* Desktop cursor language: classic pointer, zoom-in only on preview, zoom-out only on dark lightbox surround */
+@media (min-width: 701px) {
+  html,
+  body,
+  .site-shell,
+  .site-header,
+  .case-study-panel,
+  .case-study-content,
+  .work-image-lightbox-stage,
+  .work-image-lightbox-image {
+    cursor: default;
+  }
+
+  .work-gallery-simple .case-study-image {
+    cursor: zoom-in;
+  }
+
+  .work-image-lightbox {
+    cursor: zoom-out;
+  }
+
+  .work-image-lightbox-stage,
+  .work-image-lightbox-image,
+  .work-image-lightbox-arrow {
+    cursor: default;
+  }
+}
