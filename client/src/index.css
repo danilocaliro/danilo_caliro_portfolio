@@ -1695,3 +1695,19 @@ img { display: block; max-width: 100%; }
     transition: opacity .8s ease-in-out !important;
   }
 }
+
+/* Final portrait state: static supplied photo, no hover grade or animation */
+.artist-about-section .about-portrait.has-photo::before,
+.artist-about-section .about-portrait.has-photo::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+  transition: none !important;
+}
+.artist-about-section .about-portrait.has-photo img {
+  filter: none !important;
+  transition: none !important;
+}
