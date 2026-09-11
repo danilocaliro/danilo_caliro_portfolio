@@ -2155,3 +2155,19 @@ img { display: block; max-width: 100%; }
   .work-gallery-simple .case-study-panel-virtual-reality .case-study-content::after { --chapter-glow: rgba(146, 127, 208, .22); }
   .work-gallery-simple .case-study-panel-personal .case-study-content::after { --chapter-glow: rgba(226, 138, 79, .22); }
 }
+
+/* Mobile safe area: keep the iOS/Android status-bar zone inside the dark header */
+@media (max-width: 700px) {
+  .site-header {
+    padding-top: env(safe-area-inset-top);
+    background: #0b0d12;
+  }
+
+  .site-header.is-scrolled {
+    background: #0b0d12;
+  }
+
+  .header-inner {
+    height: 70px;
+  }
+}
