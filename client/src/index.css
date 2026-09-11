@@ -3036,3 +3036,28 @@ body,
     content: none !important;
   }
 }
+
+/* Unified web spotlight: match the reduced-window treatment at every web width */
+@media (min-width: 701px) {
+  .work-gallery-simple .case-study-content::after {
+    display: block !important;
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: url('/assets/hero-chiaroscuro.webp') !important;
+    background-position: right center !important;
+    background-repeat: no-repeat !important;
+    background-size: auto 165% !important;
+    background-blend-mode: normal !important;
+    content: '';
+    opacity: .42 !important;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .work-gallery-simple .case-study-content::after {
+    display: none !important;
+    content: none !important;
+  }
+}
