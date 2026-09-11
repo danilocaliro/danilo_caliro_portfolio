@@ -1395,3 +1395,18 @@ img { display: block; max-width: 100%; }
     transform: none;
   }
 }
+
+/* Desktop About Me: extend the portrait down to the Selected Productions divider */
+@media (min-width: 981px) {
+  .artist-about-section .about-portrait {
+    height: clamp(450px, 32vw, 500px);
+    aspect-ratio: auto;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 980px) {
+  .artist-about-section .about-portrait {
+    height: 390px;
+    aspect-ratio: auto;
+  }
+}
