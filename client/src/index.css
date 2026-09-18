@@ -3509,3 +3509,10 @@ body,
     color: #f0ede5;
   }
 }
+
+/* Mobile preview: remove the bottom gradient for a uniform image */
+@media (max-width: 700px) {
+  .work-gallery-simple .case-study-image::after {
+    display: none !important;
+  }
+}
