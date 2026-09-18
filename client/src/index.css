@@ -3516,3 +3516,8 @@ body,
     display: none !important;
   }
 }
+
+/* Selected Works slots: hover previews the fully saturated selected color */
+.work-gallery-simple .work-gallery-card:not(.is-selected):hover {
+  filter: saturate(1) !important;
+}
